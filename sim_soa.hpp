@@ -14,16 +14,13 @@ struct parameters {
 };
 
 struct set {
-    double x[];
-    double y[];
-    double z[];
-    double vx[];
-    double vy[];
-    double vz[];
-    double ax[];
-    double ay[];
-    double az[];
-    double m[];
+    double x[MAX_OBJECTS];
+    double y[MAX_OBJECTS];
+    double z[MAX_OBJECTS];
+    double vx[MAX_OBJECTS];
+    double vy[MAX_OBJECTS];
+    double vz[MAX_OBJECTS];
+    double m[MAX_OBJECTS];
 };
 
 int write_config(int id, parameters params);

@@ -9,7 +9,50 @@
 
 using namespace std;
 
+double pos_generator(int random_seed, float size_enclosure) {
 
+    // Motor
+    std::mt19937_64 gen64(random_seed);
+    // Distribución uniforme
+    std::uniform_real_distribution<> dis(0, size_enclosure);
+
+    // Posición
+    double pos = dis(gen64);
+
+    return pos;
+}
+
+double peso_generator(int random_seed) {
+
+    // Motor
+    std::mt19937_64 gen64(random_seed);
+    // Distribución normal
+    std::normal_distribution<> d{pow(10, 21), pow(10, 15)};
+
+    // Peso
+    double peso = d(gen64);
+
+    return peso;
+}
+
+int parser(int argc, char* argv[]){
+
+    if (argc != 5 ){
+        return -1;
+    }
+    //comprobamos que numero de objetos sea mayor que cero o cero
+    if ( ( (int) *argv[1] ) < 0){
+        return -2;
+    }
+
+
+}
+
+int gravitational_force_calc(struct parameters i, struct parameters j) {
+
+
+
+}
 
 int gravitational_force(int i, int j) {
 
