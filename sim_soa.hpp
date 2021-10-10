@@ -1,6 +1,7 @@
 //
 // Created by mariwogr on 10/10/21.
 //
+#define MAX_OBJECTS 50000
 
 #ifndef GRAVITY_SIMULATOR_SIM_SOA_HPP
 #define GRAVITY_SIMULATOR_SIM_SOA_HPP

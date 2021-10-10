@@ -61,10 +61,32 @@ int gravitational_force_calc(struct parameters i, struct parameters j) {
 int gravitational_force(int i, int j) {
 
     int grav_force;
-
-    //for 
-
+    int fuerza[3] = {0,0,0};
+    for(int i = 0; i < num_objects; i++){
+        for(int j = 0; j < num_objects; j++){
+            if (i != j){
+                fuerza += calculitos(objetos[i], objetos[j]);
+            }
+        }
+        /*
+        for (int j = 0; j < i; j++) {
+            fuerza -= calculitos();
+        }*/
+        accel;
+        vel;
+        pos;
+    }
 }
+
+0->           1 ->          + 0 con 1      + 1 con 2       + 2 con 3       - 3 con 0
+| \          /|             + 0 con 2      + 1 con 3       - 2 con 0       - 3 con 1
+V             V             + 0 con 3      - 1 con 0       - 2 con 1       - 3 con 2
+
+
+2             3
+
+
+
 
 int print_error_args(int argc, char* argv[]){
     /*This function will print in the standard output the parameters when the function was called
@@ -98,7 +120,6 @@ int write_config(int id, parameters params){
 
     /*If the id is 0 it will write the content in the init_config file*/
     if (id == 0){ out_file.open("init_config.txt"); }
-
     /*If the id is different than 0 the content will be written in the final_config file*/
     else { out_file.open("final_config.txt"); }
     out_file << "hasta luego";
@@ -108,11 +129,10 @@ int write_config(int id, parameters params){
 
 int main(int argc, char* argv[]){
     /*The array of parameters argv passes through a parser to check all the arguments are correct*/
-    int retcode = parser(argv);
+    int retcode = parser(argc, argv);
 
     /*The result of the parser will be equal to -1 or -2 if there are errors with the arguments*/
     if(retcode < 0){
-
         /*If there is an error, the program will call the function print_error_args to print them
          * through the standard output*/
         print_error_args(argc, argv);
@@ -125,6 +145,15 @@ int main(int argc, char* argv[]){
     parameters system_data{ (int) *argv[1], (int) *argv[2],
                             (int) *argv[3], (float) *argv[4],
                             (float) *argv[5]};
+
+    set objects;
+
+    for(int i = 0; i < system_data.num_objects; i++){
+        objects.x[i] = pos_generator(system_data.random_seed, system_data.size_enclosure);
+        objects.y[i] = pos_generator(system_data.random_seed, system_data.size_enclosure);
+        objects.z[i] = pos_generator(system_data.random_seed, system_data.size_enclosure);
+        objects.m[i] = peso_generator(system_data.random_seed);
+    }
 
     write_config(0, system_data);
 
