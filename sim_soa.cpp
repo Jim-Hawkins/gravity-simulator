@@ -5,6 +5,10 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+
+#include <random>
+#include <cmath>
+
 #include "sim_soa.hpp"
 
 using namespace std;
