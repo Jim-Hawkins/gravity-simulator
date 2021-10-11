@@ -26,17 +26,17 @@ double pos_generator(int random_seed, float size_enclosure) {
     return pos;
 }
 
-double peso_generator(int random_seed) {
+double weight_generator(int random_seed) {
 
     // Motor
     std::mt19937_64 gen64(random_seed);
-    // Distribución normal
+    // Normal distribution
     std::normal_distribution<> d{pow(10, 21), pow(10, 15)};
 
-    // Peso
-    double peso = d(gen64);
+    // Weight
+    double weight = d(gen64);
 
-    return peso;
+    return weight;
 }
 
 /* *
@@ -126,7 +126,7 @@ int gravitational_force(int i, int j) {
 int collision_objects(set object1, set object2){
 
     double mt;
-    mt = object1.m + object2.m;
+    mt = object1.m[0] + object2.m[0];
 
 }
 
@@ -205,7 +205,7 @@ int main(int argc, char* argv[]){
         objects.x[i] = pos_generator(system_data.random_seed, system_data.size_enclosure);
         objects.y[i] = pos_generator(system_data.random_seed, system_data.size_enclosure);
         objects.z[i] = pos_generator(system_data.random_seed, system_data.size_enclosure);
-        objects.m[i] = peso_generator(system_data.random_seed);
+        objects.m[i] = weight_generator(system_data.random_seed);
     }
 
     write_config(0, system_data);
