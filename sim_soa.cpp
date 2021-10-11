@@ -52,10 +52,23 @@ int parser(int argc, char* argv[]){
 
 }
 
-int gravitational_force_calc(struct parameters i, struct parameters j) {
+double * gravitational_force_calc(set objects, int i, int j) {
+    double G = 6.674 * pow(10, -11);
+    double fuerza[3];
 
+    double powSqX  = pow((objects.x[i] - objects.x[j]), 2);
+    double powSqY  = pow((objects.y[i] - objects.y[j]), 2);
+    double powSqZ  = pow((objects.z[i] - objects.z[j]), 2);
 
+    fuerza[0] = (G * objects.m[i] * objects.m[j] * (objects.x[i] - objects.x[j]))/(pow(sqrt(powSqX + powSqY + powSqZ),3));
+    fuerza[1] = (G * objects.m[i] * objects.m[j] * (objects.y[i] - objects.y[j]))/(pow(sqrt(powSqX + powSqY + powSqZ),3));
+    fuerza[2] = (G * objects.m[i] * objects.m[j] * (objects.z[i] - objects.z[j]))/(pow(sqrt(powSqX + powSqY + powSqZ),3));
 
+    return fuerza;
+}
+
+double accel_calc(double m, double F) {
+    return (1/(m))*F;
 }
 
 int gravitational_force(int i, int j) {
@@ -65,7 +78,9 @@ int gravitational_force(int i, int j) {
     for(int i = 0; i < num_objects; i++){
         for(int j = 0; j < num_objects; j++){
             if (i != j){
-                fuerza += calculitos(objetos[i], objetos[j]);
+                fuerza[0] += gravitational_force_calc(objects, i, j)[0];
+                fuerza[1] += gravitational_force_calc(objects, i, j)[1];
+                fuerza[2] += gravitational_force_calc(objects, i, j)[2];
             }
         }
         /*
@@ -77,6 +92,14 @@ int gravitational_force(int i, int j) {
         pos;
     }
 }
+
+int collision_objects(set object1, set object2){
+
+    double mt;
+    mt = object1.m + object2.m;
+
+}
+
 
 0->           1 ->          + 0 con 1      + 1 con 2       + 2 con 3       - 3 con 0
 | \          /|             + 0 con 2      + 1 con 3       - 2 con 0       - 3 con 1
