@@ -27,17 +27,17 @@ double pos_generator(int random_seed, float size_enclosure) {
     return position;
 }
 
-double weight_generator(int random_seed) {
+double mass_generator(int random_seed) {
 
     // Motor
     std::mt19937_64 gen64(random_seed);
     // Normal distribution
     std::normal_distribution<> d{pow(10, 21), pow(10, 15)};
 
-    // Weight
-    double weight = d(gen64);
+    // Mass
+    double mass = d(gen64);
 
-    return weight;
+    return mass;
 }
 
 /* *
@@ -294,7 +294,8 @@ int main(int argc, char* argv[]) {
         objects.x[i] = pos_generator(system_data.random_seed, system_data.size_enclosure);
         objects.y[i] = pos_generator(system_data.random_seed, system_data.size_enclosure);
         objects.z[i] = pos_generator(system_data.random_seed, system_data.size_enclosure);
-        objects.m[i] = weight_generator(system_data.random_seed);
+        objects.m[i] = mass_generator(system_data.random_seed);
+        objects.active[i] = true;
     }
     /* Write initial configuration to a file*/
     write_config(0, system_data, objects);
