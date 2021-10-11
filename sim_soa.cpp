@@ -168,7 +168,7 @@ int gravitational_force(int num_objects, set objects, float time_step) {
     return 0;
 }
 
-int check_bounce(set objects, int obj){
+int check_bounce(set objects, int obj, float size){
 
     if(objects.x[obj]<=0){
         objects.x[obj] = 0;
@@ -185,7 +185,20 @@ int check_bounce(set objects, int obj){
         objects.vz[obj] = -1 * objects.vz[obj];
     }
 
+    if(objects.x[obj]>= size){
+        objects.x[obj] = size;
+        objects.vx[obj] = -1 * objects.vx[obj];
+    }
 
+    if(objects.y[obj]>= size){
+        objects.y[obj] = size;
+        objects.vy[obj] = -1 * objects.vy[obj];
+    }
+
+    if(objects.z[obj]>= size){
+        objects.z[obj] = size;
+        objects.vz[obj] = -1 * objects.vz[obj];
+    }
 
     return 0;
 
