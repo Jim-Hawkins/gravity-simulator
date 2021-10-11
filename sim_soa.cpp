@@ -361,8 +361,8 @@ int main(int argc, char* argv[]) {
         for(int obj = 0; obj < system_data.num_objects; obj++){
             check_bounce(objects, obj, system_data.size_enclosure);
             for(int c = 0; c < system_data.num_objects; c++){
-                if (objects){}
-                check_collision(objects, obj, c);
+                if (){}
+                collision_objects(objects, obj, c);
             }
         }
     }
