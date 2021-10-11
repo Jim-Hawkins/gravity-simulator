@@ -5,7 +5,8 @@
 #include <string>
 #include <iostream>
 #include <fstream>
-
+#include <sstream>
+#include <string>
 #include <random>
 #include <cmath>
 
@@ -17,13 +18,13 @@ double pos_generator(int random_seed, float size_enclosure) {
 
     // Motor
     std::mt19937_64 gen64(random_seed);
-    // Distribución uniforme
+
+    // Uniform Distribution
     std::uniform_real_distribution<> dis(0, size_enclosure);
 
-    // Posición
-    double pos = dis(gen64);
-
-    return pos;
+    // Position
+    double position = dis(gen64);
+    return position;
 }
 
 double weight_generator(int random_seed) {
@@ -101,10 +102,10 @@ double accel_calc(double m, double F) {
     return (1/(m))*F;
 }
 
-int gravitational_force(int i, int j) {
+int gravitational_force(int num_objects, set objects, float time_step) {
+    double fuerza[3] = {0,0,0};
+    double accel[3] = {0,0,0};
 
-    int grav_force;
-    int fuerza[3] = {0,0,0};
     for(int i = 0; i < num_objects; i++){
         for(int j = 0; j < num_objects; j++){
             if (i != j){
@@ -112,15 +113,22 @@ int gravitational_force(int i, int j) {
                 fuerza[1] += gravitational_force_calc(objects, i, j)[1];
                 fuerza[2] += gravitational_force_calc(objects, i, j)[2];
             }
+
+            accel[0] = accel_calc(objects.m[i], fuerza[0]);
+            accel[1] = accel_calc(objects.m[i], fuerza[1]);
+            accel[2] = accel_calc(objects.m[i], fuerza[2]);
+
+            objects.vx[i] = objects.vx[i] + accel[0]*time_step;
+            objects.vy[i] = objects.vy[i] + accel[1]*time_step;
+            objects.vz[i] = objects.vz[i] + accel[2]*time_step;
+
+            objects.x[i] = objects.x[i] + objects.vx[i]*time_step;
+            objects.y[i] = objects.y[i] + objects.vy[i]*time_step;
+            objects.z[i] = objects.z[i] + objects.vz[i]*time_step;
+
         }
-        /*
-        for (int j = 0; j < i; j++) {
-            fuerza -= calculitos();
-        }*/
-        accel;
-        vel;
-        pos;
     }
+    return 0;
 }
 
 int collision_objects(set object1, set object2){
@@ -131,6 +139,7 @@ int collision_objects(set object1, set object2){
 }
 
 
+/*                  DO NOT TOUCH THIS, DEATH PENALTY
 0->           1 ->          + 0 con 1      + 1 con 2       + 2 con 3       - 3 con 0
 | \          /|             + 0 con 2      + 1 con 3       - 2 con 0       - 3 con 1
 V             V             + 0 con 3      - 1 con 0       - 2 con 1       - 3 con 2
@@ -138,10 +147,18 @@ V             V             + 0 con 3      - 1 con 0       - 2 con 1       - 3 c
 
 2             3
 
+*/
 
 
-
-int print_error_args(int argc, char* argv[]){
+/* *
+ * This function will write the errors in the parameter in error case
+ *
+ * @param int argc                 This is the number of arguments
+ * @param char* argv is a pointer to array of chars (strings) which it has the values
+ *
+ * @return 0 on success
+ */
+int print_error_args(int argc, char* argv[]) {
     /*This function will print in the standard output the parameters when the function was called
       and it will show the errors while doing it.*/
     cerr << argv[0] << " invoked with " << argc << " parameters." << endl;
@@ -166,24 +183,43 @@ int print_error_args(int argc, char* argv[]){
     return 0;
 }
 
-int write_config(int id, parameters params){
-
-    /*This function will write the parameters from the main program in the init_config file or in the final_config file*/
+/* *
+ * This function will write the parameters from the main program in the init_config file or in the final_config file
+ *
+ * @param int id                 whether it's the first or last file
+ * @param parameters system_data data of the systema (size_enclosure, etc.)
+ * @param set objects            structure containing the information of the objects
+ * @return 0 on success
+ */
+int write_config(int id, parameters system_data, set objects){
     ofstream out_file;
+    char res[50];
 
     /*If the id is 0 it will write the content in the init_config file*/
     if (id == 0){ out_file.open("init_config.txt"); }
     /*If the id is different than 0 the content will be written in the final_config file*/
     else { out_file.open("final_config.txt"); }
-    out_file << "hasta luego";
+
+    sprintf(res, "%.3f", system_data.size_enclosure);
+    out_file << res;
+    sprintf(res, "%.3f", system_data.time_step);
+    out_file << res;
+    sprintf(res, "%d.000", system_data.num_objects);
+    out_file << res << endl;
+
+    for(int i = 0; i < system_data.num_objects; i++){
+        sprintf(res,
+                "%.3f %.3f %.3f %.3f %.3f %.3f %.3f",
+                objects.x[i], objects.y[i], objects.z[i], objects.vx[i], objects.vy[i], objects.vz[i], objects.m[i]);
+        out_file << res << endl;
+    }
     out_file.close();
     return 0;
 }
 
-int main(int argc, char* argv[]){
+int main(int argc, char* argv[]) {
     /*The array of parameters argv passes through a parser to check all the arguments are correct*/
     int retcode = parser(argc, argv);
-
     /*The result of the parser will be equal to -1 or -2 if there are errors with the arguments*/
     if(retcode < 0){
         /*If there is an error, the program will call the function print_error_args to print them
@@ -195,21 +231,31 @@ int main(int argc, char* argv[]){
         return retcode;
     }
 
+    /* Store simulation arguments in a structure */
     parameters system_data{ (int) *argv[1], (int) *argv[2],
                             (int) *argv[3], (float) *argv[4],
                             (float) *argv[5]};
 
+    /* Declare the structure that holds objects' information */
     set objects;
 
+    /* Initialize x, y, z and m attributes of each object */
     for(int i = 0; i < system_data.num_objects; i++){
         objects.x[i] = pos_generator(system_data.random_seed, system_data.size_enclosure);
         objects.y[i] = pos_generator(system_data.random_seed, system_data.size_enclosure);
         objects.z[i] = pos_generator(system_data.random_seed, system_data.size_enclosure);
         objects.m[i] = weight_generator(system_data.random_seed);
     }
+    /* Write initial configuration to a file*/
+    write_config(0, system_data, objects);
 
-    write_config(0, system_data);
+    for(int i = 0; i < system_data.num_iterations; i++){
+        gravitational_force(system_data.num_objects, objects, system_data.time_step);
+        check_bounce(objects);
+        check_collision(objects);
+    }
 
-
+    /* Write final configuration to a file*/
+    write_config(1, system_data, objects);
     return 0;
 }
