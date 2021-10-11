@@ -83,6 +83,14 @@ int parser(int argc, char* argv[]){
 
 }
 
+/*
+ * This function will calculate all the gravitational force components of i and j in the structure set objects
+ *
+ * @param: set objects           structure of objects, with all the components of each point in the simulator
+ * @param: int i                 position of the first point
+ * @param: int j                 position of the second point
+ * @return force                 resulting force vector
+ */
 double * gravitational_force_calc(set objects, int i, int j) {
     double G = 6.674 * pow(10, -11);
     double fuerza[3];
@@ -98,10 +106,23 @@ double * gravitational_force_calc(set objects, int i, int j) {
     return fuerza;
 }
 
+/*
+ * This function will return a component of the acceleration of a point with the mass m given and the component of the sum of forces F of the point
+ *
+ * @param: double m             mass of the point
+ * @param: double F             one component of the sum of forces F
+ * @return (1/(m))*F            the point acceleration point
+ */
 double accel_calc(double m, double F) {
     return (1/(m))*F;
 }
 
+
+/*
+ * This function updates the speed vector v and the position of every point in the set objects of points
+ *
+ * @param: int num_objects
+ */
 int gravitational_force(int num_objects, set objects, float time_step) {
     double fuerza[3] = {0,0,0};
     double accel[3] = {0,0,0};
@@ -131,11 +152,40 @@ int gravitational_force(int num_objects, set objects, float time_step) {
     return 0;
 }
 
-int collision_objects(int i, int j){
+int check_bounce(set objects, int obj){
 
-    double mt;
-    mt = object1.m[0] + object2.m[0];
+    if(objects.x[obj]<=0){
+        objects.x[obj] = 0;
+        objects.vx[obj] = -1 * objects.vx[obj];
+    }
 
+    if(objects.y[obj]<=0){
+        objects.y[obj] = 0;
+        objects.vy[obj] = -1 * objects.vy[obj];
+    }
+
+    if(objects.z[obj]<=0){
+        objects.z[obj] = 0;
+        objects.vz[obj] = -1 * objects.vz[obj];
+    }
+
+
+
+    return 0;
+
+}
+
+int collision_objects(set objects,int i, int j){
+
+    if (objects.active[i] && objects.active[j]){
+
+        objects.m[i] = objects.m[i] + objects.m[j];
+        objects.vx[i] = objects.vx[i] + objects.vx[j];
+        objects.vy[i] = objects.vy[i] + objects.vy[j];
+        objects.vz[i] = objects.vz[i] + objects.vz[j];
+
+        objects.active[j] = false;
+    }
 }
 
 
