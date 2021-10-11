@@ -111,6 +111,7 @@ double * gravitational_force_calc(set objects, int i, int j) {
  *
  * @param: double m             mass of the point
  * @param: double F             one component of the sum of forces F
+ *
  * @return (1/(m))*F            the point acceleration point
  */
 double accel_calc(double m, double F) {
@@ -121,32 +122,46 @@ double accel_calc(double m, double F) {
 /*
  * This function updates the speed vector v and the position of every point in the set objects of points
  *
- * @param: int num_objects
+ * @param: int num_objects          the total of points in the set of objects
+ * @param: set objects              structure of objects, with all the components of each point in the simulator
+ * @param: float time_step          time step to obtain the speed and position of the point
+ *
+ * @return 0                        if the function was executed correctly
  */
 int gravitational_force(int num_objects, set objects, float time_step) {
+
+    // The 3 components of the gravitational force will be set to 0
     double force[3] = {0,0,0};
     double accel[3] = {0,0,0};
 
+    // The execution will pass through two nested loops to obtain the sum of gravitational forces of every point with the other points
     for(int i = 0; i < num_objects; i++) {
         for (int j = 0; j < num_objects; j++) {
+
+            // First it checks that the two points are active (not collided)
             if (objects.active[i] && objects.active[j]) {
+
+                // If the two points are not the same, it will sum the force of every component to the total force
                 if (i != j) {
                     force[0] += gravitational_force_calc(objects, i, j)[0];
                     force[1] += gravitational_force_calc(objects, i, j)[1];
                     force[2] += gravitational_force_calc(objects, i, j)[2];
                 }
 
-                accel[0] = accel_calc(objects.m[i], force[0]);
-                accel[1] = accel_calc(objects.m[i], force[1]);
-                accel[2] = accel_calc(objects.m[i], force[2]);
+        // Update the acceleration
+        accel[0] = accel_calc(objects.m[i], force[0]);
+        accel[1] = accel_calc(objects.m[i], force[1]);
+        accel[2] = accel_calc(objects.m[i], force[2]);
 
-                objects.vx[i] = objects.vx[i] + accel[0] * time_step;
-                objects.vy[i] = objects.vy[i] + accel[1] * time_step;
-                objects.vz[i] = objects.vz[i] + accel[2] * time_step;
+        // Update the speed
+        objects.vx[i] = objects.vx[i] + accel[0] * time_step;
+        objects.vy[i] = objects.vy[i] + accel[1] * time_step;
+        objects.vz[i] = objects.vz[i] + accel[2] * time_step;
 
-                objects.x[i] = objects.x[i] + objects.vx[i] * time_step;
-                objects.y[i] = objects.y[i] + objects.vy[i] * time_step;
-                objects.z[i] = objects.z[i] + objects.vz[i] * time_step;
+        // Update the position
+        objects.x[i] = objects.x[i] + objects.vx[i] * time_step;
+        objects.y[i] = objects.y[i] + objects.vy[i] * time_step;
+        objects.z[i] = objects.z[i] + objects.vz[i] * time_step;
             }
         }
     }
