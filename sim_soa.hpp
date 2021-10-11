@@ -22,6 +22,7 @@ struct set {
     double vy[MAX_OBJECTS];
     double vz[MAX_OBJECTS];
     double m[MAX_OBJECTS];
+    bool active[MAX_OBJECTS]{false};
 };
 
 double accel_calc(double m, double F);
