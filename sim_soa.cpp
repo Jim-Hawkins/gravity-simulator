@@ -14,7 +14,16 @@
 
 using namespace std;
 
+/*
+* This function will return a random position number using Uniform Distribution
+*
+* @param: int random_seed          seed of the motor
+* @param: float size_enclosure     size of the enclosure
+* @return position                 random position
+*/
+
 double pos_generator(int random_seed, float size_enclosure) {
+
 
     // Motor
     std::mt19937_64 gen64(random_seed);
@@ -24,13 +33,22 @@ double pos_generator(int random_seed, float size_enclosure) {
 
     // Position
     double position = dis(gen64);
+
     return position;
 }
+
+/*
+* This function will return a random mass number using Normal Distribution
+*
+* @param: int random_seed          seed of the motor
+* @return mass                     random mass
+*/
 
 double mass_generator(int random_seed) {
 
     // Motor
     std::mt19937_64 gen64(random_seed);
+
     // Normal distribution
     std::normal_distribution<> d{pow(10, 21), pow(10, 15)};
 
@@ -44,7 +62,7 @@ double mass_generator(int random_seed) {
  * This function will check the parameters at the beginning
  *
  * @param int id                 whether it's the first or last file
- * @param parameters system_data data of the systema (size_enclosure, etc.)
+ * @param parameters system_data data of the system (size_enclosure, etc.)
  * @param set objects            structure containing the information of the objects
  * @return 0 on success
  */
@@ -54,12 +72,12 @@ int parser(int argc, char* argv[]){
     if (argc != 5 ){
         return -1;
     }
-    //checking if the number of objs is smaller than cero
+    //checking if the number of objs is smaller than zero
     if ( ( (int) *argv[1] ) < 0){
         return -2;
     }
 
-    //checking if the number of iterations is smaller than cero
+    //checking if the number of iterations is smaller than zero
     if (((int)*argv[2])<0){
         return -2;
     }
@@ -203,9 +221,16 @@ int check_bounce(set objects, int obj, float size){
     return 0;
 
 }
-
+/*
+* This function will update the objects and their collisions
+*
+* @param: set objects          array of objects with their properties
+* @param: int i                array position of the first object
+* @param: int j                array position of the second object
+*/
 int collision_objects(set objects,int i, int j){
 
+    // Checks if both objects are active
     if (objects.active[i] && objects.active[j]){
 
         objects.m[i] = objects.m[i] + objects.m[j];
@@ -330,6 +355,7 @@ int main(int argc, char* argv[]) {
     write_config(0, system_data, objects);
 
     /* Body of the simulation */
+    /* NOTA : FUSIONAR LOS BUCLES DE gravitational_force, check_bounce y collision_objects*/
     for(int i = 0; i < system_data.num_iterations; i++){
         gravitational_force(system_data.num_objects, objects, system_data.time_step);
         for(int obj = 0; obj < system_data.num_objects; obj++){
