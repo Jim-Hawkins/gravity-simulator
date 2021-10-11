@@ -131,7 +131,7 @@ int gravitational_force(int num_objects, set objects, float time_step) {
     return 0;
 }
 
-int collision_objects(set object1, set object2){
+int collision_objects(int i, set object2){
 
     double mt;
     mt = object1.m[0] + object2.m[0];
