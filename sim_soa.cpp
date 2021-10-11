@@ -39,16 +39,46 @@ double peso_generator(int random_seed) {
     return peso;
 }
 
+/* *
+ * This function will check the parameters at the beginning
+ *
+ * @param int id                 whether it's the first or last file
+ * @param parameters system_data data of the systema (size_enclosure, etc.)
+ * @param set objects            structure containing the information of the objects
+ * @return 0 on success
+ */
+
 int parser(int argc, char* argv[]){
 
     if (argc != 5 ){
         return -1;
     }
-    //comprobamos que numero de objetos sea mayor que cero o cero
+    //checking if the number of objs is smaller than cero
     if ( ( (int) *argv[1] ) < 0){
         return -2;
     }
 
+    //checking if the number of iterations is smaller than cero
+    if (((int)*argv[2])<0){
+        return -2;
+    }
+
+    //checking the seed if it's a positive number
+    if (((int)*argv[3])<0){
+        return -2;
+    }
+
+    //checking if size_enclosure is positive
+    if (((float)*argv[4])<0){
+        return -2;
+    }
+
+    //checking if time_step is a real number positive
+    if (((float)*argv[5])<0){
+        return -2;
+    }
+
+    return 0;
 
 }
 
