@@ -20,15 +20,15 @@ using namespace std;
 * @return position                 random position
 */
 
-double pos_generator(int random_seed, float size_enclosure) {
-
-
+void start_pos_generator(int random_seed, float size_enclosure) {
     // Motor
     std::mt19937_64 gen64(random_seed);
 
     // Uniform Distribution
     std::uniform_real_distribution<> dis(0, size_enclosure);
+}
 
+double get_postion(dis){
     // Position
     double position = dis(gen64);
 
@@ -67,7 +67,7 @@ double mass_generator(int random_seed) {
 
 int parser(int argc, char* argv[]){
 
-    if (argc != 5 ){
+    if (argc != 6 ){
         return -1;
     }
     //checking if the number of objs is smaller than zero
@@ -109,7 +109,7 @@ int parser(int argc, char* argv[]){
  */
 void gravitational_force_calc(set objects, int i, int j, double *force) {
     double G = 6.674 * pow(10, -11);
-    double force[3];
+    //double force[3];
 
     double powSqX  = pow((objects.x[i] - objects.x[j]), 2);
     double powSqY  = pow((objects.y[i] - objects.y[j]), 2);
@@ -237,7 +237,7 @@ int check_bounce(set objects, int obj, float size){
 * @param: int i                array position of the first object
 * @param: int j                array position of the second object
 */
-int collision_objects(set objects,int i, int j){
+void collision_objects(set objects,int i, int j){
 
     // Checks if both objects are active
     if (objects.active[i] && objects.active[j]){
@@ -284,13 +284,13 @@ int print_error_args(int argc, char* argv[]) {
     if (2 <= argc) { cerr << "  num_iterations: " << argv[2] << endl; }
     else { cerr << "  num_iterations: ?" << endl; }
 
-    if (3 <= argc) { cerr << "  random_seed: " << argv[2] << endl; }
+    if (3 <= argc) { cerr << "  random_seed: " << argv[3] << endl; }
     else { cerr << "  random_seed: ?" << endl; }
 
-    if (4 <= argc) { cerr << "  size_enclosure: " << argv[2] << endl; }
+    if (4 <= argc) { cerr << "  size_enclosure: " << argv[4] << endl; }
     else { cerr << "  size_enclosure: ?" << endl; }
 
-    if (5 <= argc) { cerr << "  time_step: " << argv[2] << endl; }
+    if (5 <= argc) { cerr << "  time_step: " << argv[5] << endl; }
     else { cerr << "  time_step: ?" << endl; }
 
     return 0;
@@ -364,7 +364,6 @@ int main(int argc, char* argv[]) {
     write_config(0, system_data, objects);
 
     /* Body of the simulation */
-    /* NOTA : FUSIONAR LOS BUCLES DE gravitational_force, check_bounce y collision_objects*/
     for(int i = 0; i < system_data.num_iterations; i++){
         gravitational_force(system_data.num_objects, objects, system_data.time_step);
         for(int a = 0; a < system_data.num_objects; a++){
