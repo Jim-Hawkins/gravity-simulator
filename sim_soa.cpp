@@ -117,11 +117,10 @@ double * gravitational_force_calc(set objects, int i, int j) {
     double powSqY  = pow((objects.y[i] - objects.y[j]), 2);
     double powSqZ  = pow((objects.z[i] - objects.z[j]), 2);
 
-    force[0] = (G * objects.m[i] * objects.m[j] * (objects.x[i] - objects.x[j]))/(pow(sqrt(powSqX + powSqY + powSqZ),3));
-    force[1] = (G * objects.m[i] * objects.m[j] * (objects.y[i] - objects.y[j]))/(pow(sqrt(powSqX + powSqY + powSqZ),3));
-    force[2] = (G * objects.m[i] * objects.m[j] * (objects.z[i] - objects.z[j]))/(pow(sqrt(powSqX + powSqY + powSqZ),3));
-
-    return force;
+    // It will return the three components of the gravitational force between i and j
+    force[0] += (G * objects.m[i] * objects.m[j] * (objects.x[i] - objects.x[j]))/(pow(sqrt(powSqX + powSqY + powSqZ),3));
+    force[1] += (G * objects.m[i] * objects.m[j] * (objects.y[i] - objects.y[j]))/(pow(sqrt(powSqX + powSqY + powSqZ),3));
+    force[2] += (G * objects.m[i] * objects.m[j] * (objects.z[i] - objects.z[j]))/(pow(sqrt(powSqX + powSqY + powSqZ),3));
 }
 
 /*
@@ -161,22 +160,23 @@ int gravitational_force(int num_objects, set objects, float time_step) {
 
                 // If the two points are not the same, it will sum the force of every component to the total force
                 if (i != j) {
-                    force[0] += gravitational_force_calc(objects, i, j)[0];
-                    force[1] += gravitational_force_calc(objects, i, j)[1];
-                    force[2] += gravitational_force_calc(objects, i, j)[2];
+                    gravitational_force_calc(objects, i, j, &force[0]);
+                    gravitational_force_calc(objects, i, j, &force[1]);
+                    gravitational_force_calc(objects, i, j, force[2]);
+
                 }
 
-        // Update the acceleration
+        // Updates the acceleration
         accel[0] = accel_calc(objects.m[i], force[0]);
         accel[1] = accel_calc(objects.m[i], force[1]);
         accel[2] = accel_calc(objects.m[i], force[2]);
 
-        // Update the speed
+        // Updates the speed
         objects.vx[i] = objects.vx[i] + accel[0] * time_step;
         objects.vy[i] = objects.vy[i] + accel[1] * time_step;
         objects.vz[i] = objects.vz[i] + accel[2] * time_step;
 
-        // Update the position
+        // Updates the position
         objects.x[i] = objects.x[i] + objects.vx[i] * time_step;
         objects.y[i] = objects.y[i] + objects.vy[i] * time_step;
         objects.z[i] = objects.z[i] + objects.vz[i] * time_step;
@@ -358,11 +358,14 @@ int main(int argc, char* argv[]) {
     /* NOTA : FUSIONAR LOS BUCLES DE gravitational_force, check_bounce y collision_objects*/
     for(int i = 0; i < system_data.num_iterations; i++){
         gravitational_force(system_data.num_objects, objects, system_data.time_step);
-        for(int obj = 0; obj < system_data.num_objects; obj++){
-            check_bounce(objects, obj, system_data.size_enclosure);
-            for(int c = 0; c < system_data.num_objects; c++){
-                if (){}
-                collision_objects(objects, obj, c);
+        for(int a = 0; a < system_data.num_objects; a++){
+            if (objects.active[a]){
+                check_bounce(objects, a, system_data.size_enclosure);
+            }
+            for(int b = 0; b < system_data.num_objects; b++){
+                if (objects.active[a] && objects.active[b]){
+                    collision_objects(objects, a, b);
+                }
             }
         }
     }

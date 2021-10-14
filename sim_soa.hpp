@@ -26,8 +26,8 @@ struct set {
 };
 
 double accel_calc(double m, double F);
+void collision_objects(set objects,int i, int j);
 int gravitational_force(int num_objects, set objects, float time_step);
-double * gravitational_force_calc(set objects, int i, int j);
 int parser(int argc, char* argv[]);
 int print_error_args(int argc, char* argv[]);
 double weight_generator(int random_seed);
