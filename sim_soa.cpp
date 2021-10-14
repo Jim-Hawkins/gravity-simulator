@@ -5,8 +5,6 @@
 #include <string>
 #include <iostream>
 #include <fstream>
-#include <sstream>
-#include <string>
 #include <random>
 #include <cmath>
 
@@ -109,7 +107,7 @@ int parser(int argc, char* argv[]){
  * @param: int j                 position of the second point
  * @return force                 resulting force vector
  */
-double * gravitational_force_calc(set objects, int i, int j) {
+void gravitational_force_calc(set objects, int i, int j, double *force) {
     double G = 6.674 * pow(10, -11);
     double force[3];
 
@@ -186,7 +184,18 @@ int gravitational_force(int num_objects, set objects, float time_step) {
     return 0;
 }
 
+/*
+ * This function check if the object bounce with a wall and change the values if it's necessary
+ *
+ * @param: set objects              structure of objects, with all the components of each point in the simulator
+ * @param: float size         It's the size of the wall
+ * @param: int obj          it's the object which we are going to check
+ *
+ * @return 0                        if the function was executed correctly
+ */
 int check_bounce(set objects, int obj, float size){
+
+    //check if the object bounce with a wall
 
     if(objects.x[obj]<=0){
         objects.x[obj] = 0;

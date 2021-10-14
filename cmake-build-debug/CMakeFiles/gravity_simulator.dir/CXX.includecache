@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mariwogr/Documentos/ARCOS/gravity_simulator/sim_soa.cpp
+string
+-
+iostream
+-
+fstream
+-
+random
+-
+cmath
+-
+sim_soa.hpp
+/home/mariwogr/Documentos/ARCOS/gravity_simulator/sim_soa.hpp
+
+/home/mariwogr/Documentos/ARCOS/gravity_simulator/sim_soa.hpp
+
