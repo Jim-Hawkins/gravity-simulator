@@ -20,15 +20,12 @@ using namespace std;
 * @return position                 random position
 */
 
-void start_pos_generator(int random_seed, float size_enclosure) {
+double pos_generator(int random_seed, float size_enclosure) {
     // Motor
     std::mt19937_64 gen64(random_seed);
 
     // Uniform Distribution
     std::uniform_real_distribution<> dis(0, size_enclosure);
-}
-
-double get_postion(dis){
     // Position
     double position = dis(gen64);
 
@@ -313,9 +310,9 @@ int write_config(int id, parameters system_data, set objects){
     /*If the id is different than 0 the content will be written in the final_config file*/
     else { out_file.open("final_config.txt"); }
 
-    sprintf(res, "%.3f", system_data.size_enclosure);
+    sprintf(res, "%.3f ", system_data.size_enclosure);
     out_file << res;
-    sprintf(res, "%.3f", system_data.time_step);
+    sprintf(res, "%.3f ", system_data.time_step);
     out_file << res;
     sprintf(res, "%d.000", system_data.num_objects);
     out_file << res << endl;
