@@ -25,6 +25,7 @@ struct set {
     bool active[MAX_OBJECTS]{false};
 };
 
+
 double accel_calc(double m, double F);
 void collision_objects(set objects,int i, int j);
 int gravitational_force(int num_objects, set objects, float time_step);

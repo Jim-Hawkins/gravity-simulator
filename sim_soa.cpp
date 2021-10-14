@@ -26,6 +26,7 @@ double pos_generator(int random_seed, float size_enclosure) {
 
     // Uniform Distribution
     std::uniform_real_distribution<> dis(0, size_enclosure);
+
     // Position
     double position = dis(gen64);
 
