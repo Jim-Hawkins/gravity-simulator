@@ -160,7 +160,7 @@ int gravitational_force(int num_objects, set objects, float time_step) {
                 if (i != j) {
                     gravitational_force_calc(objects, i, j, &force[0]);
                     gravitational_force_calc(objects, i, j, &force[1]);
-                    gravitational_force_calc(objects, i, j, force[2]);
+                    gravitational_force_calc(objects, i, j, &force[2]);
 
                 }
 
@@ -345,10 +345,14 @@ int main(int argc, char* argv[]) {
     }
 
     /* Store simulation arguments in a structure */
-    parameters system_data{ (int) *argv[1], (int) *argv[2],
-                            (int) *argv[3], (float) *argv[4],
-                            (float) *argv[5]};
 
+    parameters system_data{ stoi(argv[1]), stoi(argv[2]),
+                            stoi(argv[3]), stof(argv[4]),
+                            stof(argv[5])};
+
+
+    //cout << *argv[1] << endl;
+    cout << system_data.num_objects << endl;
     /* Declare the structure that holds objects' information */
     set objects;
 
