@@ -12,48 +12,6 @@
 
 using namespace std;
 
-/*
-* This function will return a random position number using Uniform Distribution
-*
-* @param: int random_seed          seed of the motor
-* @param: float size_enclosure     size of the enclosure
-* @return position                 random position
-*/
-
-double pos_generator(int random_seed, float size_enclosure) {
-    // Motor
-    std::mt19937_64 gen64(random_seed);
-
-    // Uniform Distribution
-    std::uniform_real_distribution<> dis(0, size_enclosure);
-
-    // Position
-    double position = dis(gen64);
-
-    return position;
-}
-
-/*
-* This function will return a random mass number using Normal Distribution
-*
-* @param: int random_seed          seed of the motor
-* @return mass                     random mass
-*/
-
-double mass_generator(int random_seed) {
-
-    // Motor
-    std::mt19937_64 gen64(random_seed);
-
-    // Normal distribution
-    std::normal_distribution<> d{pow(10, 21), pow(10, 15)};
-
-    // Mass
-    double mass = d(gen64);
-
-    return mass;
-}
-
 /* *
  * This function will check the parameters at the beginning
  *
@@ -74,27 +32,26 @@ int parser(int argc, char* argv[]){
     }
 
     //checking if the number of iterations is smaller than zero
-    if (((int)*argv[2])<0){
+    if ( ( (int) *argv[2] ) < 0){
         return -2;
     }
 
     //checking the seed if it's a positive number
-    if (((int)*argv[3])<0){
+    if ( ( (int) *argv[3] ) < 0){
         return -2;
     }
 
     //checking if size_enclosure is positive
-    if (((float)*argv[4])<0){
+    if ( ( (double) *argv[4] ) < 0){
         return -2;
     }
 
     //checking if time_step is a real number positive
-    if (((float)*argv[5])<0){
+    if ( ( (double) *argv[5] ) < 0){
         return -2;
     }
 
     return 0;
-
 }
 
 /*
@@ -128,7 +85,7 @@ void gravitational_force_calc(set objects, int i, int j, double *force) {
  * @return (1/(m))*F            the point acceleration point
  */
 double accel_calc(double m, double F) {
-    return (1/(m))*F;
+    return (1/m)*F;
 }
 
 
@@ -141,7 +98,7 @@ double accel_calc(double m, double F) {
  *
  * @return 0                        if the function was executed correctly
  */
-int gravitational_force(int num_objects, set objects, float time_step) {
+int gravitational_force(int num_objects, set objects, double time_step) {
 
     // The 3 components of the gravitational force will be set to 0
     double force[3] = {0,0,0};
@@ -149,18 +106,15 @@ int gravitational_force(int num_objects, set objects, float time_step) {
 
     // The execution will pass through two nested loops to obtain the sum of gravitational forces of every point with the other points
     for(int i = 0; i < num_objects; i++) {
+        if ( !objects.active[i]){ continue; }
         for (int j = 0; j < num_objects; j++) {
 
-            // First it checks that the two points are active (not collided)
-            if (objects.active[i] && objects.active[j]) {
-
-                // If the two points are not the same, it will sum the force of every component to the total force
-                if (i != j) {
-                    gravitational_force_calc(objects, i, j, &force[0]);
-                    gravitational_force_calc(objects, i, j, &force[1]);
-                    gravitational_force_calc(objects, i, j, &force[2]);
-
-                }
+            // First it checks that the two points are active (not collided). If the two points are not the same,
+            // it will sum the force of every component to the total force
+            if (objects.active[j] &&  i != j) {
+                gravitational_force_calc(objects, i, j, &force[0]);
+                gravitational_force_calc(objects, i, j, &force[1]);
+                gravitational_force_calc(objects, i, j, &force[2]);
 
         // Updates the acceleration
         accel[0] = accel_calc(objects.m[i], force[0]);
@@ -191,43 +145,55 @@ int gravitational_force(int num_objects, set objects, float time_step) {
  *
  * @return 0                        if the function was executed correctly
  */
-int check_bounce(set objects, int obj, float size){
+int check_bounce(set objects, int obj, double size){
 
     //check if the object bounce with a wall
 
-    if(objects.x[obj]<=0){
+    if(objects.x[obj] <= 0){
         objects.x[obj] = 0;
         objects.vx[obj] = -1 * objects.vx[obj];
     }
 
-    if(objects.y[obj]<=0){
+    if(objects.y[obj] <= 0){
         objects.y[obj] = 0;
         objects.vy[obj] = -1 * objects.vy[obj];
     }
 
-    if(objects.z[obj]<=0){
+    if(objects.z[obj] <= 0){
         objects.z[obj] = 0;
         objects.vz[obj] = -1 * objects.vz[obj];
     }
 
-    if(objects.x[obj]>= size){
+    if(objects.x[obj] >= size){
         objects.x[obj] = size;
         objects.vx[obj] = -1 * objects.vx[obj];
     }
 
-    if(objects.y[obj]>= size){
+    if(objects.y[obj] >= size){
         objects.y[obj] = size;
         objects.vy[obj] = -1 * objects.vy[obj];
     }
 
-    if(objects.z[obj]>= size){
+    if(objects.z[obj] >= size){
         objects.z[obj] = size;
         objects.vz[obj] = -1 * objects.vz[obj];
     }
 
     return 0;
-
 }
+
+int check_collision(set objects, int i, int j){
+    double distance = sqrt(pow((objects.x[i] - objects.x[j]), 2)\
+                            + pow((objects.y[i] - objects.y[j]), 2)\
+                            + pow((objects.z[i] - objects.z[j]), 2));
+
+    if(distance < 1.0){
+        collision_objects(objects, i, j);
+    }
+    return 0;
+}
+
+
 /*
 * This function will update the objects and their collisions
 *
@@ -235,7 +201,7 @@ int check_bounce(set objects, int obj, float size){
 * @param: int i                array position of the first object
 * @param: int j                array position of the second object
 */
-void collision_objects(set objects,int i, int j){
+int collision_objects(set objects, int i, int j){
 
     // Checks if both objects are active
     if (objects.active[i] && objects.active[j]){
@@ -247,9 +213,8 @@ void collision_objects(set objects,int i, int j){
 
         objects.active[j] = false;
     }
+    return 0;
 }
-
-
 /*                  DO NOT TOUCH THIS, DEATH PENALTY
 0->           1 ->          + 0 con 1      + 1 con 2       + 2 con 3       - 3 con 0
 | \          /|             + 0 con 2      + 1 con 3       - 2 con 0       - 3 con 1
@@ -259,7 +224,6 @@ V             V             + 0 con 3      - 1 con 0       - 2 con 1       - 3 c
 2             3
 
 */
-
 
 /* *
  * This function will write the errors in the parameter in error case
@@ -272,11 +236,11 @@ V             V             + 0 con 3      - 1 con 0       - 2 con 1       - 3 c
 int print_error_args(int argc, char* argv[]) {
     /*This function will print in the standard output the parameters when the function was called
       and it will show the errors while doing it.*/
-    cerr << argv[0] << " invoked with " << argc << " parameters." << endl;
+    cerr << argv[0] << " invoked with " << argc - 1  << " parameters." << endl;
     cerr << "Arguments:" << endl;
 
-    /*If the argc is not 5, it will show a ? character when a parameter is not in the function call*/
-    if (1 <= argc) { cerr << "  num_objects: " << argv[1] << endl; }
+    /* If argc is not 5, it will show a ? character when a parameter is not in the function call */
+    if (1 < argc) { cerr << "  num_objects: " << argv[1] << endl; }
     else { cerr << "  num_objects: ?" << endl; }
 
     if (2 <= argc) { cerr << "  num_iterations: " << argv[2] << endl; }
@@ -343,27 +307,46 @@ int main(int argc, char* argv[]) {
     }
 
     /* Store simulation arguments in a structure */
-
     parameters system_data{ stoi(argv[1]), stoi(argv[2]),
-                            stoi(argv[3]), stof(argv[4]),
-                            stof(argv[5])};
+                            stoi(argv[3]), stod(argv[4]),
+                            stod(argv[5])};
 
-
-    //cout << *argv[1] << endl;
-    cout << system_data.num_objects << endl;
     /* Declare the structure that holds objects' information */
-    set objects;
+    set objects{
+        (double *) malloc(sizeof(double) * system_data.num_objects),
+        (double *) malloc(sizeof(double) * system_data.num_objects),
+        (double *) malloc(sizeof(double) * system_data.num_objects),
+        (double *) malloc(sizeof(double) * system_data.num_objects),
+        (double *) malloc(sizeof(double) * system_data.num_objects),
+        (double *) malloc(sizeof(double) * system_data.num_objects),
+        (double *) malloc(sizeof(double) * system_data.num_objects),
+        (bool *) malloc(sizeof(bool) * system_data.num_objects)
+    };
+
+	/* Create mersenne-twister generator and create a uniform and a normal distribution */
+    mt19937_64 gen64(system_data.random_seed);
+    uniform_real_distribution<> position_unif_dist(0, system_data.size_enclosure);
+    normal_distribution<> mass_norm_dist{1E21, 1E15};
 
     /* Initialize x, y, z and m attributes of each object */
     for(int i = 0; i < system_data.num_objects; i++){
-        objects.x[i] = pos_generator(system_data.random_seed, system_data.size_enclosure);
-        objects.y[i] = pos_generator(system_data.random_seed, system_data.size_enclosure);
-        objects.z[i] = pos_generator(system_data.random_seed, system_data.size_enclosure);
-        objects.m[i] = mass_generator(system_data.random_seed);
+        objects.x[i] = position_unif_dist(gen64);
+        objects.y[i] = position_unif_dist(gen64);
+        objects.z[i] = position_unif_dist(gen64);
+        objects.m[i] = mass_norm_dist(gen64);
         objects.active[i] = true;
     }
     /* Write initial configuration to a file*/
     write_config(0, system_data, objects);
+
+    /* Initial collision checking */
+    for(int i = 0; i < system_data.num_objects; i++){
+        if( !objects.active[i] ){ continue; }
+        for(int j = 0; j < system_data.num_objects; j++){
+            if( i != j && objects.active[j])
+                check_collision(objects, i, j);
+        }
+    }
 
     /* Body of the simulation */
     for(int i = 0; i < system_data.num_iterations; i++){
@@ -371,10 +354,12 @@ int main(int argc, char* argv[]) {
         for(int a = 0; a < system_data.num_objects; a++){
             if (objects.active[a]){
                 check_bounce(objects, a, system_data.size_enclosure);
+            } else {
+                continue;
             }
             for(int b = 0; b < system_data.num_objects; b++){
-                if (objects.active[a] && objects.active[b]){
-                    collision_objects(objects, a, b);
+                if ( a != b && objects.active[b]){
+                    check_collision(objects, a, b);
                 }
             }
         }

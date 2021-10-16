@@ -1,3 +1,0 @@
-/home/mariwogr/Documentos/ARCOS/gravity_simulator/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/mariwogr/Documentos/ARCOS/gravity_simulator/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/mariwogr/Documentos/ARCOS/gravity_simulator/cmake-build-debug/CMakeFiles/gravity_simulator.dir
