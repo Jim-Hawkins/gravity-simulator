@@ -268,12 +268,17 @@ int print_error_args(int argc, char* argv[]) {
  */
 int write_config(int id, parameters system_data, set objects){
     ofstream out_file;
-    char res[50];
+    char res[100];
 
     /*If the id is 0 it will write the content in the init_config file*/
-    if (id == 0){ out_file.open("init_config.txt"); }
-    /*If the id is different than 0 the content will be written in the final_config file*/
-    else { out_file.open("final_config.txt"); }
+    if (id == 0){
+        out_file.open("../init_config.txt");
+    }
+    /*If the id is different from 0 the content will be written in the final_config file*/
+    else { out_file.open("../final_config.txt"); }
+
+    if(out_file.is_open()){cout << "se abrio" << endl;}
+    else{cout << "no se abrio" << endl;}
 
     sprintf(res, "%.3f ", system_data.size_enclosure);
     out_file << res;
@@ -283,9 +288,12 @@ int write_config(int id, parameters system_data, set objects){
     out_file << res << endl;
 
     for(int i = 0; i < system_data.num_objects; i++){
-        sprintf(res,
-                "%.3f %.3f %.3f %.3f %.3f %.3f %.3f",
-                objects.x[i], objects.y[i], objects.z[i], objects.vx[i], objects.vy[i], objects.vz[i], objects.m[i]);
+        if(objects.active[i]) {
+            sprintf(res,
+                    "%.3f %.3f %.3f %.3f %.3f %.3f %.3f",
+                    objects.x[i], objects.y[i], objects.z[i], objects.vx[i], objects.vy[i], objects.vz[i],
+                    objects.m[i]);
+        }
         out_file << res << endl;
     }
     out_file.close();
