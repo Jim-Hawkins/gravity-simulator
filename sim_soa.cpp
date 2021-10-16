@@ -205,7 +205,7 @@ int collision_objects(set objects, int i, int j){
 
     // Checks if both objects are active
     if (objects.active[i] && objects.active[j]){
-
+        cout << "colision" << endl;
         objects.m[i] = objects.m[i] + objects.m[j];
         objects.vx[i] = objects.vx[i] + objects.vx[j];
         objects.vy[i] = objects.vy[i] + objects.vy[j];
@@ -289,12 +289,14 @@ int write_config(int id, parameters system_data, set objects){
 
     for(int i = 0; i < system_data.num_objects; i++){
         if(objects.active[i]) {
+            cout << objects.active[i] << endl;
             sprintf(res,
                     "%.3f %.3f %.3f %.3f %.3f %.3f %.3f",
                     objects.x[i], objects.y[i], objects.z[i], objects.vx[i], objects.vy[i], objects.vz[i],
                     objects.m[i]);
+            out_file << res << endl;
         }
-        out_file << res << endl;
+
     }
     out_file.close();
     return 0;
@@ -359,9 +361,12 @@ int main(int argc, char* argv[]) {
     /* Body of the simulation */
     for(int i = 0; i < system_data.num_iterations; i++){
         gravitational_force(system_data.num_objects, objects, system_data.time_step);
+
         for(int a = 0; a < system_data.num_objects; a++){
+
             if (objects.active[a]){
                 check_bounce(objects, a, system_data.size_enclosure);
+                cout << " " << objects.x[a] << " " << objects.y[a] << " " << objects.z[a] << " " << objects.vx[a] << " " << objects.vy[a] << " " << objects.vz[a] << "a: " << a << endl;
             } else {
                 continue;
             }
