@@ -15,14 +15,13 @@ using namespace std;
 /* *
  * This function will check the parameters at the beginning
  *
- * @param int id                 whether it's the first or last file
- * @param parameters system_data data of the system (size_enclosure, etc.)
- * @param set objects            structure containing the information of the objects
+ * @param int argc                 its the number about how many parameters are in the execution
+ * @param char argv             it's an array of chars, inside it, we have the arguments
  * @return 0 on success
  */
 
 int parser(int argc, char* argv[]){
-
+    //Checking if the number of arguments its correct
     if (argc != 6 ){
         return -1;
     }
@@ -60,6 +59,7 @@ int parser(int argc, char* argv[]){
  * @param: set objects           structure of objects, with all the components of each point in the simulator
  * @param: int i                 position of the first point
  * @param: int j                 position of the second point
+ * @param: double                 it's an array to set the new force
  * @return force                 resulting force vector
  */
 void gravitational_force_calc(set *objects, int i, int j, double *force) {
@@ -181,6 +181,14 @@ int check_bounce(set *objects, int obj, double size){
 
     return 0;
 }
+
+/*
+* This function will check if the object collisions with another
+*
+* @param: set objects          array of objects with their properties
+* @param: int i                array position of the first object
+* @param: int j                array position of the second object
+*/
 
 int check_collision(set *objects, int i, int j){
     double distance = sqrt(pow((objects[i].x - objects[j].x), 2)\
