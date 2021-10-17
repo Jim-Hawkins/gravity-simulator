@@ -15,9 +15,8 @@ using namespace std;
 /* *
  * This function will check the parameters at the beginning
  *
- * @param int id                 whether it's the first or last file
- * @param parameters system_data data of the system (size_enclosure, etc.)
- * @param set objects            structure containing the information of the objects
+ * @param int argc                 its the number about how many parameters are in the execution
+ * @param char argv             it's an array of chars, inside it, we have the arguments
  * @return 0 on success
  */
 
