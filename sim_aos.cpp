@@ -2,7 +2,6 @@
 // Created by mariwogr on 16/10/21.
 //
 
-
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -63,18 +62,18 @@ int parser(int argc, char* argv[]){
  * @param: int j                 position of the second point
  * @return force                 resulting force vector
  */
-void gravitational_force_calc(set objects, int i, int j, double *force) {
+void gravitational_force_calc(set *objects, int i, int j, double *force) {
     double G = 6.674 * pow(10, -11);
     //double force[3];
 
-    double powSqX  = pow((objects.x[i] - objects.x[j]), 2);
-    double powSqY  = pow((objects.y[i] - objects.y[j]), 2);
-    double powSqZ  = pow((objects.z[i] - objects.z[j]), 2);
+    double powSqX  = pow((objects[i].x - objects[j].x), 2);
+    double powSqY  = pow((objects[i].y - objects[j].y), 2);
+    double powSqZ  = pow((objects[i].z - objects[j].z), 2);
 
     // It will return the three components of the gravitational force between i and j
-    force[0] += (G * objects.m[i] * objects.m[j] * (objects.x[i] - objects.x[j]))/(pow(sqrt(powSqX + powSqY + powSqZ),3));
-    force[1] += (G * objects.m[i] * objects.m[j] * (objects.y[i] - objects.y[j]))/(pow(sqrt(powSqX + powSqY + powSqZ),3));
-    force[2] += (G * objects.m[i] * objects.m[j] * (objects.z[i] - objects.z[j]))/(pow(sqrt(powSqX + powSqY + powSqZ),3));
+    force[0] += (G * objects[i].m * objects[j].m * (objects[i].x - objects[j].x))/(pow(sqrt(powSqX + powSqY + powSqZ),3));
+    force[1] += (G * objects[i].m * objects[j].m * (objects[i].y - objects[j].y))/(pow(sqrt(powSqX + powSqY + powSqZ),3));
+    force[2] += (G * objects[i].m * objects[j].m * (objects[i].z - objects[j].z))/(pow(sqrt(powSqX + powSqY + powSqZ),3));
 }
 
 /*
@@ -99,7 +98,7 @@ double accel_calc(double m, double F) {
  *
  * @return 0                        if the function was executed correctly
  */
-int gravitational_force(int num_objects, set objects, double time_step) {
+int gravitational_force(int num_objects, set *objects, double time_step) {
 
     // The 3 components of the gravitational force will be set to 0
     double force[3] = {0,0,0};
@@ -107,30 +106,30 @@ int gravitational_force(int num_objects, set objects, double time_step) {
 
     // The execution will pass through two nested loops to obtain the sum of gravitational forces of every point with the other points
     for(int i = 0; i < num_objects; i++) {
-        if ( !objects.active[i]){ continue; }
+        if ( !objects[i].active){ continue; }
         for (int j = 0; j < num_objects; j++) {
 
             // First it checks that the two points are active (not collided). If the two points are not the same,
             // it will sum the force of every component to the total force
-            if (objects.active[j] &&  i != j) {
+            if (objects[j].active &&  i != j) {
                 gravitational_force_calc(objects, i, j, &force[0]);
                 gravitational_force_calc(objects, i, j, &force[1]);
                 gravitational_force_calc(objects, i, j, &force[2]);
 
                 // Updates the acceleration
-                accel[0] = accel_calc(objects.m[i], force[0]);
-                accel[1] = accel_calc(objects.m[i], force[1]);
-                accel[2] = accel_calc(objects.m[i], force[2]);
+                accel[0] = accel_calc(objects[i].m, force[0]);
+                accel[1] = accel_calc(objects[i].m, force[1]);
+                accel[2] = accel_calc(objects[i].m, force[2]);
 
                 // Updates the speed
-                objects.vx[i] = objects.vx[i] + accel[0] * time_step;
-                objects.vy[i] = objects.vy[i] + accel[1] * time_step;
-                objects.vz[i] = objects.vz[i] + accel[2] * time_step;
+                objects[i].vx = objects[i].vx + accel[0] * time_step;
+                objects[i].vy = objects[i].vy + accel[1] * time_step;
+                objects[i].vz = objects[i].vz + accel[2] * time_step;
 
                 // Updates the position
-                objects.x[i] = objects.x[i] + objects.vx[i] * time_step;
-                objects.y[i] = objects.y[i] + objects.vy[i] * time_step;
-                objects.z[i] = objects.z[i] + objects.vz[i] * time_step;
+                objects[i].x = objects[i].x + objects[i].vx * time_step;
+                objects[i].y = objects[i].y + objects[i].vy * time_step;
+                objects[i].z = objects[i].z + objects[i].vz * time_step;
             }
         }
     }
@@ -146,47 +145,47 @@ int gravitational_force(int num_objects, set objects, double time_step) {
  *
  * @return 0                        if the function was executed correctly
  */
-int check_bounce(set objects, int obj, double size){
+int check_bounce(set *objects, int obj, double size){
 
     //check if the object bounce with a wall
 
-    if(objects.x[obj] <= 0){
-        objects.x[obj] = 0;
-        objects.vx[obj] = -1 * objects.vx[obj];
+    if(objects[obj].x <= 0){
+        objects[obj].x = 0;
+        objects[obj].vx = -1 * objects[obj].vx;
     }
 
-    if(objects.y[obj] <= 0){
-        objects.y[obj] = 0;
-        objects.vy[obj] = -1 * objects.vy[obj];
+    if(objects[obj].y <= 0){
+        objects[obj].y = 0;
+        objects[obj].vy = -1 * objects[obj].vy;
     }
 
-    if(objects.z[obj] <= 0){
-        objects.z[obj] = 0;
-        objects.vz[obj] = -1 * objects.vz[obj];
+    if(objects[obj].z <= 0){
+        objects[obj].z = 0;
+        objects[obj].vz = -1 * objects[obj].vz;
     }
 
-    if(objects.x[obj] >= size){
-        objects.x[obj] = size;
-        objects.vx[obj] = -1 * objects.vx[obj];
+    if(objects[obj].x >= size){
+        objects[obj].x = size;
+        objects[obj].vx = -1 * objects[obj].vx;
     }
 
-    if(objects.y[obj] >= size){
-        objects.y[obj] = size;
-        objects.vy[obj] = -1 * objects.vy[obj];
+    if(objects[obj].y >= size){
+        objects[obj].y = size;
+        objects[obj].vy = -1 * objects[obj].vy;
     }
 
-    if(objects.z[obj] >= size){
-        objects.z[obj] = size;
-        objects.vz[obj] = -1 * objects.vz[obj];
+    if(objects[obj].z >= size){
+        objects[obj].z = size;
+        objects[obj].vz = -1 * objects[obj].vz;
     }
 
     return 0;
 }
 
-int check_collision(set objects, int i, int j){
-    double distance = sqrt(pow((objects.x[i] - objects.x[j]), 2)\
-                            + pow((objects.y[i] - objects.y[j]), 2)\
-                            + pow((objects.z[i] - objects.z[j]), 2));
+int check_collision(set *objects, int i, int j){
+    double distance = sqrt(pow((objects[i].x - objects[j].x), 2)\
+                            + pow((objects[i].y - objects[j].y), 2)\
+                            + pow((objects[i].z - objects[j].z), 2));
 
     if(distance < 1.0){
         collision_objects(objects, i, j);
@@ -202,29 +201,19 @@ int check_collision(set objects, int i, int j){
 * @param: int i                array position of the first object
 * @param: int j                array position of the second object
 */
-int collision_objects(set objects, int i, int j){
+int collision_objects(set *objects, int i, int j){
 
     // Checks if both objects are active
-    if (objects.active[i] && objects.active[j]){
-        cout << "colision" << endl;
-        objects.m[i] = objects.m[i] + objects.m[j];
-        objects.vx[i] = objects.vx[i] + objects.vx[j];
-        objects.vy[i] = objects.vy[i] + objects.vy[j];
-        objects.vz[i] = objects.vz[i] + objects.vz[j];
+    if (objects[i].active && objects[j].active){
+        objects[i].m = objects[i].m + objects[j].m;
+        objects[i].vx = objects[i].vx + objects[j].vx;
+        objects[i].vy = objects[i].vy + objects[j].vy;
+        objects[i].vz = objects[i].vz + objects[j].vz;
 
-        objects.active[j] = false;
+        objects[j].active = false;
     }
     return 0;
 }
-/*                  DO NOT TOUCH THIS, DEATH PENALTY
-0->           1 ->          + 0 con 1      + 1 con 2       + 2 con 3       - 3 con 0
-| \          /|             + 0 con 2      + 1 con 3       - 2 con 0       - 3 con 1
-V             V             + 0 con 3      - 1 con 0       - 2 con 1       - 3 con 2
-
-
-2             3
-
-*/
 
 /* *
  * This function will write the errors in the parameter in error case
@@ -267,7 +256,7 @@ int print_error_args(int argc, char* argv[]) {
  * @param set objects            structure containing the information of the objects
  * @return 0 on success
  */
-int write_config(int id, parameters system_data, set objects){
+int write_config(int id, parameters system_data, set *objects){
     ofstream out_file;
     char res[100];
 
@@ -278,9 +267,6 @@ int write_config(int id, parameters system_data, set objects){
         /*If the id is different from 0 the content will be written in the final_config file*/
     else { out_file.open("../final_config.txt"); }
 
-    if(out_file.is_open()){cout << "se abrio" << endl;}
-    else{cout << "no se abrio" << endl;}
-
     sprintf(res, "%.3f ", system_data.size_enclosure);
     out_file << res;
     sprintf(res, "%.3f ", system_data.time_step);
@@ -289,12 +275,11 @@ int write_config(int id, parameters system_data, set objects){
     out_file << res << endl;
 
     for(int i = 0; i < system_data.num_objects; i++){
-        if(objects.active[i]) {
-            cout << objects.active[i] << endl;
+        if(objects[i].active) {
             sprintf(res,
                     "%.3f %.3f %.3f %.3f %.3f %.3f %.3f",
-                    objects.x[i], objects.y[i], objects.z[i], objects.vx[i], objects.vy[i], objects.vz[i],
-                    objects.m[i]);
+                    objects[i].x, objects[i].y, objects[i].z, objects[i].vx, objects[i].vy, objects[i].vz,
+                    objects[i].m);
             out_file << res << endl;
         }
 
@@ -323,16 +308,7 @@ int main(int argc, char* argv[]) {
                             stod(argv[5])};
 
     /* Declare the structure that holds objects' information */
-    set objects{
-            (double *) malloc(sizeof(double) * system_data.num_objects),
-            (double *) malloc(sizeof(double) * system_data.num_objects),
-            (double *) malloc(sizeof(double) * system_data.num_objects),
-            (double *) malloc(sizeof(double) * system_data.num_objects),
-            (double *) malloc(sizeof(double) * system_data.num_objects),
-            (double *) malloc(sizeof(double) * system_data.num_objects),
-            (double *) malloc(sizeof(double) * system_data.num_objects),
-            (bool *) malloc(sizeof(bool) * system_data.num_objects)
-    };
+    set *objects = new set[system_data.num_objects];
 
     /* Create mersenne-twister generator and create a uniform and a normal distribution */
     mt19937_64 gen64(system_data.random_seed);
@@ -341,20 +317,20 @@ int main(int argc, char* argv[]) {
 
     /* Initialize x, y, z and m attributes of each object */
     for(int i = 0; i < system_data.num_objects; i++){
-        objects.x[i] = position_unif_dist(gen64);
-        objects.y[i] = position_unif_dist(gen64);
-        objects.z[i] = position_unif_dist(gen64);
-        objects.m[i] = mass_norm_dist(gen64);
-        objects.active[i] = true;
+        objects[i].x = position_unif_dist(gen64);
+        objects[i].y = position_unif_dist(gen64);
+        objects[i].z = position_unif_dist(gen64);
+        objects[i].m = mass_norm_dist(gen64);
+        objects[i].active = true;
     }
     /* Write initial configuration to a file*/
     write_config(0, system_data, objects);
 
     /* Initial collision checking */
     for(int i = 0; i < system_data.num_objects; i++){
-        if( !objects.active[i] ){ continue; }
+        if( !objects[i].active ){ continue; }
         for(int j = 0; j < system_data.num_objects; j++){
-            if( i != j && objects.active[j])
+            if( i != j && objects[j].active)
                 check_collision(objects, i, j);
         }
     }
@@ -365,14 +341,13 @@ int main(int argc, char* argv[]) {
 
         for(int a = 0; a < system_data.num_objects; a++){
 
-            if (objects.active[a]){
+            if (objects[a].active){
                 check_bounce(objects, a, system_data.size_enclosure);
-                cout << " " << objects.x[a] << " " << objects.y[a] << " " << objects.z[a] << " " << objects.vx[a] << " " << objects.vy[a] << " " << objects.vz[a] << "a: " << a << endl;
             } else {
                 continue;
             }
             for(int b = 0; b < system_data.num_objects; b++){
-                if ( a != b && objects.active[b]){
+                if ( a != b && objects[b].active){
                     check_collision(objects, a, b);
                 }
             }

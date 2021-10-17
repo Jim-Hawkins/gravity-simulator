@@ -64,7 +64,6 @@ int parser(int argc, char* argv[]){
  */
 void gravitational_force_calc(set objects, int i, int j, double *force) {
     double G = 6.674 * pow(10, -11);
-    //double force[3];
 
     double powSqX  = pow((objects.x[i] - objects.x[j]), 2);
     double powSqY  = pow((objects.y[i] - objects.y[j]), 2);
@@ -137,7 +136,7 @@ int gravitational_force(int num_objects, set objects, double time_step) {
 }
 
 /*
- * This function check if the object bounce with a wall and change the values if it's necessary
+ * This function checks if the object bounce with a wall and change the values if it's necessary
  *
  * @param: set objects              structure of objects, with all the components of each point in the simulator
  * @param: float size         It's the size of the wall
@@ -182,6 +181,16 @@ int check_bounce(set objects, int obj, double size){
     return 0;
 }
 
+/*
+ * This function will calculate the euclidean distance between two points i and j in the set of objects: objects (structure
+ * of arrays)
+ *
+ * @param: set objects              structure of objects, with all the components of each point in the simulator
+ * @param: int i                    i-position of one point in the set of objects
+ * @param: int j                    j-position of one point in the set of objects
+ *
+ * return 0                         if the execution was correctly executed
+ */
 int check_collision(set objects, int i, int j){
     double distance = sqrt(pow((objects.x[i] - objects.x[j]), 2)\
                             + pow((objects.y[i] - objects.y[j]), 2)\
@@ -205,7 +214,6 @@ int collision_objects(set objects, int i, int j){
 
     // Checks if both objects are active
     if (objects.active[i] && objects.active[j]){
-        cout << "colision" << endl;
         objects.m[i] = objects.m[i] + objects.m[j];
         objects.vx[i] = objects.vx[i] + objects.vx[j];
         objects.vy[i] = objects.vy[i] + objects.vy[j];
@@ -215,15 +223,6 @@ int collision_objects(set objects, int i, int j){
     }
     return 0;
 }
-/*                  DO NOT TOUCH THIS, DEATH PENALTY
-0->           1 ->          + 0 con 1      + 1 con 2       + 2 con 3       - 3 con 0
-| \          /|             + 0 con 2      + 1 con 3       - 2 con 0       - 3 con 1
-V             V             + 0 con 3      - 1 con 0       - 2 con 1       - 3 con 2
-
-
-2             3
-
-*/
 
 /* *
  * This function will write the errors in the parameter in error case
@@ -277,9 +276,6 @@ int write_config(int id, parameters system_data, set objects){
     /*If the id is different from 0 the content will be written in the final_config file*/
     else { out_file.open("../final_config.txt"); }
 
-    if(out_file.is_open()){cout << "se abrio" << endl;}
-    else{cout << "no se abrio" << endl;}
-
     sprintf(res, "%.3f ", system_data.size_enclosure);
     out_file << res;
     sprintf(res, "%.3f ", system_data.time_step);
@@ -289,7 +285,6 @@ int write_config(int id, parameters system_data, set objects){
 
     for(int i = 0; i < system_data.num_objects; i++){
         if(objects.active[i]) {
-            cout << objects.active[i] << endl;
             sprintf(res,
                     "%.3f %.3f %.3f %.3f %.3f %.3f %.3f",
                     objects.x[i], objects.y[i], objects.z[i], objects.vx[i], objects.vy[i], objects.vz[i],
@@ -366,7 +361,6 @@ int main(int argc, char* argv[]) {
 
             if (objects.active[a]){
                 check_bounce(objects, a, system_data.size_enclosure);
-                cout << " " << objects.x[a] << " " << objects.y[a] << " " << objects.z[a] << " " << objects.vx[a] << " " << objects.vy[a] << " " << objects.vz[a] << "a: " << a << endl;
             } else {
                 continue;
             }
