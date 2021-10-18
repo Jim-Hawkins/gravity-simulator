@@ -111,27 +111,26 @@ int gravitational_force(int num_objects, set *objects, double time_step) {
 
             // First it checks that the two points are active (not collided). If the two points are not the same,
             // it will sum the force of every component to the total force
-            if (objects[j].active &&  i != j) {
+            if (objects[j].active && i != j) {
                 gravitational_force_calc(objects, i, j, &force[0]);
                 gravitational_force_calc(objects, i, j, &force[1]);
                 gravitational_force_calc(objects, i, j, &force[2]);
-
-                // Updates the acceleration
-                accel[0] = accel_calc(objects[i].m, force[0]);
-                accel[1] = accel_calc(objects[i].m, force[1]);
-                accel[2] = accel_calc(objects[i].m, force[2]);
-
-                // Updates the speed
-                objects[i].vx = objects[i].vx + accel[0] * time_step;
-                objects[i].vy = objects[i].vy + accel[1] * time_step;
-                objects[i].vz = objects[i].vz + accel[2] * time_step;
-
-                // Updates the position
-                objects[i].x = objects[i].x + objects[i].vx * time_step;
-                objects[i].y = objects[i].y + objects[i].vy * time_step;
-                objects[i].z = objects[i].z + objects[i].vz * time_step;
             }
         }
+        // Updates the acceleration
+        accel[0] = accel_calc(objects[i].m, force[0]);
+        accel[1] = accel_calc(objects[i].m, force[1]);
+        accel[2] = accel_calc(objects[i].m, force[2]);
+
+        // Updates the speed
+        objects[i].vx = objects[i].vx + accel[0] * time_step;
+        objects[i].vy = objects[i].vy + accel[1] * time_step;
+        objects[i].vz = objects[i].vz + accel[2] * time_step;
+
+        // Updates the position
+        objects[i].x = objects[i].x + objects[i].vx * time_step;
+        objects[i].y = objects[i].y + objects[i].vy * time_step;
+        objects[i].z = objects[i].z + objects[i].vz * time_step;
     }
     return 0;
 }
@@ -331,6 +330,14 @@ int main(int argc, char* argv[]) {
         objects[i].m = mass_norm_dist(gen64);
         objects[i].active = true;
     }
+
+    cout << "Creating simulation:" << endl;
+    cout << "  num_objects: " << system_data.num_objects << endl;
+    cout << "  num_iterations: " << system_data.num_iterations << endl;
+    cout << "  random_seed: " << system_data.random_seed << endl;
+    cout << "  size_enclosure: " << system_data.size_enclosure << endl;
+    cout << "  time_step: " << system_data.time_step << endl;
+
     /* Write initial configuration to a file*/
     write_config(0, system_data, objects);
 

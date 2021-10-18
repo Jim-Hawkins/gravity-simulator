@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/mariwogr/Documentos/ARCOS/gravity_simulator/sim_soa.cpp" "/home/mariwogr/Documentos/ARCOS/gravity_simulator/cmake-build-release/CMakeFiles/gravity_simulator.dir/sim_soa.cpp.o"
+  "/home/sergio/Documentos/repos/gravity-simulator/sim_soa.cpp" "/home/sergio/Documentos/repos/gravity-simulator/cmake-build-release/CMakeFiles/gravity_simulator.dir/sim_soa.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

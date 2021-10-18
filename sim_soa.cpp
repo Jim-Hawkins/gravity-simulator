@@ -113,7 +113,8 @@ int gravitational_force(int num_objects, set objects, double time_step) {
                 gravitational_force_calc(objects, i, j, &force[0]);
                 gravitational_force_calc(objects, i, j, &force[1]);
                 gravitational_force_calc(objects, i, j, &force[2]);
-
+		}
+	}
         // Updates the acceleration
         accel[0] = accel_calc(objects.m[i], force[0]);
         accel[1] = accel_calc(objects.m[i], force[1]);
@@ -128,8 +129,6 @@ int gravitational_force(int num_objects, set objects, double time_step) {
         objects.x[i] = objects.x[i] + objects.vx[i] * time_step;
         objects.y[i] = objects.y[i] + objects.vy[i] * time_step;
         objects.z[i] = objects.z[i] + objects.vz[i] * time_step;
-            }
-        }
     }
     return 0;
 }
@@ -326,6 +325,14 @@ int main(int argc, char* argv[]) {
         (double *) malloc(sizeof(double) * system_data.num_objects),
         (bool *) malloc(sizeof(bool) * system_data.num_objects)
     };
+
+    cout << "Creating simulation:" << endl;
+    cout << "  num_objects: " << system_data.num_objects << endl;
+    cout << "  num_iterations: " << system_data.num_iterations << endl;
+    cout << "  random_seed: " << system_data.random_seed << endl;
+    cout << "  size_enclosure: " << system_data.size_enclosure << endl;
+    cout << "  time_step: " << system_data.time_step << endl;
+
 
 	/* Create mersenne-twister generator and create a uniform and a normal distribution */
     mt19937_64 gen64(system_data.random_seed);
