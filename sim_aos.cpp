@@ -63,17 +63,17 @@ int parser(int argc, char* argv[]){
  * @return force                 resulting force vector
  */
 void gravitational_force_calc(set *objects, int i, int j, double *force) {
-    double G = 6.674 * pow(10, -11);
-    //double force[3];
+    double G = 6.674 * 10E-11;
 
     double powSqX  = pow((objects[i].x - objects[j].x), 2);
     double powSqY  = pow((objects[i].y - objects[j].y), 2);
     double powSqZ  = pow((objects[i].z - objects[j].z), 2);
 
     // It will return the three components of the gravitational force between i and j
-    force[0] += (G * objects[i].m * objects[j].m * (objects[i].x - objects[j].x))/(pow(sqrt(powSqX + powSqY + powSqZ),3));
-    force[1] += (G * objects[i].m * objects[j].m * (objects[i].y - objects[j].y))/(pow(sqrt(powSqX + powSqY + powSqZ),3));
-    force[2] += (G * objects[i].m * objects[j].m * (objects[i].z - objects[j].z))/(pow(sqrt(powSqX + powSqY + powSqZ),3));
+
+    force[0] += (G * objects[i].m * objects[j].m * (objects[i].x - objects[j].x))/(std::sqrt((powSqX + powSqY + powSqZ)*(powSqX + powSqY + powSqZ)*(powSqX + powSqY + powSqZ)));
+    force[1] += (G * objects[i].m * objects[j].m * (objects[i].y - objects[j].y))/(std::sqrt((powSqX + powSqY + powSqZ)*(powSqX + powSqY + powSqZ)*(powSqX + powSqY + powSqZ)));
+    force[2] += (G * objects[i].m * objects[j].m * (objects[i].z - objects[j].z))/(std::sqrt((powSqX + powSqY + powSqZ)*(powSqX + powSqY + powSqZ)*(powSqX + powSqY + powSqZ)));
 }
 
 /*
@@ -87,7 +87,6 @@ void gravitational_force_calc(set *objects, int i, int j, double *force) {
 double accel_calc(double m, double F) {
     return (1/m)*F;
 }
-
 
 /*
  * This function updates the speed vector v and the position of every point in the set objects of points
@@ -194,7 +193,7 @@ int check_bounce(set *objects, int obj, double size){
 */
 
 int check_collision(set *objects, int i, int j){
-    double distance = sqrt(pow((objects[i].x - objects[j].x), 2)\
+    double distance = std::sqrt(pow((objects[i].x - objects[j].x), 2)\
                             + pow((objects[i].y - objects[j].y), 2)\
                             + pow((objects[i].z - objects[j].z), 2));
 
