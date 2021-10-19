@@ -1,0 +1,300 @@
+Iteration: 0
+Position(0): 1335.06 1391.13 4523.64
+Position(1): 747.962 5671.42 6340.83
+Iteration: 1
+Position(0): 1327.54 1445.93 4546.9
+Position(1): 755.478 5616.61 6317.56
+Iteration: 2
+Position(0): 1316.01 1529.95 4582.57
+Position(1): 767.003 5532.59 6281.89
+Iteration: 3
+Position(0): 1300.14 1645.7 4631.72
+Position(1): 782.88 5416.84 6232.75
+Iteration: 4
+Position(0): 1279.36 1797.2 4696.03
+Position(1): 803.659 5265.35 6168.43
+Iteration: 5
+Position(0): 1252.78 1990.95 4778.29
+Position(1): 830.234 5071.59 6086.17
+Iteration: 6
+Position(0): 1218.86 2238.26 4883.29
+Position(1): 864.156 4824.28 5981.18
+Iteration: 7
+Position(0): 1174.51 2561.59 5020.55
+Position(1): 908.504 4500.96 5843.91
+Iteration: 8
+Position(0): 1111.63 3020.06 5215.2
+Position(1): 971.389 4042.49 5649.27
+Iteration: 9
+Position(0): 982.048 3964.78 5616.27
+Position(1): 1100.97 3097.77 5248.19
+Iteration: 10
+Position(0): 945.219 4233.28 5730.27
+Position(1): 1137.8 2829.26 5134.19
+Iteration: 11
+Position(0): 943.758 4243.94 5734.79
+Position(1): 1139.26 2818.61 5129.67
+Iteration: 12
+Position(0): 976.615 4004.38 5633.09
+Position(1): 1106.4 3058.16 5231.37
+Iteration: 13
+Position(0): 1087.34 3197.1 5290.36
+Position(1): 995.673 3865.44 5574.1
+Iteration: 14
+Position(0): 1041.98 3527.81 5430.76
+Position(1): 1041.03 3534.74 5433.7
+Iteration: 15
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 16
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 17
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 18
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 19
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 20
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 21
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 22
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 23
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 24
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 25
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 26
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 27
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 28
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 29
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 30
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 31
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 32
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 33
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 34
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 35
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 36
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 37
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 38
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 39
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 40
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 41
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 42
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 43
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 44
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 45
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 46
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 47
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 48
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 49
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 50
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 51
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 52
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 53
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 54
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 55
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 56
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 57
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 58
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 59
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 60
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 61
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 62
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 63
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 64
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 65
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 66
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 67
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 68
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 69
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 70
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 71
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 72
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 73
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 74
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 75
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 76
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 77
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 78
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 79
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 80
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 81
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 82
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 83
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 84
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 85
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 86
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 87
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 88
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 89
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 90
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 91
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 92
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 93
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 94
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 95
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 96
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 97
+Position(0): 0 10000 10000
+Position(1): 10000 0 0
+Iteration: 98
+Position(0): 10000 0 0
+Position(1): 0 10000 10000
+Iteration: 99
+Position(0): 0 10000 10000
+Position(1): 10000 0 0

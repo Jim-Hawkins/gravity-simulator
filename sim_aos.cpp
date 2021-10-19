@@ -1,6 +1,8 @@
 //
 // Created by mariwogr on 16/10/21.
 //
+#include <limits>
+#include <iomanip>
 
 #include <string>
 #include <iostream>
@@ -63,17 +65,17 @@ int parser(int argc, char* argv[]){
  * @return force                 resulting force vector
  */
 void gravitational_force_calc(set *objects, int i, int j, double *force) {
-    double G = 6.674 * 10E-11;
+    double G = 6.674 * 1E-11;
 
     double powSqX  = pow((objects[i].x - objects[j].x), 2);
     double powSqY  = pow((objects[i].y - objects[j].y), 2);
     double powSqZ  = pow((objects[i].z - objects[j].z), 2);
-
+    double norm = std::sqrt(powSqX + powSqY + powSqZ);
     // It will return the three components of the gravitational force between i and j
 
-    force[0] += (G * objects[i].m * objects[j].m * (objects[i].x - objects[j].x))/(std::sqrt((powSqX + powSqY + powSqZ)*(powSqX + powSqY + powSqZ)*(powSqX + powSqY + powSqZ)));
-    force[1] += (G * objects[i].m * objects[j].m * (objects[i].y - objects[j].y))/(std::sqrt((powSqX + powSqY + powSqZ)*(powSqX + powSqY + powSqZ)*(powSqX + powSqY + powSqZ)));
-    force[2] += (G * objects[i].m * objects[j].m * (objects[i].z - objects[j].z))/(std::sqrt((powSqX + powSqY + powSqZ)*(powSqX + powSqY + powSqZ)*(powSqX + powSqY + powSqZ)));
+    force[0] -= (G * objects[i].m * objects[j].m * (objects[i].x - objects[j].x))/(norm * norm * norm);
+    force[1] -= (G * objects[i].m * objects[j].m * (objects[i].y - objects[j].y))/(norm * norm * norm);
+    force[2] -= (G * objects[i].m * objects[j].m * (objects[i].z - objects[j].z))/(norm * norm * norm);
 }
 
 /*
@@ -100,37 +102,38 @@ double accel_calc(double m, double F) {
 
 int gravitational_force(int num_objects, set *objects, double time_step, double *force, double *accel) {
 
-    // The execution will pass through two nested loops to obtain the sum of gravitational forces of every point with the other points
+    // The execution will pass through two nested loops to obtain the sum of gravitational forces of every point with
+    // the other points. Analogous to take a screenshot of the system before updating speeds and positions.
     for(int i = 0; i < num_objects; i++) {
         if (!objects[i].active) { continue; }
         for (int j = 0; j < num_objects; j++) {
 
-            // First it checks that the two points are active (not collided). If the two points are not the same,
-            // it will sum the force of every component to the total force
+            // If objects i and j are active and different, update i's slot in
+            // force array (force[3*i], force[3*i+1], force[3*i+2])
             if (objects[j].active && i != j) {
-                gravitational_force_calc(objects, i, j, &force[i*3]);
-                gravitational_force_calc(objects, i, j, &force[(i*3)+1]);
-                gravitational_force_calc(objects, i, j, &force[(i*3)+2]);
+                gravitational_force_calc(objects, i, j, &force[3 * i]);
             }
         }
+        cout << i << " " << std::setprecision(std::numeric_limits<double>::max_digits10) << force[3*i] << endl;
     }
-
+    // Once we have a screenshot of the system in force array, update each active object
     for (int i = 0; i < num_objects; i++) {
-        // Updates the acceleration
-        accel[0] = accel_calc(objects[i].m, force[i * 3]);
-        accel[1] = accel_calc(objects[i].m, force[(i * 3) + 1]);
-        accel[2] = accel_calc(objects[i].m, force[(i * 3) + 2]);
+        if(objects[i].active) {
+            // Updates the acceleration
+            accel[0] = accel_calc(objects[i].m, force[i * 3]);
+            accel[1] = accel_calc(objects[i].m, force[(i * 3) + 1]);
+            accel[2] = accel_calc(objects[i].m, force[(i * 3) + 2]);
 
-        // Updates the speed
-        objects[i].vx = objects[i].vx + accel[0] * time_step;
-        objects[i].vy = objects[i].vy + accel[1] * time_step;
-        objects[i].vz = objects[i].vz + accel[2] * time_step;
+            // Updates the speed
+            objects[i].vx = objects[i].vx + accel[0] * time_step;
+            objects[i].vy = objects[i].vy + accel[1] * time_step;
+            objects[i].vz = objects[i].vz + accel[2] * time_step;
 
-        // Updates the position
-        objects[i].x = objects[i].x + objects[i].vx * time_step;
-        objects[i].y = objects[i].y + objects[i].vy * time_step;
-        objects[i].z = objects[i].z + objects[i].vz * time_step;
-
+            // Updates the position
+            objects[i].x = objects[i].x + objects[i].vx * time_step;
+            objects[i].y = objects[i].y + objects[i].vy * time_step;
+            objects[i].z = objects[i].z + objects[i].vz * time_step;
+        }
     }
     return 0;
 }
@@ -278,7 +281,7 @@ int write_config(int id, parameters system_data, set *objects){
     out_file << res;
     sprintf(res, "%.3f ", system_data.time_step);
     out_file << res;
-    sprintf(res, "%d.000", system_data.num_objects);
+    sprintf(res, "%d", system_data.num_objects);
     out_file << res << endl;
 
     for(int i = 0; i < system_data.num_objects; i++){
@@ -316,7 +319,6 @@ int main(int argc, char* argv[]) {
 
     /* Declare the structure that holds objects' information */
     set *objects = new set[system_data.num_objects];
-
     /* Create mersenne-twister generator and create a uniform and a normal distribution */
     mt19937_64 gen64(system_data.random_seed);
     uniform_real_distribution<> position_unif_dist(0, system_data.size_enclosure);
@@ -355,6 +357,10 @@ int main(int argc, char* argv[]) {
 
     /* Body of the simulation */
     for(int i = 0; i < system_data.num_iterations; i++){
+        //Vaciar el buffer force antes de volver a llamar a gravitational_force. Si no, el nuevo
+        // valor es la suma del resultado actual MÁS el valor que tuviera de antes -> eso está mal
+        // P.S. no sé vaciar un buffer
+        for(int foo=0; foo < system_data.num_objects * 3; foo++){force[foo] = 0;}
         gravitational_force(system_data.num_objects, objects, system_data.time_step, force, accel);
 
         for(int a = 0; a < system_data.num_objects; a++){
