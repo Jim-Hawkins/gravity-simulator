@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/sergio/Documentos/repos/gravity-simulator/sim_soa.cpp
+/home/mariwogr/Documentos/ARCOS/gravity_simulator/sim_aos.cpp
 string
 -
 iostream
@@ -17,8 +17,8 @@ random
 -
 cmath
 -
-sim_soa.hpp
-/home/sergio/Documentos/repos/gravity-simulator/sim_soa.hpp
+sim_aos.hpp
+/home/mariwogr/Documentos/ARCOS/gravity_simulator/sim_aos.hpp
 
-/home/sergio/Documentos/repos/gravity-simulator/sim_soa.hpp
+/home/mariwogr/Documentos/ARCOS/gravity_simulator/sim_aos.hpp
 

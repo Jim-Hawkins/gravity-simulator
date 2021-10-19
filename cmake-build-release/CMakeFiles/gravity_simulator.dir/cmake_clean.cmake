@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/gravity_simulator.dir/sim_soa.cpp.o"
+  "CMakeFiles/gravity_simulator.dir/sim_aos.cpp.o"
   "gravity_simulator"
   "gravity_simulator.pdb"
 )

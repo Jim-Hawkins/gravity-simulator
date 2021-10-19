@@ -98,29 +98,30 @@ double accel_calc(double m, double F) {
  *
  * @return 0                        if the function was executed correctly
  */
-int gravitational_force(int num_objects, set *objects, double time_step) {
 
-    // The 3 components of the gravitational force will be set to 0
-    double force[3] = {0,0,0};
+int gravitational_force(int num_objects, set *objects, double time_step, double *force) {
+
     double accel[3] = {0,0,0};
-
     // The execution will pass through two nested loops to obtain the sum of gravitational forces of every point with the other points
     for(int i = 0; i < num_objects; i++) {
-        if ( !objects[i].active){ continue; }
+        if (!objects[i].active) { continue; }
         for (int j = 0; j < num_objects; j++) {
 
             // First it checks that the two points are active (not collided). If the two points are not the same,
             // it will sum the force of every component to the total force
             if (objects[j].active && i != j) {
-                gravitational_force_calc(objects, i, j, &force[0]);
-                gravitational_force_calc(objects, i, j, &force[1]);
-                gravitational_force_calc(objects, i, j, &force[2]);
+                gravitational_force_calc(objects, i, j, &force[i*3]);
+                gravitational_force_calc(objects, i, j, &force[(i*3)+1]);
+                gravitational_force_calc(objects, i, j, &force[(i*3)+2]);
             }
         }
+    }
+
+    for (int i = 0; i < num_objects; i++) {
         // Updates the acceleration
-        accel[0] = accel_calc(objects[i].m, force[0]);
-        accel[1] = accel_calc(objects[i].m, force[1]);
-        accel[2] = accel_calc(objects[i].m, force[2]);
+        accel[0] = accel_calc(objects[i].m, force[i*3]);
+        accel[1] = accel_calc(objects[i].m, force[(i*3)+1]);
+        accel[2] = accel_calc(objects[i].m, force[(i*3)+2]);
 
         // Updates the speed
         objects[i].vx = objects[i].vx + accel[0] * time_step;
@@ -131,7 +132,10 @@ int gravitational_force(int num_objects, set *objects, double time_step) {
         objects[i].x = objects[i].x + objects[i].vx * time_step;
         objects[i].y = objects[i].y + objects[i].vy * time_step;
         objects[i].z = objects[i].z + objects[i].vz * time_step;
+
     }
+
+
     return 0;
 }
 
@@ -341,6 +345,8 @@ int main(int argc, char* argv[]) {
     /* Write initial configuration to a file*/
     write_config(0, system_data, objects);
 
+    double *force = (double *) malloc(sizeof(double) * system_data.num_objects * 3);
+
     /* Initial collision checking */
     for(int i = 0; i < system_data.num_objects; i++){
         if( !objects[i].active ){ continue; }
@@ -352,7 +358,7 @@ int main(int argc, char* argv[]) {
 
     /* Body of the simulation */
     for(int i = 0; i < system_data.num_iterations; i++){
-        gravitational_force(system_data.num_objects, objects, system_data.time_step);
+        gravitational_force(system_data.num_objects, objects, system_data.time_step, force);
 
         for(int a = 0; a < system_data.num_objects; a++){
 

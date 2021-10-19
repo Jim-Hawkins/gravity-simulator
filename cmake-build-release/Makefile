@@ -57,10 +57,10 @@ RM = /snap/clion/169/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sergio/Documentos/repos/gravity-simulator
+CMAKE_SOURCE_DIR = /home/mariwogr/Documentos/ARCOS/gravity_simulator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sergio/Documentos/repos/gravity-simulator/cmake-build-release
+CMAKE_BINARY_DIR = /home/mariwogr/Documentos/ARCOS/gravity_simulator/cmake-build-release
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergio/Documentos/repos/gravity-simulator/cmake-build-release/CMakeFiles /home/sergio/Documentos/repos/gravity-simulator/cmake-build-release//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mariwogr/Documentos/ARCOS/gravity_simulator/cmake-build-release/CMakeFiles /home/mariwogr/Documentos/ARCOS/gravity_simulator/cmake-build-release//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergio/Documentos/repos/gravity-simulator/cmake-build-release/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mariwogr/Documentos/ARCOS/gravity_simulator/cmake-build-release/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,29 +129,29 @@ gravity_simulator/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gravity_simulator.dir/build.make CMakeFiles/gravity_simulator.dir/build
 .PHONY : gravity_simulator/fast
 
-sim_soa.o: sim_soa.cpp.o
-.PHONY : sim_soa.o
+sim_aos.o: sim_aos.cpp.o
+.PHONY : sim_aos.o
 
 # target to build an object file
-sim_soa.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gravity_simulator.dir/build.make CMakeFiles/gravity_simulator.dir/sim_soa.cpp.o
-.PHONY : sim_soa.cpp.o
+sim_aos.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gravity_simulator.dir/build.make CMakeFiles/gravity_simulator.dir/sim_aos.cpp.o
+.PHONY : sim_aos.cpp.o
 
-sim_soa.i: sim_soa.cpp.i
-.PHONY : sim_soa.i
+sim_aos.i: sim_aos.cpp.i
+.PHONY : sim_aos.i
 
 # target to preprocess a source file
-sim_soa.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gravity_simulator.dir/build.make CMakeFiles/gravity_simulator.dir/sim_soa.cpp.i
-.PHONY : sim_soa.cpp.i
+sim_aos.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gravity_simulator.dir/build.make CMakeFiles/gravity_simulator.dir/sim_aos.cpp.i
+.PHONY : sim_aos.cpp.i
 
-sim_soa.s: sim_soa.cpp.s
-.PHONY : sim_soa.s
+sim_aos.s: sim_aos.cpp.s
+.PHONY : sim_aos.s
 
 # target to generate assembly for a file
-sim_soa.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gravity_simulator.dir/build.make CMakeFiles/gravity_simulator.dir/sim_soa.cpp.s
-.PHONY : sim_soa.cpp.s
+sim_aos.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gravity_simulator.dir/build.make CMakeFiles/gravity_simulator.dir/sim_aos.cpp.s
+.PHONY : sim_aos.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... gravity_simulator"
-	@echo "... sim_soa.o"
-	@echo "... sim_soa.i"
-	@echo "... sim_soa.s"
+	@echo "... sim_aos.o"
+	@echo "... sim_aos.i"
+	@echo "... sim_aos.s"
 .PHONY : help
 
 

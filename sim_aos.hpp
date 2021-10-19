@@ -6,7 +6,7 @@
 #define GRAVITY_SIMULATOR_SIM_AOS_HPP
 
 struct parameters {
-    int num_objects;
+    const int num_objects;
     int num_iterations;
     int random_seed;
     double size_enclosure;
