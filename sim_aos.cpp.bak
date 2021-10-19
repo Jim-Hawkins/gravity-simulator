@@ -98,8 +98,9 @@ double accel_calc(double m, double F) {
  * @return 0                        if the function was executed correctly
  */
 
-int gravitational_force(int num_objects, set *objects, double time_step, double *force, double *accel) {
+int gravitational_force(int num_objects, set *objects, double time_step, double *force) {
 
+    double accel[3] = {0,0,0};
     // The execution will pass through two nested loops to obtain the sum of gravitational forces of every point with the other points
     for(int i = 0; i < num_objects; i++) {
         if (!objects[i].active) { continue; }
@@ -117,9 +118,9 @@ int gravitational_force(int num_objects, set *objects, double time_step, double 
 
     for (int i = 0; i < num_objects; i++) {
         // Updates the acceleration
-        accel[0] = accel_calc(objects[i].m, force[i * 3]);
-        accel[1] = accel_calc(objects[i].m, force[(i * 3) + 1]);
-        accel[2] = accel_calc(objects[i].m, force[(i * 3) + 2]);
+        accel[0] = accel_calc(objects[i].m, force[i*3]);
+        accel[1] = accel_calc(objects[i].m, force[(i*3)+1]);
+        accel[2] = accel_calc(objects[i].m, force[(i*3)+2]);
 
         // Updates the speed
         objects[i].vx = objects[i].vx + accel[0] * time_step;
@@ -132,6 +133,8 @@ int gravitational_force(int num_objects, set *objects, double time_step, double 
         objects[i].z = objects[i].z + objects[i].vz * time_step;
 
     }
+
+
     return 0;
 }
 
@@ -342,7 +345,6 @@ int main(int argc, char* argv[]) {
     write_config(0, system_data, objects);
 
     double *force = (double *) malloc(sizeof(double) * system_data.num_objects * 3);
-    double accel[3] = {0,0,0};
 
     /* Initial collision checking */
     for(int i = 0; i < system_data.num_objects; i++){
@@ -355,7 +357,7 @@ int main(int argc, char* argv[]) {
 
     /* Body of the simulation */
     for(int i = 0; i < system_data.num_iterations; i++){
-        gravitational_force(system_data.num_objects, objects, system_data.time_step, force, accel);
+        gravitational_force(system_data.num_objects, objects, system_data.time_step, force);
 
         for(int a = 0; a < system_data.num_objects; a++){
 
