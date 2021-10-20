@@ -1,9 +1,6 @@
 //
 // Created by mariwogr on 16/10/21.
 //
-#include <limits>
-#include <iomanip>
-
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -114,7 +111,6 @@ int gravitational_force(int num_objects, set *objects, double time_step, double 
                 gravitational_force_calc(objects, i, j, &force[3 * i]);
             }
         }
-        cout << i << " " << std::setprecision(std::numeric_limits<double>::max_digits10) << force[3*i] << endl;
     }
     // Once we have a screenshot of the system in force array, update each active object
     for (int i = 0; i < num_objects; i++) {
@@ -212,16 +208,12 @@ int check_collision(set *objects, int i, int j){
 * @param: int j                array position of the second object
 */
 int collision_objects(set *objects, int i, int j){
+    objects[i].m = objects[i].m + objects[j].m;
+    objects[i].vx = objects[i].vx + objects[j].vx;
+    objects[i].vy = objects[i].vy + objects[j].vy;
+    objects[i].vz = objects[i].vz + objects[j].vz;
 
-    // Checks if both objects are active
-    if (objects[i].active && objects[j].active){
-        objects[i].m = objects[i].m + objects[j].m;
-        objects[i].vx = objects[i].vx + objects[j].vx;
-        objects[i].vy = objects[i].vy + objects[j].vy;
-        objects[i].vz = objects[i].vz + objects[j].vz;
-
-        objects[j].active = false;
-    }
+    objects[j].active = false;
     return 0;
 }
 
@@ -380,5 +372,6 @@ int main(int argc, char* argv[]) {
 
     /* Write final configuration to a file*/
     write_config(1, system_data, objects);
+    free(force);
     return 0;
 }

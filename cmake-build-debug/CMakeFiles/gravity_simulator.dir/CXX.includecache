@@ -7,10 +7,6 @@
 #IncludeRegexTransform: 
 
 /home/sergio/Documentos/repos/gravity-simulator/sim_aos.cpp
-limits
--
-iomanip
--
 string
 -
 iostream

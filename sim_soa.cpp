@@ -62,16 +62,17 @@ int parser(int argc, char* argv[]){
  * @return force                 resulting force vector
  */
 void gravitational_force_calc(set objects, int i, int j, double *force) {
-    double G = 6.674 * pow(10, -11);
+    double G = 6.674 * 1E-11;
 
     double powSqX  = pow((objects.x[i] - objects.x[j]), 2);
     double powSqY  = pow((objects.y[i] - objects.y[j]), 2);
     double powSqZ  = pow((objects.z[i] - objects.z[j]), 2);
+    double norm = std::sqrt(powSqX + powSqY + powSqZ);
 
     // It will return the three components of the gravitational force between i and j
-    force[0] += (G * objects.m[i] * objects.m[j] * (objects.x[i] - objects.x[j]))/(pow(sqrt(powSqX + powSqY + powSqZ),3));
-    force[1] += (G * objects.m[i] * objects.m[j] * (objects.y[i] - objects.y[j]))/(pow(sqrt(powSqX + powSqY + powSqZ),3));
-    force[2] += (G * objects.m[i] * objects.m[j] * (objects.z[i] - objects.z[j]))/(pow(sqrt(powSqX + powSqY + powSqZ),3));
+    force[0] -= (G * objects.m[i] * objects.m[j] * (objects.x[i] - objects.x[j]))/(norm * norm * norm);
+    force[1] -= (G * objects.m[i] * objects.m[j] * (objects.y[i] - objects.y[j]))/(norm * norm * norm);
+    force[2] -= (G * objects.m[i] * objects.m[j] * (objects.z[i] - objects.z[j]))/(norm * norm * norm);
 }
 
 /*
@@ -96,39 +97,37 @@ double accel_calc(double m, double F) {
  *
  * @return 0                        if the function was executed correctly
  */
-int gravitational_force(int num_objects, set objects, double time_step) {
-
-    // The 3 components of the gravitational force will be set to 0
-    double force[3] = {0,0,0};
-    double accel[3] = {0,0,0};
-
+int gravitational_force(int num_objects, set objects, double time_step, double *force, double *accel) {
     // The execution will pass through two nested loops to obtain the sum of gravitational forces of every point with the other points
     for(int i = 0; i < num_objects; i++) {
-        if ( !objects.active[i]){ continue; }
+        if (!objects.active[i]) { continue; }
         for (int j = 0; j < num_objects; j++) {
 
             // First it checks that the two points are active (not collided). If the two points are not the same,
             // it will sum the force of every component to the total force
-            if (objects.active[j] &&  i != j) {
-                gravitational_force_calc(objects, i, j, &force[0]);
-                gravitational_force_calc(objects, i, j, &force[1]);
-                gravitational_force_calc(objects, i, j, &force[2]);
-		}
-	}
-        // Updates the acceleration
-        accel[0] = accel_calc(objects.m[i], force[0]);
-        accel[1] = accel_calc(objects.m[i], force[1]);
-        accel[2] = accel_calc(objects.m[i], force[2]);
+            if (objects.active[j] && i != j) {
+                gravitational_force_calc(objects, i, j, &force[3 * i]);
+            }
+        }
+    }
+    // Once we have a screenshot of the system in force array, update each active object
+    for (int i = 0; i < num_objects; i++) {
+        if(objects.active[i]) {
+            // Updates the acceleration
+            accel[0] = accel_calc(objects.m[i], force[i * 3]);
+            accel[1] = accel_calc(objects.m[i], force[(i * 3) + 1]);
+            accel[2] = accel_calc(objects.m[i], force[(i * 3) + 2]);
 
-        // Updates the speed
-        objects.vx[i] = objects.vx[i] + accel[0] * time_step;
-        objects.vy[i] = objects.vy[i] + accel[1] * time_step;
-        objects.vz[i] = objects.vz[i] + accel[2] * time_step;
+            // Updates the speed
+            objects.vx[i] = objects.vx[i] + accel[0] * time_step;
+            objects.vy[i] = objects.vy[i] + accel[1] * time_step;
+            objects.vz[i] = objects.vz[i] + accel[2] * time_step;
 
-        // Updates the position
-        objects.x[i] = objects.x[i] + objects.vx[i] * time_step;
-        objects.y[i] = objects.y[i] + objects.vy[i] * time_step;
-        objects.z[i] = objects.z[i] + objects.vz[i] * time_step;
+            // Updates the position
+            objects.x[i] = objects.x[i] + objects.vx[i] * time_step;
+            objects.y[i] = objects.y[i] + objects.vy[i] * time_step;
+            objects.z[i] = objects.z[i] + objects.vz[i] * time_step;
+        }
     }
     return 0;
 }
@@ -190,7 +189,7 @@ int check_bounce(set objects, int obj, double size){
  * return 0                         if the execution was correctly executed
  */
 int check_collision(set objects, int i, int j){
-    double distance = sqrt(pow((objects.x[i] - objects.x[j]), 2)\
+    double distance = std::sqrt(pow((objects.x[i] - objects.x[j]), 2)\
                             + pow((objects.y[i] - objects.y[j]), 2)\
                             + pow((objects.z[i] - objects.z[j]), 2));
 
@@ -210,15 +209,13 @@ int check_collision(set objects, int i, int j){
 */
 int collision_objects(set objects, int i, int j){
 
-    // Checks if both objects are active
-    if (objects.active[i] && objects.active[j]){
-        objects.m[i] = objects.m[i] + objects.m[j];
-        objects.vx[i] = objects.vx[i] + objects.vx[j];
-        objects.vy[i] = objects.vy[i] + objects.vy[j];
-        objects.vz[i] = objects.vz[i] + objects.vz[j];
+    objects.m[i] = objects.m[i] + objects.m[j];
+    objects.vx[i] = objects.vx[i] + objects.vx[j];
+    objects.vy[i] = objects.vy[i] + objects.vy[j];
+    objects.vz[i] = objects.vz[i] + objects.vz[j];
 
-        objects.active[j] = false;
-    }
+    objects.active[j] = false;
+
     return 0;
 }
 
@@ -278,7 +275,7 @@ int write_config(int id, parameters system_data, set objects){
     out_file << res;
     sprintf(res, "%.3f ", system_data.time_step);
     out_file << res;
-    sprintf(res, "%d.000", system_data.num_objects);
+    sprintf(res, "%d", system_data.num_objects);
     out_file << res << endl;
 
     for(int i = 0; i < system_data.num_objects; i++){
@@ -339,6 +336,9 @@ int main(int argc, char* argv[]) {
     uniform_real_distribution<> position_unif_dist(0, system_data.size_enclosure);
     normal_distribution<> mass_norm_dist{1E21, 1E15};
 
+    double *force = (double *) malloc(sizeof(double) * system_data.num_objects * 3);
+    double accel[3] = {0,0,0};
+
     /* Initialize x, y, z and m attributes of each object */
     for(int i = 0; i < system_data.num_objects; i++){
         objects.x[i] = position_unif_dist(gen64);
@@ -361,7 +361,8 @@ int main(int argc, char* argv[]) {
 
     /* Body of the simulation */
     for(int i = 0; i < system_data.num_iterations; i++){
-        gravitational_force(system_data.num_objects, objects, system_data.time_step);
+        for(int foo=0; foo < system_data.num_objects * 3; foo++){force[foo] = 0;}
+        gravitational_force(system_data.num_objects, objects, system_data.time_step, force, accel);
 
         for(int a = 0; a < system_data.num_objects; a++){
 
@@ -380,5 +381,14 @@ int main(int argc, char* argv[]) {
 
     /* Write final configuration to a file*/
     write_config(1, system_data, objects);
+    free(force);
+    free(objects.x);
+    free(objects.y);
+    free(objects.z);
+    free(objects.vx);
+    free(objects.vy);
+    free(objects.vz);
+    free(objects.m);
+    free(objects.active);
     return 0;
 }
