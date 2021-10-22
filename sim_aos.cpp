@@ -311,10 +311,21 @@ int main(int argc, char* argv[]) {
 
     /* Declare the structure that holds objects' information */
     set *objects = new set[system_data.num_objects];
+
+    cout << "Creating simulation:" << endl;
+    cout << "  num_objects: " << system_data.num_objects << endl;
+    cout << "  num_iterations: " << system_data.num_iterations << endl;
+    cout << "  random_seed: " << system_data.random_seed << endl;
+    cout << "  size_enclosure: " << system_data.size_enclosure << endl;
+    cout << "  time_step: " << system_data.time_step << endl;
+
     /* Create mersenne-twister generator and create a uniform and a normal distribution */
     mt19937_64 gen64(system_data.random_seed);
     uniform_real_distribution<> position_unif_dist(0, system_data.size_enclosure);
     normal_distribution<> mass_norm_dist{1E21, 1E15};
+
+    double *force = (double *) malloc(sizeof(double) * system_data.num_objects * 3);
+    double accel[3] = {0,0,0};
 
     /* Initialize x, y, z and m attributes of each object */
     for(int i = 0; i < system_data.num_objects; i++){
@@ -325,18 +336,10 @@ int main(int argc, char* argv[]) {
         objects[i].active = true;
     }
 
-    cout << "Creating simulation:" << endl;
-    cout << "  num_objects: " << system_data.num_objects << endl;
-    cout << "  num_iterations: " << system_data.num_iterations << endl;
-    cout << "  random_seed: " << system_data.random_seed << endl;
-    cout << "  size_enclosure: " << system_data.size_enclosure << endl;
-    cout << "  time_step: " << system_data.time_step << endl;
 
     /* Write initial configuration to a file*/
     write_config(0, system_data, objects);
 
-    double *force = (double *) malloc(sizeof(double) * system_data.num_objects * 3);
-    double accel[3] = {0,0,0};
 
     /* Initial collision checking */
     for(int i = 0; i < system_data.num_objects; i++){
@@ -349,9 +352,6 @@ int main(int argc, char* argv[]) {
 
     /* Body of the simulation */
     for(int i = 0; i < system_data.num_iterations; i++){
-        //Vaciar el buffer force antes de volver a llamar a gravitational_force. Si no, el nuevo
-        // valor es la suma del resultado actual MÁS el valor que tuviera de antes -> eso está mal
-        // P.S. no sé vaciar un buffer
         for(int foo=0; foo < system_data.num_objects * 3; foo++){force[foo] = 0;}
         gravitational_force(system_data.num_objects, objects, system_data.time_step, force, accel);
 
