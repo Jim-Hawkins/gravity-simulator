@@ -1,0 +1,14 @@
+int i;
+
+#pragma omp parallel
+
+n = opm.thread_num();
+t = omp.get_num_threads();
+
+for(i=n; i<100000; i = i + t){
+	if(){
+	}
+	else if{}
+	else if{}
+	else{}
+}
