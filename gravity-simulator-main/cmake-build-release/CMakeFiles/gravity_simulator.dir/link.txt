@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/gravity_simulator.dir/sim_soa.cpp.o -o gravity_simulator 

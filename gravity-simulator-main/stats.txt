@@ -1,0 +1,89 @@
+PROFE
+
+Performance counter stats for './sim-v8-log 2 100 1 10000 0.1':
+
+              2,37 msec task-clock                #    0,883 CPUs utilized          
+                 0      context-switches          #    0,000 K/sec                  
+                 0      cpu-migrations            #    0,000 K/sec                  
+                48      page-faults               #    0,020 M/sec                  
+         5.703.787      cycles                    #    2,407 GHz                    
+        14.361.681      instructions              #    2,52  insn per cycle         
+         2.710.435      branches                  # 1143,943 M/sec                  
+            12.889      branch-misses             #    0,48% of all branches        
+
+       0,002684294 seconds time elapsed
+
+       0,002839000 seconds user
+       0,000000000 seconds sys   
+NOSOTROS
+aos 2 100 1 10000 0.1
+ Performance counter stats for './sim_aos 2 100 1 10000 0.1':
+
+              1,81 msec task-clock                #    0,807 CPUs utilized          
+                 0      context-switches          #    0,000 K/sec                  
+                 0      cpu-migrations            #    0,000 K/sec                  
+               130      page-faults               #    0,072 M/sec                  
+         3.306.003      cycles                    #    1,822 GHz                    
+         4.289.714      instructions              #    1,30  insn per cycle         
+           720.458      branches                  #  397,071 M/sec                  
+            20.341      branch-misses             #    2,82% of all branches        
+
+       0,002247916 seconds time elapsed
+
+       0,002389000 seconds user
+       0,000000000 seconds sys
+       
+       
+aos con flags 2 100 1 10000 0.1
+ Performance counter stats for './sim_aos 2 100 1 10000 0.1':
+
+              1,43 msec task-clock                #    0,807 CPUs utilized          
+                 0      context-switches          #    0,000 K/sec                  
+                 0      cpu-migrations            #    0,000 K/sec                  
+               133      page-faults               #    0,093 M/sec                  
+         3.247.012      cycles                    #    2,273 GHz                    
+         3.981.187      instructions              #    1,23  insn per cycle         
+           694.609      branches                  #  486,256 M/sec                  
+            20.563      branch-misses             #    2,96% of all branches        
+
+       0,001769598 seconds time elapsed
+
+       0,001814000 seconds user
+       0,000000000 seconds sys
+
+
+
+soa 2 100 1 10000 0.1
+ Performance counter stats for './sim_soa 2 100 1 10000 0.1':
+
+              2,27 msec task-clock                #    0,742 CPUs utilized          
+                 0      context-switches          #    0,000 K/sec                  
+                 0      cpu-migrations            #    0,000 K/sec                  
+               133      page-faults               #    0,059 M/sec                  
+         3.759.722      cycles                    #    1,660 GHz                    
+         4.266.886      instructions              #    1,13  insn per cycle         
+           717.566      branches                  #  316,777 M/sec                  
+            19.905      branch-misses             #    2,77% of all branches        
+
+       0,003050917 seconds time elapsed
+
+       0,003118000 seconds user
+       0,000000000 seconds sys
+       
+       
+soa con flags 2 100 1 10000 0.1
+ Performance counter stats for './sim_soa 2 100 1 10000 0.1':
+
+              1,40 msec task-clock                #    0,752 CPUs utilized          
+                 0      context-switches          #    0,000 K/sec                  
+                 0      cpu-migrations            #    0,000 K/sec                  
+               131      page-faults               #    0,093 M/sec                  
+         3.180.115      cycles                    #    2,264 GHz                    
+         3.985.108      instructions              #    1,25  insn per cycle         
+           690.749      branches                  #  491,845 M/sec                  
+            20.074      branch-misses             #    2,91% of all branches        
+
+       0,001867389 seconds time elapsed
+
+       0,001996000 seconds user
+       0,000000000 seconds sys
