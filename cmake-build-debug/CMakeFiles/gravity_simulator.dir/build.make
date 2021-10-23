@@ -66,27 +66,27 @@ include CMakeFiles/gravity_simulator.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/gravity_simulator.dir/flags.make
 
-CMakeFiles/gravity_simulator.dir/sim_aos.cpp.o: CMakeFiles/gravity_simulator.dir/flags.make
-CMakeFiles/gravity_simulator.dir/sim_aos.cpp.o: ../sim_aos.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergio/repos/gravity-simulator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/gravity_simulator.dir/sim_aos.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gravity_simulator.dir/sim_aos.cpp.o -c /home/sergio/repos/gravity-simulator/sim_aos.cpp
+CMakeFiles/gravity_simulator.dir/sim_soa.cpp.o: CMakeFiles/gravity_simulator.dir/flags.make
+CMakeFiles/gravity_simulator.dir/sim_soa.cpp.o: ../sim_soa.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergio/repos/gravity-simulator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/gravity_simulator.dir/sim_soa.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gravity_simulator.dir/sim_soa.cpp.o -c /home/sergio/repos/gravity-simulator/sim_soa.cpp
 
-CMakeFiles/gravity_simulator.dir/sim_aos.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gravity_simulator.dir/sim_aos.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/repos/gravity-simulator/sim_aos.cpp > CMakeFiles/gravity_simulator.dir/sim_aos.cpp.i
+CMakeFiles/gravity_simulator.dir/sim_soa.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gravity_simulator.dir/sim_soa.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergio/repos/gravity-simulator/sim_soa.cpp > CMakeFiles/gravity_simulator.dir/sim_soa.cpp.i
 
-CMakeFiles/gravity_simulator.dir/sim_aos.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gravity_simulator.dir/sim_aos.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/repos/gravity-simulator/sim_aos.cpp -o CMakeFiles/gravity_simulator.dir/sim_aos.cpp.s
+CMakeFiles/gravity_simulator.dir/sim_soa.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gravity_simulator.dir/sim_soa.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergio/repos/gravity-simulator/sim_soa.cpp -o CMakeFiles/gravity_simulator.dir/sim_soa.cpp.s
 
 # Object files for target gravity_simulator
 gravity_simulator_OBJECTS = \
-"CMakeFiles/gravity_simulator.dir/sim_aos.cpp.o"
+"CMakeFiles/gravity_simulator.dir/sim_soa.cpp.o"
 
 # External object files for target gravity_simulator
 gravity_simulator_EXTERNAL_OBJECTS =
 
-gravity_simulator: CMakeFiles/gravity_simulator.dir/sim_aos.cpp.o
+gravity_simulator: CMakeFiles/gravity_simulator.dir/sim_soa.cpp.o
 gravity_simulator: CMakeFiles/gravity_simulator.dir/build.make
 gravity_simulator: CMakeFiles/gravity_simulator.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sergio/repos/gravity-simulator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable gravity_simulator"

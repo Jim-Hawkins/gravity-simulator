@@ -64,9 +64,9 @@ int parser(int argc, char* argv[]){
 void gravitational_force_calc(set objects, int i, int j, double *force) {
     double G = 6.674 * 1E-11;
 
-    double powSqX  = pow((objects.x[i] - objects.x[j]), 2);
-    double powSqY  = pow((objects.y[i] - objects.y[j]), 2);
-    double powSqZ  = pow((objects.z[i] - objects.z[j]), 2);
+    double powSqX  = (objects.x[i] - objects.x[j]) * (objects.x[i] - objects.x[j]);
+    double powSqY  = (objects.y[i] - objects.y[j]) * (objects.y[i] - objects.y[j]);
+    double powSqZ  = (objects.z[i] - objects.z[j]) * (objects.z[i] - objects.z[j]);
     double norm = std::sqrt(powSqX + powSqY + powSqZ);
 
     // It will return the three components of the gravitational force between i and j
@@ -108,6 +108,13 @@ int gravitational_force(int num_objects, set objects, double time_step, double *
             if (objects.active[j] && i != j) {
                 gravitational_force_calc(objects, i, j, &force[3 * i]);
             }
+        }
+    }
+    int x = 0;
+    for(int i = 0; i < num_objects; i++){
+        if(objects.active[i]){
+            cout << "Force(" << x << ") = " << force[i * 3] << " " << force[i * 3 + 1] << " " << force[i * 3 + 2] << endl;
+            x++;
         }
     }
     // Once we have a screenshot of the system in force array, update each active object
@@ -189,9 +196,9 @@ int check_bounce(set objects, int obj, double size){
  * return 0                         if the execution was correctly executed
  */
 int check_collision(set objects, int i, int j){
-    double distance = std::sqrt(pow((objects.x[i] - objects.x[j]), 2)\
-                            + pow((objects.y[i] - objects.y[j]), 2)\
-                            + pow((objects.z[i] - objects.z[j]), 2));
+    double distance = std::sqrt((objects.x[i] - objects.x[j]) * (objects.x[i] - objects.x[j]) \
+                            + (objects.y[i] - objects.y[j]) * (objects.y[i] - objects.y[j])\
+                            + (objects.z[i] - objects.z[j]) * (objects.z[i] - objects.z[j]));
 
     if(distance < 1.0){
         collision_objects(objects, i, j);
@@ -266,10 +273,10 @@ int write_config(int id, parameters system_data, set objects){
 
     /*If the id is 0 it will write the content in the init_config file*/
     if (id == 0){
-        out_file.open("../init_config.txt");
+        out_file.open("init_config.txt");
     }
-    /*If the id is different from 0 the content will be written in the final_config file*/
-    else { out_file.open("../final_config.txt"); }
+        /*If the id is different from 0 the content will be written in the final_config file*/
+    else { out_file.open("final_config.txt"); }
 
     sprintf(res, "%.3f ", system_data.size_enclosure);
     out_file << res;
@@ -313,14 +320,14 @@ int main(int argc, char* argv[]) {
 
     /* Declare the structure that holds objects' information */
     set objects{
-        (double *) malloc(sizeof(double) * system_data.num_objects),
-        (double *) malloc(sizeof(double) * system_data.num_objects),
-        (double *) malloc(sizeof(double) * system_data.num_objects),
-        (double *) malloc(sizeof(double) * system_data.num_objects),
-        (double *) malloc(sizeof(double) * system_data.num_objects),
-        (double *) malloc(sizeof(double) * system_data.num_objects),
-        (double *) malloc(sizeof(double) * system_data.num_objects),
-        (bool *) malloc(sizeof(bool) * system_data.num_objects)
+            (double *) malloc(sizeof(double) * system_data.num_objects),
+            (double *) malloc(sizeof(double) * system_data.num_objects),
+            (double *) malloc(sizeof(double) * system_data.num_objects),
+            (double *) malloc(sizeof(double) * system_data.num_objects),
+            (double *) malloc(sizeof(double) * system_data.num_objects),
+            (double *) malloc(sizeof(double) * system_data.num_objects),
+            (double *) malloc(sizeof(double) * system_data.num_objects),
+            (bool *) malloc(sizeof(bool) * system_data.num_objects)
     };
 
     cout << "Creating simulation:" << endl;
@@ -331,7 +338,7 @@ int main(int argc, char* argv[]) {
     cout << "  time_step: " << system_data.time_step << endl;
 
 
-	/* Create mersenne-twister generator and create a uniform and a normal distribution */
+    /* Create mersenne-twister generator and create a uniform and a normal distribution */
     mt19937_64 gen64(system_data.random_seed);
     uniform_real_distribution<> position_unif_dist(0, system_data.size_enclosure);
     normal_distribution<> mass_norm_dist{1E21, 1E15};
@@ -361,6 +368,8 @@ int main(int argc, char* argv[]) {
 
     /* Body of the simulation */
     for(int i = 0; i < system_data.num_iterations; i++){
+        cout << endl << "Iteration: " << i << endl;
+        cout << "Net Forces" << endl;
         for(int foo=0; foo < system_data.num_objects * 3; foo++){force[foo] = 0;}
         gravitational_force(system_data.num_objects, objects, system_data.time_step, force, accel);
 

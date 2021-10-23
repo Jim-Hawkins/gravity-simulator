@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/gravity_simulator.dir/sim_aos.cpp.o -o gravity_simulator 
+/usr/bin/c++ -g CMakeFiles/gravity_simulator.dir/sim_soa.cpp.o -o gravity_simulator 

@@ -64,9 +64,9 @@ int parser(int argc, char* argv[]){
 void gravitational_force_calc(set *objects, int i, int j, double *force) {
     double G = 6.674 * 1E-11;
 
-    double powSqX  = pow((objects[i].x - objects[j].x), 2);
-    double powSqY  = pow((objects[i].y - objects[j].y), 2);
-    double powSqZ  = pow((objects[i].z - objects[j].z), 2);
+    double powSqX  = (objects[i].x - objects[j].x) * (objects[i].x - objects[j].x);
+    double powSqY  = (objects[i].y - objects[j].y) * (objects[i].y - objects[j].y);
+    double powSqZ  = (objects[i].z - objects[j].z) * (objects[i].z - objects[j].z);
     double norm = std::sqrt(powSqX + powSqY + powSqZ);
     // It will return the three components of the gravitational force between i and j
 
@@ -189,9 +189,9 @@ int check_bounce(set *objects, int obj, double size){
 */
 
 int check_collision(set *objects, int i, int j){
-    double distance = std::sqrt(pow((objects[i].x - objects[j].x), 2)\
-                            + pow((objects[i].y - objects[j].y), 2)\
-                            + pow((objects[i].z - objects[j].z), 2));
+    double distance = std::sqrt((objects[i].x - objects[j].x) * (objects[i].x - objects[j].x) \
+                            + (objects[i].y - objects[j].y) * (objects[i].y - objects[j].y) \
+                            + (objects[i].z - objects[j].z) * (objects[i].z - objects[j].z);
 
     if(distance < 1.0){
         collision_objects(objects, i, j);
@@ -264,10 +264,10 @@ int write_config(int id, parameters system_data, set *objects){
 
     /*If the id is 0 it will write the content in the init_config file*/
     if (id == 0){
-        out_file.open("../init_config.txt");
+        out_file.open("init_config.txt");
     }
         /*If the id is different from 0 the content will be written in the final_config file*/
-    else { out_file.open("../final_config.txt"); }
+    else { out_file.open("final_config.txt"); }
 
     sprintf(res, "%.3f ", system_data.size_enclosure);
     out_file << res;
