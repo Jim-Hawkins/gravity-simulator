@@ -89,6 +89,8 @@ void gravitational_force_calc(set *objects, int i, int j, double *force) {
  *
  * @return (1/(m))*F            the point acceleration point
  */
+
+//OPTIMIZACION 11 NI FU NI FA: dejamos de llamar a esta funcion
 double accel_calc(double m, double F) {
     return (1/m)*F;
 }
@@ -187,20 +189,25 @@ int gravitational_force(int num_objects, set *objects, double time_step, double 
             }
         }
     }
-    int x = 0;
+    /*int x = 0;
     for(int i = 0; i < num_objects; i++){
     	if (objects[i].active){
     		cout << "Force(" << x << ") = " << force[3*i] << " " << force[3*i+1] << " " << force[3*i+2] << " " << endl;
     		x++;
     		}
-    	}
+    	}*/
     // Once we have a screenshot of the system in force array, update each active object
     for (int i = 0; i < num_objects; i++) {
         if(objects[i].active) {
             // Updates the acceleration
+            /* OPTIMIZACION 11 NI FU NI FA
             accel[0] = accel_calc(objects[i].m, force[i * 3]);
             accel[1] = accel_calc(objects[i].m, force[(i * 3) + 1]);
             accel[2] = accel_calc(objects[i].m, force[(i * 3) + 2]);
+            */
+            accel[0] = 1.0/objects[i].m * force[i * 3];
+            accel[1] = 1.0/objects[i].m * force[(i * 3) + 1];
+            accel[2] = 1.0/objects[i].m * force[(i * 3) + 2];
 
             // Updates the speed
             objects[i].vx = objects[i].vx + accel[0] * time_step;
@@ -276,8 +283,8 @@ int check_collision(set *objects, int i, int j){
                             + (objects[i].z - objects[j].z) * (objects[i].z - objects[j].z));
 
     if(distance < 1.0){
-        cout << "Colisionó i " << i << " con j " << j << endl;
-        cout << "activos i j" << objects[i].active << " " << objects[j].active << endl;
+        /*cout << "Colisionó i " << i << " con j " << j << endl;
+        cout << "activos i j" << objects[i].active << " " << objects[j].active << endl;*/
         collision_objects(objects, i, j);
     }
     return 0;
@@ -442,7 +449,7 @@ int main(int argc, char* argv[]) {
     for(int i = 0; i < system_data.num_iterations; i++){
         //OPTIMIZACION 8 SE QUITA: semaforo para ahorrarse el siguiente for
         //bool no_te_ejecutes = false;
-    	cout << endl << "Iteration: " << i << endl << "Net forces" << endl;
+    	//cout << endl << "Iteration: " << i << endl << "Net forces" << endl;
         for(int foo=0; foo < system_data.num_objects * 3; foo++){force[foo] = 0;}
         gravitational_force(system_data.num_objects, objects, system_data.time_step, force, accel);
 
