@@ -269,7 +269,7 @@ int print_error_args(int argc, char* argv[]) {
  */
 int write_config(int id, parameters system_data, set objects){
     ofstream out_file;
-    char res[100];
+    char res[5001];
 
     /*If the id is 0 it will write the content in the init_config file*/
     if (id == 0){
