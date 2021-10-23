@@ -7,7 +7,7 @@
 #include <random>
 //#include <cmath>
 
-#include "sim_aos.hpp"
+#include "sim_soa.hpp"
 
 //OPTIMIZACION 2
 #define G (6.674 * 1E-11)
@@ -162,7 +162,7 @@ int gravitational_force(int num_objects, set objects, double time_step, double *
                 // force array (force[3*i], force[3*i+1], force[3*i+2])
                 //OPTIMIZACION 3: quitar i!=j
                 //if (objects[j].active && i != j) {
-                if (objects[j].active) {
+                if (objects.active[j]) {
                     //gravitational_force_calc(objects, i, j, &force[3*i]);
                     //OPTIMIZACION 1 bucles a la mitad:
 
@@ -198,16 +198,16 @@ int gravitational_force(int num_objects, set objects, double time_step, double *
     	}*/
     // Once we have a screenshot of the system in force array, update each active object
     for (int i = 0; i < num_objects; i++) {
-        if(objects[i].active) {
+        if(objects.active[i]) {
             // Updates the acceleration
             /* OPTIMIZACION 11 NI FU NI FA
             accel[0] = accel_calc(objects[i].m, force[i * 3]);
             accel[1] = accel_calc(objects[i].m, force[(i * 3) + 1]);
             accel[2] = accel_calc(objects[i].m, force[(i * 3) + 2]);
             */
-            accel[0] = 1.0/objects[i].m * force[i * 3];
-            accel[1] = 1.0/objects[i].m * force[(i * 3) + 1];
-            accel[2] = 1.0/objects[i].m * force[(i * 3) + 2];
+            accel[0] = 1.0/objects.m[i] * force[i * 3];
+            accel[1] = 1.0/objects.m[i] * force[(i * 3) + 1];
+            accel[2] = 1.0/objects.m[i] * force[(i * 3) + 2];
 
             // Updates the speed
             objects.vx[i] = objects.vx[i] + accel[0] * time_step;
@@ -368,7 +368,7 @@ int write_config(int id, parameters system_data, set objects){
     out_file << res << endl;
 
     for(int i = 0; i < system_data.num_objects; i++){
-        if(objects[i].active) {
+        if(objects.active[i]) {
             sprintf(res,
                     "%.3f %.3f %.3f %.3f %.3f %.3f %.3f",
                     objects.x[i], objects.y[i], objects.z[i], objects.vx[i], objects.vy[i], objects.vz[i],
