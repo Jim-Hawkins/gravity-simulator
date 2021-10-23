@@ -483,7 +483,7 @@ int main(int argc, char* argv[]) {
         //OPTIMIZACION 9 VA MUY BIEN: quitar este if
         //if (!no_te_ejecutes){
             for(int a = 0; a < system_data.num_objects; a++){
-                //OPTIMIZACION 9 VA MUY BIEN: no_te_ejecutes por aqui dentro
+                //OPTIMIZACION 9 VA MUY BIEN: 
                 if(objects[a].active){
                 //for(int b = 0; b < system_data.num_objects; b++){
                 //OPTIMIZACION 4 NICEEEEEE: b = a para intentar reducir tiempos
