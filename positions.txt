@@ -8144,3 +8144,303 @@ Position(4) = 0 1000 0
 Position(5) = 1000 1000 1000
 Position(6) = 1000 1000 0
 Position(7) = 1000 0 1000
+
+Iteration: 20
+Position(0) = 1000 1000 1000
+Position(1) = 1000 1000 0
+Position(2) = 1000 0 0
+Position(3) = 0 1000 1000
+Position(4) = 1000 0 1000
+Position(5) = 0 0 0
+Position(6) = 0 0 1000
+Position(7) = 0 1000 0
+
+Iteration: 21
+Position(0) = 0 0 0
+Position(1) = 0 0 1000
+Position(2) = 0 1000 1000
+Position(3) = 1000 0 0
+Position(4) = 0 1000 0
+Position(5) = 1000 1000 1000
+Position(6) = 1000 1000 0
+Position(7) = 1000 0 1000
+
+Iteration: 22
+Position(0) = 1000 1000 1000
+Position(1) = 1000 1000 0
+Position(2) = 1000 0 0
+Position(3) = 0 1000 1000
+Position(4) = 1000 0 1000
+Position(5) = 0 0 0
+Position(6) = 0 0 1000
+Position(7) = 0 1000 0
+
+Iteration: 23
+Position(0) = 0 0 0
+Position(1) = 0 0 1000
+Position(2) = 0 1000 1000
+Position(3) = 1000 0 0
+Position(4) = 0 1000 0
+Position(5) = 1000 1000 1000
+Position(6) = 1000 1000 0
+Position(7) = 1000 0 1000
+
+Iteration: 24
+Position(0) = 1000 1000 1000
+Position(1) = 1000 1000 0
+Position(2) = 1000 0 0
+Position(3) = 0 1000 1000
+Position(4) = 1000 0 1000
+Position(5) = 0 0 0
+Position(6) = 0 0 1000
+Position(7) = 0 1000 0
+
+Iteration: 25
+Position(0) = 0 0 0
+Position(1) = 0 0 1000
+Position(2) = 0 1000 1000
+Position(3) = 1000 0 0
+Position(4) = 0 1000 0
+Position(5) = 1000 1000 1000
+Position(6) = 1000 1000 0
+Position(7) = 1000 0 1000
+
+Iteration: 26
+Position(0) = 1000 1000 1000
+Position(1) = 1000 1000 0
+Position(2) = 1000 0 0
+Position(3) = 0 1000 1000
+Position(4) = 1000 0 1000
+Position(5) = 0 0 0
+Position(6) = 0 0 1000
+Position(7) = 0 1000 0
+
+Iteration: 27
+Position(0) = 0 0 0
+Position(1) = 0 0 1000
+Position(2) = 0 1000 1000
+Position(3) = 1000 0 0
+Position(4) = 0 1000 0
+Position(5) = 1000 1000 1000
+Position(6) = 1000 1000 0
+Position(7) = 1000 0 1000
+
+Iteration: 28
+Position(0) = 1000 1000 1000
+Position(1) = 1000 1000 0
+Position(2) = 1000 0 0
+Position(3) = 0 1000 1000
+Position(4) = 1000 0 1000
+Position(5) = 0 0 0
+Position(6) = 0 0 1000
+Position(7) = 0 1000 0
+
+Iteration: 29
+Position(0) = 0 0 0
+Position(1) = 0 0 1000
+Position(2) = 0 1000 1000
+Position(3) = 1000 0 0
+Position(4) = 0 1000 0
+Position(5) = 1000 1000 1000
+Position(6) = 1000 1000 0
+Position(7) = 1000 0 1000
+
+Iteration: 30
+Position(0) = 1000 1000 1000
+Position(1) = 1000 1000 0
+Position(2) = 1000 0 0
+Position(3) = 0 1000 1000
+Position(4) = 1000 0 1000
+Position(5) = 0 0 0
+Position(6) = 0 0 1000
+Position(7) = 0 1000 0
+
+Iteration: 31
+Position(0) = 0 0 0
+Position(1) = 0 0 1000
+Position(2) = 0 1000 1000
+Position(3) = 1000 0 0
+Position(4) = 0 1000 0
+Position(5) = 1000 1000 1000
+Position(6) = 1000 1000 0
+Position(7) = 1000 0 1000
+
+Iteration: 32
+Position(0) = 1000 1000 1000
+Position(1) = 1000 1000 0
+Position(2) = 1000 0 0
+Position(3) = 0 1000 1000
+Position(4) = 1000 0 1000
+Position(5) = 0 0 0
+Position(6) = 0 0 1000
+Position(7) = 0 1000 0
+
+Iteration: 33
+Position(0) = 0 0 0
+Position(1) = 0 0 1000
+Position(2) = 0 1000 1000
+Position(3) = 1000 0 0
+Position(4) = 0 1000 0
+Position(5) = 1000 1000 1000
+Position(6) = 1000 1000 0
+Position(7) = 1000 0 1000
+
+Iteration: 34
+Position(0) = 1000 1000 1000
+Position(1) = 1000 1000 0
+Position(2) = 1000 0 0
+Position(3) = 0 1000 1000
+Position(4) = 1000 0 1000
+Position(5) = 0 0 0
+Position(6) = 0 0 1000
+Position(7) = 0 1000 0
+
+Iteration: 35
+Position(0) = 0 0 0
+Position(1) = 0 0 1000
+Position(2) = 0 1000 1000
+Position(3) = 1000 0 0
+Position(4) = 0 1000 0
+Position(5) = 1000 1000 1000
+Position(6) = 1000 1000 0
+Position(7) = 1000 0 1000
+
+Iteration: 36
+Position(0) = 1000 1000 1000
+Position(1) = 1000 1000 0
+Position(2) = 1000 0 0
+Position(3) = 0 1000 1000
+Position(4) = 1000 0 1000
+Position(5) = 0 0 0
+Position(6) = 0 0 1000
+Position(7) = 0 1000 0
+
+Iteration: 37
+Position(0) = 0 0 0
+Position(1) = 0 0 1000
+Position(2) = 0 1000 1000
+Position(3) = 1000 0 0
+Position(4) = 0 1000 0
+Position(5) = 1000 1000 1000
+Position(6) = 1000 1000 0
+Position(7) = 1000 0 1000
+
+Iteration: 38
+Position(0) = 1000 1000 1000
+Position(1) = 1000 1000 0
+Position(2) = 1000 0 0
+Position(3) = 0 1000 1000
+Position(4) = 1000 0 1000
+Position(5) = 0 0 0
+Position(6) = 0 0 1000
+Position(7) = 0 1000 0
+
+Iteration: 39
+Position(0) = 0 0 0
+Position(1) = 0 0 1000
+Position(2) = 0 1000 1000
+Position(3) = 1000 0 0
+Position(4) = 0 1000 0
+Position(5) = 1000 1000 1000
+Position(6) = 1000 1000 0
+Position(7) = 1000 0 1000
+
+Iteration: 40
+Position(0) = 1000 1000 1000
+Position(1) = 1000 1000 0
+Position(2) = 1000 0 0
+Position(3) = 0 1000 1000
+Position(4) = 1000 0 1000
+Position(5) = 0 0 0
+Position(6) = 0 0 1000
+Position(7) = 0 1000 0
+
+Iteration: 41
+Position(0) = 0 0 0
+Position(1) = 0 0 1000
+Position(2) = 0 1000 1000
+Position(3) = 1000 0 0
+Position(4) = 0 1000 0
+Position(5) = 1000 1000 1000
+Position(6) = 1000 1000 0
+Position(7) = 1000 0 1000
+
+Iteration: 42
+Position(0) = 1000 1000 1000
+Position(1) = 1000 1000 0
+Position(2) = 1000 0 0
+Position(3) = 0 1000 1000
+Position(4) = 1000 0 1000
+Position(5) = 0 0 0
+Position(6) = 0 0 1000
+Position(7) = 0 1000 0
+
+Iteration: 43
+Position(0) = 0 0 0
+Position(1) = 0 0 1000
+Position(2) = 0 1000 1000
+Position(3) = 1000 0 0
+Position(4) = 0 1000 0
+Position(5) = 1000 1000 1000
+Position(6) = 1000 1000 0
+Position(7) = 1000 0 1000
+
+Iteration: 44
+Position(0) = 1000 1000 1000
+Position(1) = 1000 1000 0
+Position(2) = 1000 0 0
+Position(3) = 0 1000 1000
+Position(4) = 1000 0 1000
+Position(5) = 0 0 0
+Position(6) = 0 0 1000
+Position(7) = 0 1000 0
+
+Iteration: 45
+Position(0) = 0 0 0
+Position(1) = 0 0 1000
+Position(2) = 0 1000 1000
+Position(3) = 1000 0 0
+Position(4) = 0 1000 0
+Position(5) = 1000 1000 1000
+Position(6) = 1000 1000 0
+Position(7) = 1000 0 1000
+
+Iteration: 46
+Position(0) = 1000 1000 1000
+Position(1) = 1000 1000 0
+Position(2) = 1000 0 0
+Position(3) = 0 1000 1000
+Position(4) = 1000 0 1000
+Position(5) = 0 0 0
+Position(6) = 0 0 1000
+Position(7) = 0 1000 0
+
+Iteration: 47
+Position(0) = 0 0 0
+Position(1) = 0 0 1000
+Position(2) = 0 1000 1000
+Position(3) = 1000 0 0
+Position(4) = 0 1000 0
+Position(5) = 1000 1000 1000
+Position(6) = 1000 1000 0
+Position(7) = 1000 0 1000
+
+Iteration: 48
+Position(0) = 1000 1000 1000
+Position(1) = 1000 1000 0
+Position(2) = 1000 0 0
+Position(3) = 0 1000 1000
+Position(4) = 1000 0 1000
+Position(5) = 0 0 0
+Position(6) = 0 0 1000
+Position(7) = 0 1000 0
+
+Iteration: 49
+Position(0) = 0 0 0
+Position(1) = 0 0 1000
+Position(2) = 0 1000 1000
+Position(3) = 1000 0 0
+Position(4) = 0 1000 0
+Position(5) = 1000 1000 1000
+Position(6) = 1000 1000 0
+Position(7) = 1000 0 1000

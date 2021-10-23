@@ -5,7 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include <random>
-#include <cmath>
+//#include <cmath>
 
 #include "sim_aos.hpp"
 
@@ -108,10 +108,17 @@ int gravitational_force(int num_objects, set *objects, double time_step, double 
             // If objects i and j are active and different, update i's slot in
             // force array (force[3*i], force[3*i+1], force[3*i+2])
             if (objects[j].active && i != j) {
-                gravitational_force_calc(objects, i, j, &force[3 * i]);
+                gravitational_force_calc(objects, i, j, &force[3*i]);
             }
         }
     }
+    int x = 0;
+    for(int i = 0; i < num_objects; i++){
+    	if (objects[i].active){
+    		cout << "Force(" << x << ") = " << force[3*i] << " " << force[3*i+1] << " " << force[3*i+2] << " " << endl;
+    		x++;
+    		}
+    	}
     // Once we have a screenshot of the system in force array, update each active object
     for (int i = 0; i < num_objects; i++) {
         if(objects[i].active) {
@@ -191,7 +198,7 @@ int check_bounce(set *objects, int obj, double size){
 int check_collision(set *objects, int i, int j){
     double distance = std::sqrt((objects[i].x - objects[j].x) * (objects[i].x - objects[j].x) \
                             + (objects[i].y - objects[j].y) * (objects[i].y - objects[j].y) \
-                            + (objects[i].z - objects[j].z) * (objects[i].z - objects[j].z);
+                            + (objects[i].z - objects[j].z) * (objects[i].z - objects[j].z));
 
     if(distance < 1.0){
         collision_objects(objects, i, j);
@@ -264,10 +271,10 @@ int write_config(int id, parameters system_data, set *objects){
 
     /*If the id is 0 it will write the content in the init_config file*/
     if (id == 0){
-        out_file.open("init_config.txt");
+        out_file.open("init_config_nuestro.txt");
     }
         /*If the id is different from 0 the content will be written in the final_config file*/
-    else { out_file.open("final_config.txt"); }
+    else { out_file.open("final_config_nuestro.txt"); }
 
     sprintf(res, "%.3f ", system_data.size_enclosure);
     out_file << res;
@@ -352,6 +359,7 @@ int main(int argc, char* argv[]) {
 
     /* Body of the simulation */
     for(int i = 0; i < system_data.num_iterations; i++){
+    	cout << endl << "Iteration: " << i << endl << "Net forces" << endl;
         for(int foo=0; foo < system_data.num_objects * 3; foo++){force[foo] = 0;}
         gravitational_force(system_data.num_objects, objects, system_data.time_step, force, accel);
 
@@ -362,15 +370,18 @@ int main(int argc, char* argv[]) {
             } else {
                 continue;
             }
+        }
+        for(int a = 0; a < system_data.num_objects; a++){
             for(int b = 0; b < system_data.num_objects; b++){
-                if ( a != b && objects[b].active){
+                //if ( a != b && objects[b].active){
+                if ( a != b && objects[b].active && objects[a].active){
                     check_collision(objects, a, b);
                 }
             }
         }
     }
 
-    /* Write final configuration to a file*/
+    /* Write final configuration to a file */
     write_config(1, system_data, objects);
     free(force);
     return 0;

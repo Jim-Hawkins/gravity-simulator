@@ -1192,3 +1192,303 @@ Acceleration(4): -1.6043e+07 1.67656e+07 -1.5414e+07
 Acceleration(5): 1.57159e+07 1.57955e+07 1.63449e+07
 Acceleration(6): 1.55106e+07 1.7057e+07 -1.48856e+07
 Acceleration(7): 1.578e+07 -1.50574e+07 1.72288e+07
+
+Iteration: 20
+Acceleration(0): 1.67655e+07 1.5219e+07 1.53168e+07
+Acceleration(1): 1.5504e+07 1.54244e+07 -1.67761e+07
+Acceleration(2): 1.52025e+07 -1.59252e+07 -1.58275e+07
+Acceleration(3): -1.62549e+07 1.55322e+07 1.49828e+07
+Acceleration(4): 1.6043e+07 -1.67656e+07 1.5414e+07
+Acceleration(5): -1.57159e+07 -1.57955e+07 -1.63449e+07
+Acceleration(6): -1.55106e+07 -1.7057e+07 1.48856e+07
+Acceleration(7): -1.578e+07 1.50574e+07 -1.72288e+07
+
+Iteration: 21
+Acceleration(0): -1.67655e+07 -1.5219e+07 -1.53168e+07
+Acceleration(1): -1.5504e+07 -1.54244e+07 1.67761e+07
+Acceleration(2): -1.52025e+07 1.59252e+07 1.58275e+07
+Acceleration(3): 1.62549e+07 -1.55322e+07 -1.49828e+07
+Acceleration(4): -1.6043e+07 1.67656e+07 -1.5414e+07
+Acceleration(5): 1.57159e+07 1.57955e+07 1.63449e+07
+Acceleration(6): 1.55106e+07 1.7057e+07 -1.48856e+07
+Acceleration(7): 1.578e+07 -1.50574e+07 1.72288e+07
+
+Iteration: 22
+Acceleration(0): 1.67655e+07 1.5219e+07 1.53168e+07
+Acceleration(1): 1.5504e+07 1.54244e+07 -1.67761e+07
+Acceleration(2): 1.52025e+07 -1.59252e+07 -1.58275e+07
+Acceleration(3): -1.62549e+07 1.55322e+07 1.49828e+07
+Acceleration(4): 1.6043e+07 -1.67656e+07 1.5414e+07
+Acceleration(5): -1.57159e+07 -1.57955e+07 -1.63449e+07
+Acceleration(6): -1.55106e+07 -1.7057e+07 1.48856e+07
+Acceleration(7): -1.578e+07 1.50574e+07 -1.72288e+07
+
+Iteration: 23
+Acceleration(0): -1.67655e+07 -1.5219e+07 -1.53168e+07
+Acceleration(1): -1.5504e+07 -1.54244e+07 1.67761e+07
+Acceleration(2): -1.52025e+07 1.59252e+07 1.58275e+07
+Acceleration(3): 1.62549e+07 -1.55322e+07 -1.49828e+07
+Acceleration(4): -1.6043e+07 1.67656e+07 -1.5414e+07
+Acceleration(5): 1.57159e+07 1.57955e+07 1.63449e+07
+Acceleration(6): 1.55106e+07 1.7057e+07 -1.48856e+07
+Acceleration(7): 1.578e+07 -1.50574e+07 1.72288e+07
+
+Iteration: 24
+Acceleration(0): 1.67655e+07 1.5219e+07 1.53168e+07
+Acceleration(1): 1.5504e+07 1.54244e+07 -1.67761e+07
+Acceleration(2): 1.52025e+07 -1.59252e+07 -1.58275e+07
+Acceleration(3): -1.62549e+07 1.55322e+07 1.49828e+07
+Acceleration(4): 1.6043e+07 -1.67656e+07 1.5414e+07
+Acceleration(5): -1.57159e+07 -1.57955e+07 -1.63449e+07
+Acceleration(6): -1.55106e+07 -1.7057e+07 1.48856e+07
+Acceleration(7): -1.578e+07 1.50574e+07 -1.72288e+07
+
+Iteration: 25
+Acceleration(0): -1.67655e+07 -1.5219e+07 -1.53168e+07
+Acceleration(1): -1.5504e+07 -1.54244e+07 1.67761e+07
+Acceleration(2): -1.52025e+07 1.59252e+07 1.58275e+07
+Acceleration(3): 1.62549e+07 -1.55322e+07 -1.49828e+07
+Acceleration(4): -1.6043e+07 1.67656e+07 -1.5414e+07
+Acceleration(5): 1.57159e+07 1.57955e+07 1.63449e+07
+Acceleration(6): 1.55106e+07 1.7057e+07 -1.48856e+07
+Acceleration(7): 1.578e+07 -1.50574e+07 1.72288e+07
+
+Iteration: 26
+Acceleration(0): 1.67655e+07 1.5219e+07 1.53168e+07
+Acceleration(1): 1.5504e+07 1.54244e+07 -1.67761e+07
+Acceleration(2): 1.52025e+07 -1.59252e+07 -1.58275e+07
+Acceleration(3): -1.62549e+07 1.55322e+07 1.49828e+07
+Acceleration(4): 1.6043e+07 -1.67656e+07 1.5414e+07
+Acceleration(5): -1.57159e+07 -1.57955e+07 -1.63449e+07
+Acceleration(6): -1.55106e+07 -1.7057e+07 1.48856e+07
+Acceleration(7): -1.578e+07 1.50574e+07 -1.72288e+07
+
+Iteration: 27
+Acceleration(0): -1.67655e+07 -1.5219e+07 -1.53168e+07
+Acceleration(1): -1.5504e+07 -1.54244e+07 1.67761e+07
+Acceleration(2): -1.52025e+07 1.59252e+07 1.58275e+07
+Acceleration(3): 1.62549e+07 -1.55322e+07 -1.49828e+07
+Acceleration(4): -1.6043e+07 1.67656e+07 -1.5414e+07
+Acceleration(5): 1.57159e+07 1.57955e+07 1.63449e+07
+Acceleration(6): 1.55106e+07 1.7057e+07 -1.48856e+07
+Acceleration(7): 1.578e+07 -1.50574e+07 1.72288e+07
+
+Iteration: 28
+Acceleration(0): 1.67655e+07 1.5219e+07 1.53168e+07
+Acceleration(1): 1.5504e+07 1.54244e+07 -1.67761e+07
+Acceleration(2): 1.52025e+07 -1.59252e+07 -1.58275e+07
+Acceleration(3): -1.62549e+07 1.55322e+07 1.49828e+07
+Acceleration(4): 1.6043e+07 -1.67656e+07 1.5414e+07
+Acceleration(5): -1.57159e+07 -1.57955e+07 -1.63449e+07
+Acceleration(6): -1.55106e+07 -1.7057e+07 1.48856e+07
+Acceleration(7): -1.578e+07 1.50574e+07 -1.72288e+07
+
+Iteration: 29
+Acceleration(0): -1.67655e+07 -1.5219e+07 -1.53168e+07
+Acceleration(1): -1.5504e+07 -1.54244e+07 1.67761e+07
+Acceleration(2): -1.52025e+07 1.59252e+07 1.58275e+07
+Acceleration(3): 1.62549e+07 -1.55322e+07 -1.49828e+07
+Acceleration(4): -1.6043e+07 1.67656e+07 -1.5414e+07
+Acceleration(5): 1.57159e+07 1.57955e+07 1.63449e+07
+Acceleration(6): 1.55106e+07 1.7057e+07 -1.48856e+07
+Acceleration(7): 1.578e+07 -1.50574e+07 1.72288e+07
+
+Iteration: 30
+Acceleration(0): 1.67655e+07 1.5219e+07 1.53168e+07
+Acceleration(1): 1.5504e+07 1.54244e+07 -1.67761e+07
+Acceleration(2): 1.52025e+07 -1.59252e+07 -1.58275e+07
+Acceleration(3): -1.62549e+07 1.55322e+07 1.49828e+07
+Acceleration(4): 1.6043e+07 -1.67656e+07 1.5414e+07
+Acceleration(5): -1.57159e+07 -1.57955e+07 -1.63449e+07
+Acceleration(6): -1.55106e+07 -1.7057e+07 1.48856e+07
+Acceleration(7): -1.578e+07 1.50574e+07 -1.72288e+07
+
+Iteration: 31
+Acceleration(0): -1.67655e+07 -1.5219e+07 -1.53168e+07
+Acceleration(1): -1.5504e+07 -1.54244e+07 1.67761e+07
+Acceleration(2): -1.52025e+07 1.59252e+07 1.58275e+07
+Acceleration(3): 1.62549e+07 -1.55322e+07 -1.49828e+07
+Acceleration(4): -1.6043e+07 1.67656e+07 -1.5414e+07
+Acceleration(5): 1.57159e+07 1.57955e+07 1.63449e+07
+Acceleration(6): 1.55106e+07 1.7057e+07 -1.48856e+07
+Acceleration(7): 1.578e+07 -1.50574e+07 1.72288e+07
+
+Iteration: 32
+Acceleration(0): 1.67655e+07 1.5219e+07 1.53168e+07
+Acceleration(1): 1.5504e+07 1.54244e+07 -1.67761e+07
+Acceleration(2): 1.52025e+07 -1.59252e+07 -1.58275e+07
+Acceleration(3): -1.62549e+07 1.55322e+07 1.49828e+07
+Acceleration(4): 1.6043e+07 -1.67656e+07 1.5414e+07
+Acceleration(5): -1.57159e+07 -1.57955e+07 -1.63449e+07
+Acceleration(6): -1.55106e+07 -1.7057e+07 1.48856e+07
+Acceleration(7): -1.578e+07 1.50574e+07 -1.72288e+07
+
+Iteration: 33
+Acceleration(0): -1.67655e+07 -1.5219e+07 -1.53168e+07
+Acceleration(1): -1.5504e+07 -1.54244e+07 1.67761e+07
+Acceleration(2): -1.52025e+07 1.59252e+07 1.58275e+07
+Acceleration(3): 1.62549e+07 -1.55322e+07 -1.49828e+07
+Acceleration(4): -1.6043e+07 1.67656e+07 -1.5414e+07
+Acceleration(5): 1.57159e+07 1.57955e+07 1.63449e+07
+Acceleration(6): 1.55106e+07 1.7057e+07 -1.48856e+07
+Acceleration(7): 1.578e+07 -1.50574e+07 1.72288e+07
+
+Iteration: 34
+Acceleration(0): 1.67655e+07 1.5219e+07 1.53168e+07
+Acceleration(1): 1.5504e+07 1.54244e+07 -1.67761e+07
+Acceleration(2): 1.52025e+07 -1.59252e+07 -1.58275e+07
+Acceleration(3): -1.62549e+07 1.55322e+07 1.49828e+07
+Acceleration(4): 1.6043e+07 -1.67656e+07 1.5414e+07
+Acceleration(5): -1.57159e+07 -1.57955e+07 -1.63449e+07
+Acceleration(6): -1.55106e+07 -1.7057e+07 1.48856e+07
+Acceleration(7): -1.578e+07 1.50574e+07 -1.72288e+07
+
+Iteration: 35
+Acceleration(0): -1.67655e+07 -1.5219e+07 -1.53168e+07
+Acceleration(1): -1.5504e+07 -1.54244e+07 1.67761e+07
+Acceleration(2): -1.52025e+07 1.59252e+07 1.58275e+07
+Acceleration(3): 1.62549e+07 -1.55322e+07 -1.49828e+07
+Acceleration(4): -1.6043e+07 1.67656e+07 -1.5414e+07
+Acceleration(5): 1.57159e+07 1.57955e+07 1.63449e+07
+Acceleration(6): 1.55106e+07 1.7057e+07 -1.48856e+07
+Acceleration(7): 1.578e+07 -1.50574e+07 1.72288e+07
+
+Iteration: 36
+Acceleration(0): 1.67655e+07 1.5219e+07 1.53168e+07
+Acceleration(1): 1.5504e+07 1.54244e+07 -1.67761e+07
+Acceleration(2): 1.52025e+07 -1.59252e+07 -1.58275e+07
+Acceleration(3): -1.62549e+07 1.55322e+07 1.49828e+07
+Acceleration(4): 1.6043e+07 -1.67656e+07 1.5414e+07
+Acceleration(5): -1.57159e+07 -1.57955e+07 -1.63449e+07
+Acceleration(6): -1.55106e+07 -1.7057e+07 1.48856e+07
+Acceleration(7): -1.578e+07 1.50574e+07 -1.72288e+07
+
+Iteration: 37
+Acceleration(0): -1.67655e+07 -1.5219e+07 -1.53168e+07
+Acceleration(1): -1.5504e+07 -1.54244e+07 1.67761e+07
+Acceleration(2): -1.52025e+07 1.59252e+07 1.58275e+07
+Acceleration(3): 1.62549e+07 -1.55322e+07 -1.49828e+07
+Acceleration(4): -1.6043e+07 1.67656e+07 -1.5414e+07
+Acceleration(5): 1.57159e+07 1.57955e+07 1.63449e+07
+Acceleration(6): 1.55106e+07 1.7057e+07 -1.48856e+07
+Acceleration(7): 1.578e+07 -1.50574e+07 1.72288e+07
+
+Iteration: 38
+Acceleration(0): 1.67655e+07 1.5219e+07 1.53168e+07
+Acceleration(1): 1.5504e+07 1.54244e+07 -1.67761e+07
+Acceleration(2): 1.52025e+07 -1.59252e+07 -1.58275e+07
+Acceleration(3): -1.62549e+07 1.55322e+07 1.49828e+07
+Acceleration(4): 1.6043e+07 -1.67656e+07 1.5414e+07
+Acceleration(5): -1.57159e+07 -1.57955e+07 -1.63449e+07
+Acceleration(6): -1.55106e+07 -1.7057e+07 1.48856e+07
+Acceleration(7): -1.578e+07 1.50574e+07 -1.72288e+07
+
+Iteration: 39
+Acceleration(0): -1.67655e+07 -1.5219e+07 -1.53168e+07
+Acceleration(1): -1.5504e+07 -1.54244e+07 1.67761e+07
+Acceleration(2): -1.52025e+07 1.59252e+07 1.58275e+07
+Acceleration(3): 1.62549e+07 -1.55322e+07 -1.49828e+07
+Acceleration(4): -1.6043e+07 1.67656e+07 -1.5414e+07
+Acceleration(5): 1.57159e+07 1.57955e+07 1.63449e+07
+Acceleration(6): 1.55106e+07 1.7057e+07 -1.48856e+07
+Acceleration(7): 1.578e+07 -1.50574e+07 1.72288e+07
+
+Iteration: 40
+Acceleration(0): 1.67655e+07 1.5219e+07 1.53168e+07
+Acceleration(1): 1.5504e+07 1.54244e+07 -1.67761e+07
+Acceleration(2): 1.52025e+07 -1.59252e+07 -1.58275e+07
+Acceleration(3): -1.62549e+07 1.55322e+07 1.49828e+07
+Acceleration(4): 1.6043e+07 -1.67656e+07 1.5414e+07
+Acceleration(5): -1.57159e+07 -1.57955e+07 -1.63449e+07
+Acceleration(6): -1.55106e+07 -1.7057e+07 1.48856e+07
+Acceleration(7): -1.578e+07 1.50574e+07 -1.72288e+07
+
+Iteration: 41
+Acceleration(0): -1.67655e+07 -1.5219e+07 -1.53168e+07
+Acceleration(1): -1.5504e+07 -1.54244e+07 1.67761e+07
+Acceleration(2): -1.52025e+07 1.59252e+07 1.58275e+07
+Acceleration(3): 1.62549e+07 -1.55322e+07 -1.49828e+07
+Acceleration(4): -1.6043e+07 1.67656e+07 -1.5414e+07
+Acceleration(5): 1.57159e+07 1.57955e+07 1.63449e+07
+Acceleration(6): 1.55106e+07 1.7057e+07 -1.48856e+07
+Acceleration(7): 1.578e+07 -1.50574e+07 1.72288e+07
+
+Iteration: 42
+Acceleration(0): 1.67655e+07 1.5219e+07 1.53168e+07
+Acceleration(1): 1.5504e+07 1.54244e+07 -1.67761e+07
+Acceleration(2): 1.52025e+07 -1.59252e+07 -1.58275e+07
+Acceleration(3): -1.62549e+07 1.55322e+07 1.49828e+07
+Acceleration(4): 1.6043e+07 -1.67656e+07 1.5414e+07
+Acceleration(5): -1.57159e+07 -1.57955e+07 -1.63449e+07
+Acceleration(6): -1.55106e+07 -1.7057e+07 1.48856e+07
+Acceleration(7): -1.578e+07 1.50574e+07 -1.72288e+07
+
+Iteration: 43
+Acceleration(0): -1.67655e+07 -1.5219e+07 -1.53168e+07
+Acceleration(1): -1.5504e+07 -1.54244e+07 1.67761e+07
+Acceleration(2): -1.52025e+07 1.59252e+07 1.58275e+07
+Acceleration(3): 1.62549e+07 -1.55322e+07 -1.49828e+07
+Acceleration(4): -1.6043e+07 1.67656e+07 -1.5414e+07
+Acceleration(5): 1.57159e+07 1.57955e+07 1.63449e+07
+Acceleration(6): 1.55106e+07 1.7057e+07 -1.48856e+07
+Acceleration(7): 1.578e+07 -1.50574e+07 1.72288e+07
+
+Iteration: 44
+Acceleration(0): 1.67655e+07 1.5219e+07 1.53168e+07
+Acceleration(1): 1.5504e+07 1.54244e+07 -1.67761e+07
+Acceleration(2): 1.52025e+07 -1.59252e+07 -1.58275e+07
+Acceleration(3): -1.62549e+07 1.55322e+07 1.49828e+07
+Acceleration(4): 1.6043e+07 -1.67656e+07 1.5414e+07
+Acceleration(5): -1.57159e+07 -1.57955e+07 -1.63449e+07
+Acceleration(6): -1.55106e+07 -1.7057e+07 1.48856e+07
+Acceleration(7): -1.578e+07 1.50574e+07 -1.72288e+07
+
+Iteration: 45
+Acceleration(0): -1.67655e+07 -1.5219e+07 -1.53168e+07
+Acceleration(1): -1.5504e+07 -1.54244e+07 1.67761e+07
+Acceleration(2): -1.52025e+07 1.59252e+07 1.58275e+07
+Acceleration(3): 1.62549e+07 -1.55322e+07 -1.49828e+07
+Acceleration(4): -1.6043e+07 1.67656e+07 -1.5414e+07
+Acceleration(5): 1.57159e+07 1.57955e+07 1.63449e+07
+Acceleration(6): 1.55106e+07 1.7057e+07 -1.48856e+07
+Acceleration(7): 1.578e+07 -1.50574e+07 1.72288e+07
+
+Iteration: 46
+Acceleration(0): 1.67655e+07 1.5219e+07 1.53168e+07
+Acceleration(1): 1.5504e+07 1.54244e+07 -1.67761e+07
+Acceleration(2): 1.52025e+07 -1.59252e+07 -1.58275e+07
+Acceleration(3): -1.62549e+07 1.55322e+07 1.49828e+07
+Acceleration(4): 1.6043e+07 -1.67656e+07 1.5414e+07
+Acceleration(5): -1.57159e+07 -1.57955e+07 -1.63449e+07
+Acceleration(6): -1.55106e+07 -1.7057e+07 1.48856e+07
+Acceleration(7): -1.578e+07 1.50574e+07 -1.72288e+07
+
+Iteration: 47
+Acceleration(0): -1.67655e+07 -1.5219e+07 -1.53168e+07
+Acceleration(1): -1.5504e+07 -1.54244e+07 1.67761e+07
+Acceleration(2): -1.52025e+07 1.59252e+07 1.58275e+07
+Acceleration(3): 1.62549e+07 -1.55322e+07 -1.49828e+07
+Acceleration(4): -1.6043e+07 1.67656e+07 -1.5414e+07
+Acceleration(5): 1.57159e+07 1.57955e+07 1.63449e+07
+Acceleration(6): 1.55106e+07 1.7057e+07 -1.48856e+07
+Acceleration(7): 1.578e+07 -1.50574e+07 1.72288e+07
+
+Iteration: 48
+Acceleration(0): 1.67655e+07 1.5219e+07 1.53168e+07
+Acceleration(1): 1.5504e+07 1.54244e+07 -1.67761e+07
+Acceleration(2): 1.52025e+07 -1.59252e+07 -1.58275e+07
+Acceleration(3): -1.62549e+07 1.55322e+07 1.49828e+07
+Acceleration(4): 1.6043e+07 -1.67656e+07 1.5414e+07
+Acceleration(5): -1.57159e+07 -1.57955e+07 -1.63449e+07
+Acceleration(6): -1.55106e+07 -1.7057e+07 1.48856e+07
+Acceleration(7): -1.578e+07 1.50574e+07 -1.72288e+07
+
+Iteration: 49
+Acceleration(0): -1.67655e+07 -1.5219e+07 -1.53168e+07
+Acceleration(1): -1.5504e+07 -1.54244e+07 1.67761e+07
+Acceleration(2): -1.52025e+07 1.59252e+07 1.58275e+07
+Acceleration(3): 1.62549e+07 -1.55322e+07 -1.49828e+07
+Acceleration(4): -1.6043e+07 1.67656e+07 -1.5414e+07
+Acceleration(5): 1.57159e+07 1.57955e+07 1.63449e+07
+Acceleration(6): 1.55106e+07 1.7057e+07 -1.48856e+07
+Acceleration(7): 1.578e+07 -1.50574e+07 1.72288e+07
