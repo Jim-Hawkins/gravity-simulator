@@ -9,6 +9,9 @@
 
 #include "sim_aos.hpp"
 
+//OPTIMIZACION 2
+#define G (6.674 * 1E-11)
+
 using namespace std;
 
 /* *
@@ -61,6 +64,8 @@ int parser(int argc, char* argv[]){
  * @param: double                 it's an array to set the new force
  * @return force                 resulting force vector
  */
+ 
+ /* OPTIMIZACION 2: EVITAR SOBRECARGA POR CREAR UNA FUNCION
 void gravitational_force_calc(set *objects, int i, int j, double *force) {
     double G = 6.674 * 1E-11;
 
@@ -74,6 +79,7 @@ void gravitational_force_calc(set *objects, int i, int j, double *force) {
     force[1] -= (G * objects[i].m * objects[j].m * (objects[i].y - objects[j].y))/(norm * norm * norm);
     force[2] -= (G * objects[i].m * objects[j].m * (objects[i].z - objects[j].z))/(norm * norm * norm);
 }
+*/
 
 /*
  * This function will return a component of the acceleration of a point with the mass m given and the component of the sum of forces F of the point
@@ -99,16 +105,85 @@ double accel_calc(double m, double F) {
 
 int gravitational_force(int num_objects, set *objects, double time_step, double *force, double *accel) {
 
+    double powSqX;
+    double powSqY;
+    double powSqZ;
+    double norm;
+    double fx;
+    double fy;
+    double fz;
+    
     // The execution will pass through two nested loops to obtain the sum of gravitational forces of every point with
     // the other points. Analogous to take a screenshot of the system before updating speeds and positions.
     for(int i = 0; i < num_objects; i++) {
-        if (!objects[i].active) { continue; }
-        for (int j = 0; j < num_objects; j++) {
+    //OPTIMIZACION 10 aniversario VA MUY BIEN: cambiar el if
+    /*if (!objects[i].active) { continue; }
+        //for (int j = 0; j < num_objects; j++) {
+        //OPTIMIZACION 1: bucles a la mitad:
+        for (int j = i + 1; j < num_objects; j++) {
 
             // If objects i and j are active and different, update i's slot in
             // force array (force[3*i], force[3*i+1], force[3*i+2])
-            if (objects[j].active && i != j) {
-                gravitational_force_calc(objects, i, j, &force[3*i]);
+            //OPTIMIZACION 3: quitar i!=j
+            //if (objects[j].active && i != j) {
+            if (objects[j].active) {
+                //gravitational_force_calc(objects, i, j, &force[3*i]);
+                //OPTIMIZACION 1 bucles a la mitad:
+
+		        powSqX  = (objects[j].x - objects[i].x) * (objects[j].x - objects[i].x);
+		        powSqY  = (objects[j].y - objects[i].y) * (objects[j].y - objects[i].y);
+		        powSqZ  = (objects[j].z - objects[i].z) * (objects[j].z - objects[i].z);
+		        norm = std::sqrt(powSqX + powSqY + powSqZ);
+		        // It will return the three components of the gravitational force between i and j
+    
+                // y OPTIMIZACION 2:
+
+                fx = (G * objects[i].m * objects[j].m * (objects[j].x - objects[i].x))/(norm * norm * norm);
+                fy = (G * objects[i].m * objects[j].m * (objects[j].y - objects[i].y))/(norm * norm * norm);
+                fz = (G * objects[i].m * objects[j].m * (objects[j].z - objects[i].z))/(norm * norm * norm);
+                
+		        force[3*i] += fx;
+		        force[3*i + 1] += fy;
+		        force[3*i + 2] += fz;
+		        force[3*j] -= fx;
+		        force[3*j + 1] -= fy;
+		        force[3*j + 2] -= fz;
+                //posible (quitar primero optm2): gravitational_force_calc(objects, i, j, &force[3*i], &force[3*j]);
+            }
+        }*/
+            if (objects[i].active) {
+            //for (int j = 0; j < num_objects; j++) {
+            //OPTIMIZACION 1: bucles a la mitad:
+            for (int j = i + 1; j < num_objects; j++) {
+
+                // If objects i and j are active and different, update i's slot in
+                // force array (force[3*i], force[3*i+1], force[3*i+2])
+                //OPTIMIZACION 3: quitar i!=j
+                //if (objects[j].active && i != j) {
+                if (objects[j].active) {
+                    //gravitational_force_calc(objects, i, j, &force[3*i]);
+                    //OPTIMIZACION 1 bucles a la mitad:
+
+		            powSqX  = (objects[j].x - objects[i].x) * (objects[j].x - objects[i].x);
+		            powSqY  = (objects[j].y - objects[i].y) * (objects[j].y - objects[i].y);
+		            powSqZ  = (objects[j].z - objects[i].z) * (objects[j].z - objects[i].z);
+		            norm = std::sqrt(powSqX + powSqY + powSqZ);
+		            // It will return the three components of the gravitational force between i and j
+        
+                    // y OPTIMIZACION 2:
+
+                    fx = (G * objects[i].m * objects[j].m * (objects[j].x - objects[i].x))/(norm * norm * norm);
+                    fy = (G * objects[i].m * objects[j].m * (objects[j].y - objects[i].y))/(norm * norm * norm);
+                    fz = (G * objects[i].m * objects[j].m * (objects[j].z - objects[i].z))/(norm * norm * norm);
+                    
+		            force[3*i] += fx;
+		            force[3*i + 1] += fy;
+		            force[3*i + 2] += fz;
+		            force[3*j] -= fx;
+		            force[3*j + 1] -= fy;
+		            force[3*j + 2] -= fz;
+                    //posible (quitar primero optm2): gravitational_force_calc(objects, i, j, &force[3*i], &force[3*j]);
+                }
             }
         }
     }
@@ -201,6 +276,8 @@ int check_collision(set *objects, int i, int j){
                             + (objects[i].z - objects[j].z) * (objects[i].z - objects[j].z));
 
     if(distance < 1.0){
+        cout << "Colisionó i " << i << " con j " << j << endl;
+        cout << "activos i j" << objects[i].active << " " << objects[j].active << endl;
         collision_objects(objects, i, j);
     }
     return 0;
@@ -351,14 +428,20 @@ int main(int argc, char* argv[]) {
     /* Initial collision checking */
     for(int i = 0; i < system_data.num_objects; i++){
         if( !objects[i].active ){ continue; }
-        for(int j = 0; j < system_data.num_objects; j++){
-            if( i != j && objects[j].active)
+        //OPTIMIZACION 6 VA BIEN: j = i + 1 para reducir tiempos igual que optm5
+        //for(int j = 0; j < system_data.num_objects; j++){
+        for(int j = i + 1; j < system_data.num_objects; j++){
+            //OPTIMIZACION 7 VA BIEN: quitar filtro i!=j pq no hace falta 
+            //if( i != j && objects[j].active)
+            if(objects[j].active)
                 check_collision(objects, i, j);
         }
     }
 
     /* Body of the simulation */
     for(int i = 0; i < system_data.num_iterations; i++){
+        //OPTIMIZACION 8 SE QUITA: semaforo para ahorrarse el siguiente for
+        //bool no_te_ejecutes = false;
     	cout << endl << "Iteration: " << i << endl << "Net forces" << endl;
         for(int foo=0; foo < system_data.num_objects * 3; foo++){force[foo] = 0;}
         gravitational_force(system_data.num_objects, objects, system_data.time_step, force, accel);
@@ -367,19 +450,54 @@ int main(int argc, char* argv[]) {
 
             if (objects[a].active){
                 check_bounce(objects, a, system_data.size_enclosure);
-            } else {
-                continue;
-            }
+            } /*else {
+                //OPTIMIZACION 8 SE QUITA: semaforo para ahorrarse el siguiente for
+                no_te_ejecutes = true;
+                //quitar a este hace que vaya relocaaaaa: continue;
+            }*/
         }
+        //OPTIMIZACION 8 SE QUITA: semaforo para ahorrarse el siguiente for
+        /*
         for(int a = 0; a < system_data.num_objects; a++){
-            for(int b = 0; b < system_data.num_objects; b++){
+            //for(int b = 0; b < system_data.num_objects; b++){
+            //OPTIMIZACION 4 NICEEEEEE: b = a para intentar reducir tiempos
+            //OPTIMIZACION 5 VA BIEN: b = a + 1 para intentar reducir tiempos
+            //for(int b = a; b < system_data.num_objects; b++){
+            for(int b = a + 1; b < system_data.num_objects; b++){
                 //if ( a != b && objects[b].active){
-                if ( a != b && objects[b].active && objects[a].active){
+                //OPTIMIZACION 7 VA BIEN: quitar filtro a!= b pq no hace falta 
+                //if ( a != b && objects[b].active && objects[a].active){
+                if (objects[b].active && objects[a].active){
                     check_collision(objects, a, b);
+                    }
+                //}
+            }
+        }*/
+        //OPTIMIZACION 9 VA MUY BIEN: quitar este if
+        //if (!no_te_ejecutes){
+            for(int a = 0; a < system_data.num_objects; a++){
+                //OPTIMIZACION 9 VA MUY BIEN: no_te_ejecutes por aqui dentro
+                if(objects[a].active){
+                //for(int b = 0; b < system_data.num_objects; b++){
+                //OPTIMIZACION 4 NICEEEEEE: b = a para intentar reducir tiempos
+                //OPTIMIZACION 5 VA BIEN: b = a + 1 para intentar reducir tiempos
+                //for(int b = a; b < system_data.num_objects; b++){
+                for(int b = a + 1; b < system_data.num_objects; b++){
+                    //if ( a != b && objects[b].active){
+                    //OPTIMIZACION 7 VA BIEN: quitar filtro a!= b pq no hace falta 
+                    //if ( a != b && objects[b].active && objects[a].active){
+                    //if (objects[b].active && objects[a].active){
+                    //OPTIMIZACION 9 VA MUY BIEN:
+                    if (objects[b].active){
+                        check_collision(objects, a, b);
+                        }
+                    //}
+                }
                 }
             }
-        }
-    }
+        
+        //}
+    }//amen jesus
 
     /* Write final configuration to a file */
     write_config(1, system_data, objects);

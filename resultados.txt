@@ -1007,6 +1007,1986 @@ Force(996) = 9.38241e+27 -1.12283e+29 9.20935e+28
 Force(997) = 3.97452e+28 2.26873e+28 -1.54956e+29 
 Force(998) = -1.56479e+29 2.59096e+28 -5.93092e+28 
 Force(999) = 2.89259e+27 1.17533e+29 8.53167e+28 
+Colisionó i 0 con j 5
+activos i j1 1
+Colisionó i 0 con j 10
+activos i j1 1
+Colisionó i 0 con j 24
+activos i j1 1
+Colisionó i 0 con j 28
+activos i j1 1
+Colisionó i 0 con j 29
+activos i j1 1
+Colisionó i 0 con j 35
+activos i j1 1
+Colisionó i 0 con j 36
+activos i j1 1
+Colisionó i 0 con j 38
+activos i j1 1
+Colisionó i 0 con j 54
+activos i j1 1
+Colisionó i 0 con j 58
+activos i j1 1
+Colisionó i 0 con j 88
+activos i j1 1
+Colisionó i 0 con j 97
+activos i j1 1
+Colisionó i 0 con j 104
+activos i j1 1
+Colisionó i 0 con j 113
+activos i j1 1
+Colisionó i 0 con j 114
+activos i j1 1
+Colisionó i 0 con j 119
+activos i j1 1
+Colisionó i 0 con j 123
+activos i j1 1
+Colisionó i 0 con j 134
+activos i j1 1
+Colisionó i 0 con j 135
+activos i j1 1
+Colisionó i 0 con j 144
+activos i j1 1
+Colisionó i 0 con j 148
+activos i j1 1
+Colisionó i 0 con j 156
+activos i j1 1
+Colisionó i 0 con j 185
+activos i j1 1
+Colisionó i 0 con j 200
+activos i j1 1
+Colisionó i 0 con j 213
+activos i j1 1
+Colisionó i 0 con j 224
+activos i j1 1
+Colisionó i 0 con j 226
+activos i j1 1
+Colisionó i 0 con j 228
+activos i j1 1
+Colisionó i 0 con j 231
+activos i j1 1
+Colisionó i 0 con j 236
+activos i j1 1
+Colisionó i 0 con j 239
+activos i j1 1
+Colisionó i 0 con j 243
+activos i j1 1
+Colisionó i 0 con j 256
+activos i j1 1
+Colisionó i 0 con j 267
+activos i j1 1
+Colisionó i 0 con j 283
+activos i j1 1
+Colisionó i 0 con j 292
+activos i j1 1
+Colisionó i 0 con j 297
+activos i j1 1
+Colisionó i 0 con j 313
+activos i j1 1
+Colisionó i 0 con j 319
+activos i j1 1
+Colisionó i 0 con j 324
+activos i j1 1
+Colisionó i 0 con j 347
+activos i j1 1
+Colisionó i 0 con j 349
+activos i j1 1
+Colisionó i 0 con j 355
+activos i j1 1
+Colisionó i 0 con j 360
+activos i j1 1
+Colisionó i 0 con j 362
+activos i j1 1
+Colisionó i 0 con j 366
+activos i j1 1
+Colisionó i 0 con j 367
+activos i j1 1
+Colisionó i 0 con j 368
+activos i j1 1
+Colisionó i 0 con j 391
+activos i j1 1
+Colisionó i 0 con j 394
+activos i j1 1
+Colisionó i 0 con j 400
+activos i j1 1
+Colisionó i 0 con j 406
+activos i j1 1
+Colisionó i 0 con j 425
+activos i j1 1
+Colisionó i 0 con j 434
+activos i j1 1
+Colisionó i 0 con j 440
+activos i j1 1
+Colisionó i 0 con j 458
+activos i j1 1
+Colisionó i 0 con j 463
+activos i j1 1
+Colisionó i 0 con j 471
+activos i j1 1
+Colisionó i 0 con j 473
+activos i j1 1
+Colisionó i 0 con j 485
+activos i j1 1
+Colisionó i 0 con j 488
+activos i j1 1
+Colisionó i 0 con j 491
+activos i j1 1
+Colisionó i 0 con j 493
+activos i j1 1
+Colisionó i 0 con j 500
+activos i j1 1
+Colisionó i 0 con j 511
+activos i j1 1
+Colisionó i 0 con j 526
+activos i j1 1
+Colisionó i 0 con j 528
+activos i j1 1
+Colisionó i 0 con j 543
+activos i j1 1
+Colisionó i 0 con j 549
+activos i j1 1
+Colisionó i 0 con j 555
+activos i j1 1
+Colisionó i 0 con j 558
+activos i j1 1
+Colisionó i 0 con j 566
+activos i j1 1
+Colisionó i 0 con j 590
+activos i j1 1
+Colisionó i 0 con j 592
+activos i j1 1
+Colisionó i 0 con j 594
+activos i j1 1
+Colisionó i 0 con j 596
+activos i j1 1
+Colisionó i 0 con j 599
+activos i j1 1
+Colisionó i 0 con j 606
+activos i j1 1
+Colisionó i 0 con j 614
+activos i j1 1
+Colisionó i 0 con j 627
+activos i j1 1
+Colisionó i 0 con j 636
+activos i j1 1
+Colisionó i 0 con j 638
+activos i j1 1
+Colisionó i 0 con j 660
+activos i j1 1
+Colisionó i 0 con j 662
+activos i j1 1
+Colisionó i 0 con j 665
+activos i j1 1
+Colisionó i 0 con j 668
+activos i j1 1
+Colisionó i 0 con j 671
+activos i j1 1
+Colisionó i 0 con j 687
+activos i j1 1
+Colisionó i 0 con j 690
+activos i j1 1
+Colisionó i 0 con j 691
+activos i j1 1
+Colisionó i 0 con j 695
+activos i j1 1
+Colisionó i 0 con j 696
+activos i j1 1
+Colisionó i 0 con j 702
+activos i j1 1
+Colisionó i 0 con j 707
+activos i j1 1
+Colisionó i 0 con j 711
+activos i j1 1
+Colisionó i 0 con j 712
+activos i j1 1
+Colisionó i 0 con j 713
+activos i j1 1
+Colisionó i 0 con j 732
+activos i j1 1
+Colisionó i 0 con j 734
+activos i j1 1
+Colisionó i 0 con j 745
+activos i j1 1
+Colisionó i 0 con j 747
+activos i j1 1
+Colisionó i 0 con j 765
+activos i j1 1
+Colisionó i 0 con j 778
+activos i j1 1
+Colisionó i 0 con j 795
+activos i j1 1
+Colisionó i 0 con j 804
+activos i j1 1
+Colisionó i 0 con j 806
+activos i j1 1
+Colisionó i 0 con j 807
+activos i j1 1
+Colisionó i 0 con j 809
+activos i j1 1
+Colisionó i 0 con j 815
+activos i j1 1
+Colisionó i 0 con j 822
+activos i j1 1
+Colisionó i 0 con j 827
+activos i j1 1
+Colisionó i 0 con j 845
+activos i j1 1
+Colisionó i 0 con j 866
+activos i j1 1
+Colisionó i 0 con j 882
+activos i j1 1
+Colisionó i 0 con j 888
+activos i j1 1
+Colisionó i 0 con j 892
+activos i j1 1
+Colisionó i 0 con j 896
+activos i j1 1
+Colisionó i 0 con j 910
+activos i j1 1
+Colisionó i 0 con j 913
+activos i j1 1
+Colisionó i 0 con j 920
+activos i j1 1
+Colisionó i 0 con j 924
+activos i j1 1
+Colisionó i 0 con j 928
+activos i j1 1
+Colisionó i 0 con j 929
+activos i j1 1
+Colisionó i 0 con j 948
+activos i j1 1
+Colisionó i 0 con j 949
+activos i j1 1
+Colisionó i 0 con j 959
+activos i j1 1
+Colisionó i 0 con j 967
+activos i j1 1
+Colisionó i 0 con j 972
+activos i j1 1
+Colisionó i 0 con j 974
+activos i j1 1
+Colisionó i 0 con j 987
+activos i j1 1
+Colisionó i 0 con j 989
+activos i j1 1
+Colisionó i 0 con j 992
+activos i j1 1
+Colisionó i 0 con j 999
+activos i j1 1
+Colisionó i 1 con j 3
+activos i j1 1
+Colisionó i 1 con j 6
+activos i j1 1
+Colisionó i 1 con j 15
+activos i j1 1
+Colisionó i 1 con j 25
+activos i j1 1
+Colisionó i 1 con j 33
+activos i j1 1
+Colisionó i 1 con j 34
+activos i j1 1
+Colisionó i 1 con j 37
+activos i j1 1
+Colisionó i 1 con j 42
+activos i j1 1
+Colisionó i 1 con j 45
+activos i j1 1
+Colisionó i 1 con j 50
+activos i j1 1
+Colisionó i 1 con j 60
+activos i j1 1
+Colisionó i 1 con j 71
+activos i j1 1
+Colisionó i 1 con j 92
+activos i j1 1
+Colisionó i 1 con j 95
+activos i j1 1
+Colisionó i 1 con j 105
+activos i j1 1
+Colisionó i 1 con j 109
+activos i j1 1
+Colisionó i 1 con j 127
+activos i j1 1
+Colisionó i 1 con j 129
+activos i j1 1
+Colisionó i 1 con j 147
+activos i j1 1
+Colisionó i 1 con j 158
+activos i j1 1
+Colisionó i 1 con j 168
+activos i j1 1
+Colisionó i 1 con j 172
+activos i j1 1
+Colisionó i 1 con j 179
+activos i j1 1
+Colisionó i 1 con j 186
+activos i j1 1
+Colisionó i 1 con j 192
+activos i j1 1
+Colisionó i 1 con j 194
+activos i j1 1
+Colisionó i 1 con j 212
+activos i j1 1
+Colisionó i 1 con j 221
+activos i j1 1
+Colisionó i 1 con j 227
+activos i j1 1
+Colisionó i 1 con j 241
+activos i j1 1
+Colisionó i 1 con j 245
+activos i j1 1
+Colisionó i 1 con j 246
+activos i j1 1
+Colisionó i 1 con j 247
+activos i j1 1
+Colisionó i 1 con j 274
+activos i j1 1
+Colisionó i 1 con j 285
+activos i j1 1
+Colisionó i 1 con j 295
+activos i j1 1
+Colisionó i 1 con j 296
+activos i j1 1
+Colisionó i 1 con j 312
+activos i j1 1
+Colisionó i 1 con j 322
+activos i j1 1
+Colisionó i 1 con j 332
+activos i j1 1
+Colisionó i 1 con j 337
+activos i j1 1
+Colisionó i 1 con j 348
+activos i j1 1
+Colisionó i 1 con j 354
+activos i j1 1
+Colisionó i 1 con j 369
+activos i j1 1
+Colisionó i 1 con j 377
+activos i j1 1
+Colisionó i 1 con j 384
+activos i j1 1
+Colisionó i 1 con j 389
+activos i j1 1
+Colisionó i 1 con j 405
+activos i j1 1
+Colisionó i 1 con j 412
+activos i j1 1
+Colisionó i 1 con j 413
+activos i j1 1
+Colisionó i 1 con j 416
+activos i j1 1
+Colisionó i 1 con j 418
+activos i j1 1
+Colisionó i 1 con j 430
+activos i j1 1
+Colisionó i 1 con j 453
+activos i j1 1
+Colisionó i 1 con j 464
+activos i j1 1
+Colisionó i 1 con j 469
+activos i j1 1
+Colisionó i 1 con j 496
+activos i j1 1
+Colisionó i 1 con j 498
+activos i j1 1
+Colisionó i 1 con j 502
+activos i j1 1
+Colisionó i 1 con j 503
+activos i j1 1
+Colisionó i 1 con j 504
+activos i j1 1
+Colisionó i 1 con j 510
+activos i j1 1
+Colisionó i 1 con j 514
+activos i j1 1
+Colisionó i 1 con j 517
+activos i j1 1
+Colisionó i 1 con j 524
+activos i j1 1
+Colisionó i 1 con j 527
+activos i j1 1
+Colisionó i 1 con j 533
+activos i j1 1
+Colisionó i 1 con j 534
+activos i j1 1
+Colisionó i 1 con j 535
+activos i j1 1
+Colisionó i 1 con j 542
+activos i j1 1
+Colisionó i 1 con j 544
+activos i j1 1
+Colisionó i 1 con j 546
+activos i j1 1
+Colisionó i 1 con j 550
+activos i j1 1
+Colisionó i 1 con j 553
+activos i j1 1
+Colisionó i 1 con j 557
+activos i j1 1
+Colisionó i 1 con j 565
+activos i j1 1
+Colisionó i 1 con j 571
+activos i j1 1
+Colisionó i 1 con j 579
+activos i j1 1
+Colisionó i 1 con j 585
+activos i j1 1
+Colisionó i 1 con j 589
+activos i j1 1
+Colisionó i 1 con j 609
+activos i j1 1
+Colisionó i 1 con j 625
+activos i j1 1
+Colisionó i 1 con j 642
+activos i j1 1
+Colisionó i 1 con j 659
+activos i j1 1
+Colisionó i 1 con j 670
+activos i j1 1
+Colisionó i 1 con j 726
+activos i j1 1
+Colisionó i 1 con j 744
+activos i j1 1
+Colisionó i 1 con j 767
+activos i j1 1
+Colisionó i 1 con j 770
+activos i j1 1
+Colisionó i 1 con j 776
+activos i j1 1
+Colisionó i 1 con j 782
+activos i j1 1
+Colisionó i 1 con j 785
+activos i j1 1
+Colisionó i 1 con j 786
+activos i j1 1
+Colisionó i 1 con j 790
+activos i j1 1
+Colisionó i 1 con j 797
+activos i j1 1
+Colisionó i 1 con j 812
+activos i j1 1
+Colisionó i 1 con j 824
+activos i j1 1
+Colisionó i 1 con j 831
+activos i j1 1
+Colisionó i 1 con j 843
+activos i j1 1
+Colisionó i 1 con j 857
+activos i j1 1
+Colisionó i 1 con j 859
+activos i j1 1
+Colisionó i 1 con j 867
+activos i j1 1
+Colisionó i 1 con j 873
+activos i j1 1
+Colisionó i 1 con j 877
+activos i j1 1
+Colisionó i 1 con j 883
+activos i j1 1
+Colisionó i 1 con j 890
+activos i j1 1
+Colisionó i 1 con j 891
+activos i j1 1
+Colisionó i 1 con j 903
+activos i j1 1
+Colisionó i 1 con j 911
+activos i j1 1
+Colisionó i 1 con j 912
+activos i j1 1
+Colisionó i 1 con j 914
+activos i j1 1
+Colisionó i 1 con j 919
+activos i j1 1
+Colisionó i 1 con j 925
+activos i j1 1
+Colisionó i 1 con j 971
+activos i j1 1
+Colisionó i 1 con j 975
+activos i j1 1
+Colisionó i 1 con j 976
+activos i j1 1
+Colisionó i 1 con j 979
+activos i j1 1
+Colisionó i 1 con j 980
+activos i j1 1
+Colisionó i 1 con j 981
+activos i j1 1
+Colisionó i 1 con j 991
+activos i j1 1
+Colisionó i 1 con j 997
+activos i j1 1
+Colisionó i 2 con j 8
+activos i j1 1
+Colisionó i 2 con j 23
+activos i j1 1
+Colisionó i 2 con j 30
+activos i j1 1
+Colisionó i 2 con j 31
+activos i j1 1
+Colisionó i 2 con j 64
+activos i j1 1
+Colisionó i 2 con j 66
+activos i j1 1
+Colisionó i 2 con j 69
+activos i j1 1
+Colisionó i 2 con j 72
+activos i j1 1
+Colisionó i 2 con j 75
+activos i j1 1
+Colisionó i 2 con j 79
+activos i j1 1
+Colisionó i 2 con j 80
+activos i j1 1
+Colisionó i 2 con j 81
+activos i j1 1
+Colisionó i 2 con j 83
+activos i j1 1
+Colisionó i 2 con j 84
+activos i j1 1
+Colisionó i 2 con j 89
+activos i j1 1
+Colisionó i 2 con j 90
+activos i j1 1
+Colisionó i 2 con j 94
+activos i j1 1
+Colisionó i 2 con j 96
+activos i j1 1
+Colisionó i 2 con j 116
+activos i j1 1
+Colisionó i 2 con j 139
+activos i j1 1
+Colisionó i 2 con j 150
+activos i j1 1
+Colisionó i 2 con j 169
+activos i j1 1
+Colisionó i 2 con j 184
+activos i j1 1
+Colisionó i 2 con j 207
+activos i j1 1
+Colisionó i 2 con j 216
+activos i j1 1
+Colisionó i 2 con j 225
+activos i j1 1
+Colisionó i 2 con j 242
+activos i j1 1
+Colisionó i 2 con j 253
+activos i j1 1
+Colisionó i 2 con j 257
+activos i j1 1
+Colisionó i 2 con j 259
+activos i j1 1
+Colisionó i 2 con j 263
+activos i j1 1
+Colisionó i 2 con j 264
+activos i j1 1
+Colisionó i 2 con j 270
+activos i j1 1
+Colisionó i 2 con j 276
+activos i j1 1
+Colisionó i 2 con j 277
+activos i j1 1
+Colisionó i 2 con j 286
+activos i j1 1
+Colisionó i 2 con j 290
+activos i j1 1
+Colisionó i 2 con j 293
+activos i j1 1
+Colisionó i 2 con j 294
+activos i j1 1
+Colisionó i 2 con j 304
+activos i j1 1
+Colisionó i 2 con j 308
+activos i j1 1
+Colisionó i 2 con j 311
+activos i j1 1
+Colisionó i 2 con j 320
+activos i j1 1
+Colisionó i 2 con j 327
+activos i j1 1
+Colisionó i 2 con j 341
+activos i j1 1
+Colisionó i 2 con j 344
+activos i j1 1
+Colisionó i 2 con j 357
+activos i j1 1
+Colisionó i 2 con j 358
+activos i j1 1
+Colisionó i 2 con j 359
+activos i j1 1
+Colisionó i 2 con j 373
+activos i j1 1
+Colisionó i 2 con j 378
+activos i j1 1
+Colisionó i 2 con j 379
+activos i j1 1
+Colisionó i 2 con j 388
+activos i j1 1
+Colisionó i 2 con j 390
+activos i j1 1
+Colisionó i 2 con j 392
+activos i j1 1
+Colisionó i 2 con j 402
+activos i j1 1
+Colisionó i 2 con j 408
+activos i j1 1
+Colisionó i 2 con j 411
+activos i j1 1
+Colisionó i 2 con j 415
+activos i j1 1
+Colisionó i 2 con j 419
+activos i j1 1
+Colisionó i 2 con j 423
+activos i j1 1
+Colisionó i 2 con j 424
+activos i j1 1
+Colisionó i 2 con j 426
+activos i j1 1
+Colisionó i 2 con j 433
+activos i j1 1
+Colisionó i 2 con j 449
+activos i j1 1
+Colisionó i 2 con j 451
+activos i j1 1
+Colisionó i 2 con j 465
+activos i j1 1
+Colisionó i 2 con j 474
+activos i j1 1
+Colisionó i 2 con j 484
+activos i j1 1
+Colisionó i 2 con j 487
+activos i j1 1
+Colisionó i 2 con j 492
+activos i j1 1
+Colisionó i 2 con j 507
+activos i j1 1
+Colisionó i 2 con j 516
+activos i j1 1
+Colisionó i 2 con j 519
+activos i j1 1
+Colisionó i 2 con j 529
+activos i j1 1
+Colisionó i 2 con j 530
+activos i j1 1
+Colisionó i 2 con j 532
+activos i j1 1
+Colisionó i 2 con j 539
+activos i j1 1
+Colisionó i 2 con j 547
+activos i j1 1
+Colisionó i 2 con j 548
+activos i j1 1
+Colisionó i 2 con j 574
+activos i j1 1
+Colisionó i 2 con j 583
+activos i j1 1
+Colisionó i 2 con j 587
+activos i j1 1
+Colisionó i 2 con j 598
+activos i j1 1
+Colisionó i 2 con j 601
+activos i j1 1
+Colisionó i 2 con j 616
+activos i j1 1
+Colisionó i 2 con j 621
+activos i j1 1
+Colisionó i 2 con j 623
+activos i j1 1
+Colisionó i 2 con j 630
+activos i j1 1
+Colisionó i 2 con j 631
+activos i j1 1
+Colisionó i 2 con j 633
+activos i j1 1
+Colisionó i 2 con j 635
+activos i j1 1
+Colisionó i 2 con j 637
+activos i j1 1
+Colisionó i 2 con j 647
+activos i j1 1
+Colisionó i 2 con j 664
+activos i j1 1
+Colisionó i 2 con j 672
+activos i j1 1
+Colisionó i 2 con j 677
+activos i j1 1
+Colisionó i 2 con j 678
+activos i j1 1
+Colisionó i 2 con j 682
+activos i j1 1
+Colisionó i 2 con j 724
+activos i j1 1
+Colisionó i 2 con j 739
+activos i j1 1
+Colisionó i 2 con j 753
+activos i j1 1
+Colisionó i 2 con j 761
+activos i j1 1
+Colisionó i 2 con j 768
+activos i j1 1
+Colisionó i 2 con j 777
+activos i j1 1
+Colisionó i 2 con j 802
+activos i j1 1
+Colisionó i 2 con j 805
+activos i j1 1
+Colisionó i 2 con j 825
+activos i j1 1
+Colisionó i 2 con j 842
+activos i j1 1
+Colisionó i 2 con j 847
+activos i j1 1
+Colisionó i 2 con j 861
+activos i j1 1
+Colisionó i 2 con j 869
+activos i j1 1
+Colisionó i 2 con j 871
+activos i j1 1
+Colisionó i 2 con j 879
+activos i j1 1
+Colisionó i 2 con j 885
+activos i j1 1
+Colisionó i 2 con j 886
+activos i j1 1
+Colisionó i 2 con j 889
+activos i j1 1
+Colisionó i 2 con j 897
+activos i j1 1
+Colisionó i 2 con j 926
+activos i j1 1
+Colisionó i 2 con j 947
+activos i j1 1
+Colisionó i 2 con j 950
+activos i j1 1
+Colisionó i 2 con j 965
+activos i j1 1
+Colisionó i 2 con j 968
+activos i j1 1
+Colisionó i 2 con j 983
+activos i j1 1
+Colisionó i 4 con j 26
+activos i j1 1
+Colisionó i 4 con j 32
+activos i j1 1
+Colisionó i 4 con j 39
+activos i j1 1
+Colisionó i 4 con j 40
+activos i j1 1
+Colisionó i 4 con j 41
+activos i j1 1
+Colisionó i 4 con j 48
+activos i j1 1
+Colisionó i 4 con j 49
+activos i j1 1
+Colisionó i 4 con j 61
+activos i j1 1
+Colisionó i 4 con j 82
+activos i j1 1
+Colisionó i 4 con j 98
+activos i j1 1
+Colisionó i 4 con j 111
+activos i j1 1
+Colisionó i 4 con j 112
+activos i j1 1
+Colisionó i 4 con j 120
+activos i j1 1
+Colisionó i 4 con j 121
+activos i j1 1
+Colisionó i 4 con j 128
+activos i j1 1
+Colisionó i 4 con j 130
+activos i j1 1
+Colisionó i 4 con j 136
+activos i j1 1
+Colisionó i 4 con j 160
+activos i j1 1
+Colisionó i 4 con j 171
+activos i j1 1
+Colisionó i 4 con j 173
+activos i j1 1
+Colisionó i 4 con j 178
+activos i j1 1
+Colisionó i 4 con j 189
+activos i j1 1
+Colisionó i 4 con j 190
+activos i j1 1
+Colisionó i 4 con j 195
+activos i j1 1
+Colisionó i 4 con j 198
+activos i j1 1
+Colisionó i 4 con j 199
+activos i j1 1
+Colisionó i 4 con j 205
+activos i j1 1
+Colisionó i 4 con j 209
+activos i j1 1
+Colisionó i 4 con j 210
+activos i j1 1
+Colisionó i 4 con j 214
+activos i j1 1
+Colisionó i 4 con j 220
+activos i j1 1
+Colisionó i 4 con j 229
+activos i j1 1
+Colisionó i 4 con j 235
+activos i j1 1
+Colisionó i 4 con j 249
+activos i j1 1
+Colisionó i 4 con j 250
+activos i j1 1
+Colisionó i 4 con j 251
+activos i j1 1
+Colisionó i 4 con j 258
+activos i j1 1
+Colisionó i 4 con j 262
+activos i j1 1
+Colisionó i 4 con j 265
+activos i j1 1
+Colisionó i 4 con j 278
+activos i j1 1
+Colisionó i 4 con j 279
+activos i j1 1
+Colisionó i 4 con j 288
+activos i j1 1
+Colisionó i 4 con j 309
+activos i j1 1
+Colisionó i 4 con j 325
+activos i j1 1
+Colisionó i 4 con j 335
+activos i j1 1
+Colisionó i 4 con j 343
+activos i j1 1
+Colisionó i 4 con j 350
+activos i j1 1
+Colisionó i 4 con j 356
+activos i j1 1
+Colisionó i 4 con j 372
+activos i j1 1
+Colisionó i 4 con j 382
+activos i j1 1
+Colisionó i 4 con j 383
+activos i j1 1
+Colisionó i 4 con j 385
+activos i j1 1
+Colisionó i 4 con j 393
+activos i j1 1
+Colisionó i 4 con j 397
+activos i j1 1
+Colisionó i 4 con j 414
+activos i j1 1
+Colisionó i 4 con j 428
+activos i j1 1
+Colisionó i 4 con j 446
+activos i j1 1
+Colisionó i 4 con j 447
+activos i j1 1
+Colisionó i 4 con j 454
+activos i j1 1
+Colisionó i 4 con j 461
+activos i j1 1
+Colisionó i 4 con j 467
+activos i j1 1
+Colisionó i 4 con j 486
+activos i j1 1
+Colisionó i 4 con j 497
+activos i j1 1
+Colisionó i 4 con j 508
+activos i j1 1
+Colisionó i 4 con j 522
+activos i j1 1
+Colisionó i 4 con j 525
+activos i j1 1
+Colisionó i 4 con j 537
+activos i j1 1
+Colisionó i 4 con j 551
+activos i j1 1
+Colisionó i 4 con j 552
+activos i j1 1
+Colisionó i 4 con j 554
+activos i j1 1
+Colisionó i 4 con j 559
+activos i j1 1
+Colisionó i 4 con j 562
+activos i j1 1
+Colisionó i 4 con j 563
+activos i j1 1
+Colisionó i 4 con j 564
+activos i j1 1
+Colisionó i 4 con j 570
+activos i j1 1
+Colisionó i 4 con j 578
+activos i j1 1
+Colisionó i 4 con j 581
+activos i j1 1
+Colisionó i 4 con j 584
+activos i j1 1
+Colisionó i 4 con j 608
+activos i j1 1
+Colisionó i 4 con j 613
+activos i j1 1
+Colisionó i 4 con j 622
+activos i j1 1
+Colisionó i 4 con j 626
+activos i j1 1
+Colisionó i 4 con j 639
+activos i j1 1
+Colisionó i 4 con j 646
+activos i j1 1
+Colisionó i 4 con j 650
+activos i j1 1
+Colisionó i 4 con j 661
+activos i j1 1
+Colisionó i 4 con j 667
+activos i j1 1
+Colisionó i 4 con j 679
+activos i j1 1
+Colisionó i 4 con j 681
+activos i j1 1
+Colisionó i 4 con j 684
+activos i j1 1
+Colisionó i 4 con j 698
+activos i j1 1
+Colisionó i 4 con j 705
+activos i j1 1
+Colisionó i 4 con j 706
+activos i j1 1
+Colisionó i 4 con j 719
+activos i j1 1
+Colisionó i 4 con j 722
+activos i j1 1
+Colisionó i 4 con j 725
+activos i j1 1
+Colisionó i 4 con j 733
+activos i j1 1
+Colisionó i 4 con j 743
+activos i j1 1
+Colisionó i 4 con j 746
+activos i j1 1
+Colisionó i 4 con j 756
+activos i j1 1
+Colisionó i 4 con j 769
+activos i j1 1
+Colisionó i 4 con j 771
+activos i j1 1
+Colisionó i 4 con j 798
+activos i j1 1
+Colisionó i 4 con j 800
+activos i j1 1
+Colisionó i 4 con j 803
+activos i j1 1
+Colisionó i 4 con j 816
+activos i j1 1
+Colisionó i 4 con j 819
+activos i j1 1
+Colisionó i 4 con j 823
+activos i j1 1
+Colisionó i 4 con j 828
+activos i j1 1
+Colisionó i 4 con j 834
+activos i j1 1
+Colisionó i 4 con j 835
+activos i j1 1
+Colisionó i 4 con j 837
+activos i j1 1
+Colisionó i 4 con j 844
+activos i j1 1
+Colisionó i 4 con j 846
+activos i j1 1
+Colisionó i 4 con j 848
+activos i j1 1
+Colisionó i 4 con j 850
+activos i j1 1
+Colisionó i 4 con j 858
+activos i j1 1
+Colisionó i 4 con j 864
+activos i j1 1
+Colisionó i 4 con j 874
+activos i j1 1
+Colisionó i 4 con j 901
+activos i j1 1
+Colisionó i 4 con j 904
+activos i j1 1
+Colisionó i 4 con j 905
+activos i j1 1
+Colisionó i 4 con j 915
+activos i j1 1
+Colisionó i 4 con j 921
+activos i j1 1
+Colisionó i 4 con j 927
+activos i j1 1
+Colisionó i 4 con j 932
+activos i j1 1
+Colisionó i 4 con j 934
+activos i j1 1
+Colisionó i 4 con j 937
+activos i j1 1
+Colisionó i 4 con j 938
+activos i j1 1
+Colisionó i 4 con j 939
+activos i j1 1
+Colisionó i 4 con j 951
+activos i j1 1
+Colisionó i 4 con j 955
+activos i j1 1
+Colisionó i 4 con j 956
+activos i j1 1
+Colisionó i 4 con j 958
+activos i j1 1
+Colisionó i 4 con j 960
+activos i j1 1
+Colisionó i 4 con j 966
+activos i j1 1
+Colisionó i 4 con j 969
+activos i j1 1
+Colisionó i 4 con j 982
+activos i j1 1
+Colisionó i 4 con j 984
+activos i j1 1
+Colisionó i 4 con j 993
+activos i j1 1
+Colisionó i 4 con j 995
+activos i j1 1
+Colisionó i 7 con j 9
+activos i j1 1
+Colisionó i 7 con j 12
+activos i j1 1
+Colisionó i 7 con j 20
+activos i j1 1
+Colisionó i 7 con j 43
+activos i j1 1
+Colisionó i 7 con j 44
+activos i j1 1
+Colisionó i 7 con j 46
+activos i j1 1
+Colisionó i 7 con j 51
+activos i j1 1
+Colisionó i 7 con j 56
+activos i j1 1
+Colisionó i 7 con j 59
+activos i j1 1
+Colisionó i 7 con j 63
+activos i j1 1
+Colisionó i 7 con j 70
+activos i j1 1
+Colisionó i 7 con j 103
+activos i j1 1
+Colisionó i 7 con j 106
+activos i j1 1
+Colisionó i 7 con j 107
+activos i j1 1
+Colisionó i 7 con j 132
+activos i j1 1
+Colisionó i 7 con j 146
+activos i j1 1
+Colisionó i 7 con j 149
+activos i j1 1
+Colisionó i 7 con j 151
+activos i j1 1
+Colisionó i 7 con j 157
+activos i j1 1
+Colisionó i 7 con j 174
+activos i j1 1
+Colisionó i 7 con j 180
+activos i j1 1
+Colisionó i 7 con j 182
+activos i j1 1
+Colisionó i 7 con j 202
+activos i j1 1
+Colisionó i 7 con j 203
+activos i j1 1
+Colisionó i 7 con j 204
+activos i j1 1
+Colisionó i 7 con j 208
+activos i j1 1
+Colisionó i 7 con j 240
+activos i j1 1
+Colisionó i 7 con j 244
+activos i j1 1
+Colisionó i 7 con j 254
+activos i j1 1
+Colisionó i 7 con j 266
+activos i j1 1
+Colisionó i 7 con j 271
+activos i j1 1
+Colisionó i 7 con j 272
+activos i j1 1
+Colisionó i 7 con j 281
+activos i j1 1
+Colisionó i 7 con j 282
+activos i j1 1
+Colisionó i 7 con j 303
+activos i j1 1
+Colisionó i 7 con j 310
+activos i j1 1
+Colisionó i 7 con j 333
+activos i j1 1
+Colisionó i 7 con j 336
+activos i j1 1
+Colisionó i 7 con j 345
+activos i j1 1
+Colisionó i 7 con j 346
+activos i j1 1
+Colisionó i 7 con j 352
+activos i j1 1
+Colisionó i 7 con j 361
+activos i j1 1
+Colisionó i 7 con j 363
+activos i j1 1
+Colisionó i 7 con j 364
+activos i j1 1
+Colisionó i 7 con j 371
+activos i j1 1
+Colisionó i 7 con j 375
+activos i j1 1
+Colisionó i 7 con j 376
+activos i j1 1
+Colisionó i 7 con j 395
+activos i j1 1
+Colisionó i 7 con j 398
+activos i j1 1
+Colisionó i 7 con j 407
+activos i j1 1
+Colisionó i 7 con j 409
+activos i j1 1
+Colisionó i 7 con j 421
+activos i j1 1
+Colisionó i 7 con j 427
+activos i j1 1
+Colisionó i 7 con j 429
+activos i j1 1
+Colisionó i 7 con j 438
+activos i j1 1
+Colisionó i 7 con j 472
+activos i j1 1
+Colisionó i 7 con j 477
+activos i j1 1
+Colisionó i 7 con j 478
+activos i j1 1
+Colisionó i 7 con j 482
+activos i j1 1
+Colisionó i 7 con j 483
+activos i j1 1
+Colisionó i 7 con j 495
+activos i j1 1
+Colisionó i 7 con j 509
+activos i j1 1
+Colisionó i 7 con j 518
+activos i j1 1
+Colisionó i 7 con j 531
+activos i j1 1
+Colisionó i 7 con j 538
+activos i j1 1
+Colisionó i 7 con j 560
+activos i j1 1
+Colisionó i 7 con j 575
+activos i j1 1
+Colisionó i 7 con j 580
+activos i j1 1
+Colisionó i 7 con j 588
+activos i j1 1
+Colisionó i 7 con j 595
+activos i j1 1
+Colisionó i 7 con j 615
+activos i j1 1
+Colisionó i 7 con j 634
+activos i j1 1
+Colisionó i 7 con j 649
+activos i j1 1
+Colisionó i 7 con j 652
+activos i j1 1
+Colisionó i 7 con j 674
+activos i j1 1
+Colisionó i 7 con j 676
+activos i j1 1
+Colisionó i 7 con j 688
+activos i j1 1
+Colisionó i 7 con j 692
+activos i j1 1
+Colisionó i 7 con j 701
+activos i j1 1
+Colisionó i 7 con j 715
+activos i j1 1
+Colisionó i 7 con j 717
+activos i j1 1
+Colisionó i 7 con j 721
+activos i j1 1
+Colisionó i 7 con j 727
+activos i j1 1
+Colisionó i 7 con j 741
+activos i j1 1
+Colisionó i 7 con j 751
+activos i j1 1
+Colisionó i 7 con j 755
+activos i j1 1
+Colisionó i 7 con j 766
+activos i j1 1
+Colisionó i 7 con j 775
+activos i j1 1
+Colisionó i 7 con j 780
+activos i j1 1
+Colisionó i 7 con j 781
+activos i j1 1
+Colisionó i 7 con j 787
+activos i j1 1
+Colisionó i 7 con j 796
+activos i j1 1
+Colisionó i 7 con j 829
+activos i j1 1
+Colisionó i 7 con j 841
+activos i j1 1
+Colisionó i 7 con j 849
+activos i j1 1
+Colisionó i 7 con j 854
+activos i j1 1
+Colisionó i 7 con j 860
+activos i j1 1
+Colisionó i 7 con j 865
+activos i j1 1
+Colisionó i 7 con j 875
+activos i j1 1
+Colisionó i 7 con j 876
+activos i j1 1
+Colisionó i 7 con j 878
+activos i j1 1
+Colisionó i 7 con j 884
+activos i j1 1
+Colisionó i 7 con j 895
+activos i j1 1
+Colisionó i 7 con j 898
+activos i j1 1
+Colisionó i 7 con j 923
+activos i j1 1
+Colisionó i 7 con j 935
+activos i j1 1
+Colisionó i 7 con j 936
+activos i j1 1
+Colisionó i 7 con j 941
+activos i j1 1
+Colisionó i 7 con j 943
+activos i j1 1
+Colisionó i 7 con j 944
+activos i j1 1
+Colisionó i 7 con j 945
+activos i j1 1
+Colisionó i 7 con j 953
+activos i j1 1
+Colisionó i 7 con j 954
+activos i j1 1
+Colisionó i 7 con j 973
+activos i j1 1
+Colisionó i 7 con j 977
+activos i j1 1
+Colisionó i 7 con j 996
+activos i j1 1
+Colisionó i 11 con j 14
+activos i j1 1
+Colisionó i 11 con j 16
+activos i j1 1
+Colisionó i 11 con j 18
+activos i j1 1
+Colisionó i 11 con j 27
+activos i j1 1
+Colisionó i 11 con j 53
+activos i j1 1
+Colisionó i 11 con j 62
+activos i j1 1
+Colisionó i 11 con j 76
+activos i j1 1
+Colisionó i 11 con j 78
+activos i j1 1
+Colisionó i 11 con j 93
+activos i j1 1
+Colisionó i 11 con j 99
+activos i j1 1
+Colisionó i 11 con j 101
+activos i j1 1
+Colisionó i 11 con j 122
+activos i j1 1
+Colisionó i 11 con j 131
+activos i j1 1
+Colisionó i 11 con j 133
+activos i j1 1
+Colisionó i 11 con j 137
+activos i j1 1
+Colisionó i 11 con j 140
+activos i j1 1
+Colisionó i 11 con j 152
+activos i j1 1
+Colisionó i 11 con j 163
+activos i j1 1
+Colisionó i 11 con j 165
+activos i j1 1
+Colisionó i 11 con j 170
+activos i j1 1
+Colisionó i 11 con j 181
+activos i j1 1
+Colisionó i 11 con j 183
+activos i j1 1
+Colisionó i 11 con j 191
+activos i j1 1
+Colisionó i 11 con j 193
+activos i j1 1
+Colisionó i 11 con j 197
+activos i j1 1
+Colisionó i 11 con j 201
+activos i j1 1
+Colisionó i 11 con j 211
+activos i j1 1
+Colisionó i 11 con j 222
+activos i j1 1
+Colisionó i 11 con j 232
+activos i j1 1
+Colisionó i 11 con j 233
+activos i j1 1
+Colisionó i 11 con j 234
+activos i j1 1
+Colisionó i 11 con j 237
+activos i j1 1
+Colisionó i 11 con j 255
+activos i j1 1
+Colisionó i 11 con j 260
+activos i j1 1
+Colisionó i 11 con j 261
+activos i j1 1
+Colisionó i 11 con j 268
+activos i j1 1
+Colisionó i 11 con j 275
+activos i j1 1
+Colisionó i 11 con j 287
+activos i j1 1
+Colisionó i 11 con j 291
+activos i j1 1
+Colisionó i 11 con j 298
+activos i j1 1
+Colisionó i 11 con j 300
+activos i j1 1
+Colisionó i 11 con j 306
+activos i j1 1
+Colisionó i 11 con j 307
+activos i j1 1
+Colisionó i 11 con j 315
+activos i j1 1
+Colisionó i 11 con j 316
+activos i j1 1
+Colisionó i 11 con j 328
+activos i j1 1
+Colisionó i 11 con j 338
+activos i j1 1
+Colisionó i 11 con j 340
+activos i j1 1
+Colisionó i 11 con j 370
+activos i j1 1
+Colisionó i 11 con j 374
+activos i j1 1
+Colisionó i 11 con j 380
+activos i j1 1
+Colisionó i 11 con j 386
+activos i j1 1
+Colisionó i 11 con j 387
+activos i j1 1
+Colisionó i 11 con j 399
+activos i j1 1
+Colisionó i 11 con j 404
+activos i j1 1
+Colisionó i 11 con j 417
+activos i j1 1
+Colisionó i 11 con j 420
+activos i j1 1
+Colisionó i 11 con j 431
+activos i j1 1
+Colisionó i 11 con j 432
+activos i j1 1
+Colisionó i 11 con j 435
+activos i j1 1
+Colisionó i 11 con j 442
+activos i j1 1
+Colisionó i 11 con j 448
+activos i j1 1
+Colisionó i 11 con j 452
+activos i j1 1
+Colisionó i 11 con j 468
+activos i j1 1
+Colisionó i 11 con j 470
+activos i j1 1
+Colisionó i 11 con j 489
+activos i j1 1
+Colisionó i 11 con j 523
+activos i j1 1
+Colisionó i 11 con j 541
+activos i j1 1
+Colisionó i 11 con j 556
+activos i j1 1
+Colisionó i 11 con j 567
+activos i j1 1
+Colisionó i 11 con j 569
+activos i j1 1
+Colisionó i 11 con j 597
+activos i j1 1
+Colisionó i 11 con j 605
+activos i j1 1
+Colisionó i 11 con j 610
+activos i j1 1
+Colisionó i 11 con j 611
+activos i j1 1
+Colisionó i 11 con j 612
+activos i j1 1
+Colisionó i 11 con j 618
+activos i j1 1
+Colisionó i 11 con j 624
+activos i j1 1
+Colisionó i 11 con j 629
+activos i j1 1
+Colisionó i 11 con j 632
+activos i j1 1
+Colisionó i 11 con j 641
+activos i j1 1
+Colisionó i 11 con j 653
+activos i j1 1
+Colisionó i 11 con j 658
+activos i j1 1
+Colisionó i 11 con j 669
+activos i j1 1
+Colisionó i 11 con j 693
+activos i j1 1
+Colisionó i 11 con j 703
+activos i j1 1
+Colisionó i 11 con j 709
+activos i j1 1
+Colisionó i 11 con j 714
+activos i j1 1
+Colisionó i 11 con j 723
+activos i j1 1
+Colisionó i 11 con j 735
+activos i j1 1
+Colisionó i 11 con j 740
+activos i j1 1
+Colisionó i 11 con j 749
+activos i j1 1
+Colisionó i 11 con j 754
+activos i j1 1
+Colisionó i 11 con j 758
+activos i j1 1
+Colisionó i 11 con j 762
+activos i j1 1
+Colisionó i 11 con j 788
+activos i j1 1
+Colisionó i 11 con j 789
+activos i j1 1
+Colisionó i 11 con j 793
+activos i j1 1
+Colisionó i 11 con j 801
+activos i j1 1
+Colisionó i 11 con j 810
+activos i j1 1
+Colisionó i 11 con j 811
+activos i j1 1
+Colisionó i 11 con j 820
+activos i j1 1
+Colisionó i 11 con j 836
+activos i j1 1
+Colisionó i 11 con j 839
+activos i j1 1
+Colisionó i 11 con j 840
+activos i j1 1
+Colisionó i 11 con j 856
+activos i j1 1
+Colisionó i 11 con j 862
+activos i j1 1
+Colisionó i 11 con j 893
+activos i j1 1
+Colisionó i 11 con j 894
+activos i j1 1
+Colisionó i 11 con j 918
+activos i j1 1
+Colisionó i 11 con j 931
+activos i j1 1
+Colisionó i 11 con j 962
+activos i j1 1
+Colisionó i 11 con j 978
+activos i j1 1
+Colisionó i 13 con j 19
+activos i j1 1
+Colisionó i 13 con j 21
+activos i j1 1
+Colisionó i 13 con j 47
+activos i j1 1
+Colisionó i 13 con j 57
+activos i j1 1
+Colisionó i 13 con j 65
+activos i j1 1
+Colisionó i 13 con j 86
+activos i j1 1
+Colisionó i 13 con j 100
+activos i j1 1
+Colisionó i 13 con j 110
+activos i j1 1
+Colisionó i 13 con j 117
+activos i j1 1
+Colisionó i 13 con j 124
+activos i j1 1
+Colisionó i 13 con j 125
+activos i j1 1
+Colisionó i 13 con j 126
+activos i j1 1
+Colisionó i 13 con j 138
+activos i j1 1
+Colisionó i 13 con j 141
+activos i j1 1
+Colisionó i 13 con j 142
+activos i j1 1
+Colisionó i 13 con j 145
+activos i j1 1
+Colisionó i 13 con j 153
+activos i j1 1
+Colisionó i 13 con j 154
+activos i j1 1
+Colisionó i 13 con j 155
+activos i j1 1
+Colisionó i 13 con j 161
+activos i j1 1
+Colisionó i 13 con j 164
+activos i j1 1
+Colisionó i 13 con j 175
+activos i j1 1
+Colisionó i 13 con j 187
+activos i j1 1
+Colisionó i 13 con j 188
+activos i j1 1
+Colisionó i 13 con j 196
+activos i j1 1
+Colisionó i 13 con j 215
+activos i j1 1
+Colisionó i 13 con j 217
+activos i j1 1
+Colisionó i 13 con j 218
+activos i j1 1
+Colisionó i 13 con j 219
+activos i j1 1
+Colisionó i 13 con j 223
+activos i j1 1
+Colisionó i 13 con j 230
+activos i j1 1
+Colisionó i 13 con j 248
+activos i j1 1
+Colisionó i 13 con j 252
+activos i j1 1
+Colisionó i 13 con j 269
+activos i j1 1
+Colisionó i 13 con j 273
+activos i j1 1
+Colisionó i 13 con j 280
+activos i j1 1
+Colisionó i 13 con j 284
+activos i j1 1
+Colisionó i 13 con j 299
+activos i j1 1
+Colisionó i 13 con j 301
+activos i j1 1
+Colisionó i 13 con j 305
+activos i j1 1
+Colisionó i 13 con j 314
+activos i j1 1
+Colisionó i 13 con j 317
+activos i j1 1
+Colisionó i 13 con j 321
+activos i j1 1
+Colisionó i 13 con j 351
+activos i j1 1
+Colisionó i 13 con j 353
+activos i j1 1
+Colisionó i 13 con j 365
+activos i j1 1
+Colisionó i 13 con j 381
+activos i j1 1
+Colisionó i 13 con j 401
+activos i j1 1
+Colisionó i 13 con j 403
+activos i j1 1
+Colisionó i 13 con j 410
+activos i j1 1
+Colisionó i 13 con j 422
+activos i j1 1
+Colisionó i 13 con j 437
+activos i j1 1
+Colisionó i 13 con j 439
+activos i j1 1
+Colisionó i 13 con j 441
+activos i j1 1
+Colisionó i 13 con j 443
+activos i j1 1
+Colisionó i 13 con j 445
+activos i j1 1
+Colisionó i 13 con j 450
+activos i j1 1
+Colisionó i 13 con j 457
+activos i j1 1
+Colisionó i 13 con j 460
+activos i j1 1
+Colisionó i 13 con j 466
+activos i j1 1
+Colisionó i 13 con j 479
+activos i j1 1
+Colisionó i 13 con j 480
+activos i j1 1
+Colisionó i 13 con j 505
+activos i j1 1
+Colisionó i 13 con j 506
+activos i j1 1
+Colisionó i 13 con j 513
+activos i j1 1
+Colisionó i 13 con j 515
+activos i j1 1
+Colisionó i 13 con j 521
+activos i j1 1
+Colisionó i 13 con j 536
+activos i j1 1
+Colisionó i 13 con j 540
+activos i j1 1
+Colisionó i 13 con j 561
+activos i j1 1
+Colisionó i 13 con j 576
+activos i j1 1
+Colisionó i 13 con j 582
+activos i j1 1
+Colisionó i 13 con j 586
+activos i j1 1
+Colisionó i 13 con j 591
+activos i j1 1
+Colisionó i 13 con j 593
+activos i j1 1
+Colisionó i 13 con j 603
+activos i j1 1
+Colisionó i 13 con j 604
+activos i j1 1
+Colisionó i 13 con j 619
+activos i j1 1
+Colisionó i 13 con j 628
+activos i j1 1
+Colisionó i 13 con j 640
+activos i j1 1
+Colisionó i 13 con j 644
+activos i j1 1
+Colisionó i 13 con j 651
+activos i j1 1
+Colisionó i 13 con j 654
+activos i j1 1
+Colisionó i 13 con j 655
+activos i j1 1
+Colisionó i 13 con j 657
+activos i j1 1
+Colisionó i 13 con j 666
+activos i j1 1
+Colisionó i 13 con j 680
+activos i j1 1
+Colisionó i 13 con j 683
+activos i j1 1
+Colisionó i 13 con j 697
+activos i j1 1
+Colisionó i 13 con j 700
+activos i j1 1
+Colisionó i 13 con j 710
+activos i j1 1
+Colisionó i 13 con j 718
+activos i j1 1
+Colisionó i 13 con j 720
+activos i j1 1
+Colisionó i 13 con j 730
+activos i j1 1
+Colisionó i 13 con j 736
+activos i j1 1
+Colisionó i 13 con j 737
+activos i j1 1
+Colisionó i 13 con j 738
+activos i j1 1
+Colisionó i 13 con j 748
+activos i j1 1
+Colisionó i 13 con j 752
+activos i j1 1
+Colisionó i 13 con j 757
+activos i j1 1
+Colisionó i 13 con j 760
+activos i j1 1
+Colisionó i 13 con j 763
+activos i j1 1
+Colisionó i 13 con j 779
+activos i j1 1
+Colisionó i 13 con j 783
+activos i j1 1
+Colisionó i 13 con j 791
+activos i j1 1
+Colisionó i 13 con j 794
+activos i j1 1
+Colisionó i 13 con j 814
+activos i j1 1
+Colisionó i 13 con j 826
+activos i j1 1
+Colisionó i 13 con j 833
+activos i j1 1
+Colisionó i 13 con j 863
+activos i j1 1
+Colisionó i 13 con j 872
+activos i j1 1
+Colisionó i 13 con j 880
+activos i j1 1
+Colisionó i 13 con j 881
+activos i j1 1
+Colisionó i 13 con j 899
+activos i j1 1
+Colisionó i 13 con j 900
+activos i j1 1
+Colisionó i 13 con j 906
+activos i j1 1
+Colisionó i 13 con j 907
+activos i j1 1
+Colisionó i 13 con j 908
+activos i j1 1
+Colisionó i 13 con j 916
+activos i j1 1
+Colisionó i 13 con j 917
+activos i j1 1
+Colisionó i 13 con j 930
+activos i j1 1
+Colisionó i 13 con j 946
+activos i j1 1
+Colisionó i 13 con j 952
+activos i j1 1
+Colisionó i 13 con j 961
+activos i j1 1
+Colisionó i 13 con j 964
+activos i j1 1
+Colisionó i 13 con j 970
+activos i j1 1
+Colisionó i 17 con j 22
+activos i j1 1
+Colisionó i 17 con j 52
+activos i j1 1
+Colisionó i 17 con j 55
+activos i j1 1
+Colisionó i 17 con j 67
+activos i j1 1
+Colisionó i 17 con j 73
+activos i j1 1
+Colisionó i 17 con j 74
+activos i j1 1
+Colisionó i 17 con j 77
+activos i j1 1
+Colisionó i 17 con j 85
+activos i j1 1
+Colisionó i 17 con j 87
+activos i j1 1
+Colisionó i 17 con j 91
+activos i j1 1
+Colisionó i 17 con j 102
+activos i j1 1
+Colisionó i 17 con j 108
+activos i j1 1
+Colisionó i 17 con j 115
+activos i j1 1
+Colisionó i 17 con j 118
+activos i j1 1
+Colisionó i 17 con j 143
+activos i j1 1
+Colisionó i 17 con j 159
+activos i j1 1
+Colisionó i 17 con j 162
+activos i j1 1
+Colisionó i 17 con j 166
+activos i j1 1
+Colisionó i 17 con j 167
+activos i j1 1
+Colisionó i 17 con j 176
+activos i j1 1
+Colisionó i 17 con j 177
+activos i j1 1
+Colisionó i 17 con j 238
+activos i j1 1
+Colisionó i 17 con j 289
+activos i j1 1
+Colisionó i 17 con j 302
+activos i j1 1
+Colisionó i 17 con j 318
+activos i j1 1
+Colisionó i 17 con j 323
+activos i j1 1
+Colisionó i 17 con j 326
+activos i j1 1
+Colisionó i 17 con j 329
+activos i j1 1
+Colisionó i 17 con j 330
+activos i j1 1
+Colisionó i 17 con j 331
+activos i j1 1
+Colisionó i 17 con j 334
+activos i j1 1
+Colisionó i 17 con j 339
+activos i j1 1
+Colisionó i 17 con j 342
+activos i j1 1
+Colisionó i 17 con j 396
+activos i j1 1
+Colisionó i 17 con j 436
+activos i j1 1
+Colisionó i 17 con j 444
+activos i j1 1
+Colisionó i 17 con j 455
+activos i j1 1
+Colisionó i 17 con j 456
+activos i j1 1
+Colisionó i 17 con j 459
+activos i j1 1
+Colisionó i 17 con j 462
+activos i j1 1
+Colisionó i 17 con j 475
+activos i j1 1
+Colisionó i 17 con j 476
+activos i j1 1
+Colisionó i 17 con j 481
+activos i j1 1
+Colisionó i 17 con j 490
+activos i j1 1
+Colisionó i 17 con j 494
+activos i j1 1
+Colisionó i 17 con j 499
+activos i j1 1
+Colisionó i 17 con j 501
+activos i j1 1
+Colisionó i 17 con j 512
+activos i j1 1
+Colisionó i 17 con j 520
+activos i j1 1
+Colisionó i 17 con j 545
+activos i j1 1
+Colisionó i 17 con j 568
+activos i j1 1
+Colisionó i 17 con j 572
+activos i j1 1
+Colisionó i 17 con j 573
+activos i j1 1
+Colisionó i 17 con j 577
+activos i j1 1
+Colisionó i 17 con j 600
+activos i j1 1
+Colisionó i 17 con j 602
+activos i j1 1
+Colisionó i 17 con j 607
+activos i j1 1
+Colisionó i 17 con j 617
+activos i j1 1
+Colisionó i 17 con j 620
+activos i j1 1
+Colisionó i 17 con j 643
+activos i j1 1
+Colisionó i 17 con j 645
+activos i j1 1
+Colisionó i 17 con j 648
+activos i j1 1
+Colisionó i 17 con j 656
+activos i j1 1
+Colisionó i 17 con j 663
+activos i j1 1
+Colisionó i 17 con j 673
+activos i j1 1
+Colisionó i 17 con j 675
+activos i j1 1
+Colisionó i 17 con j 685
+activos i j1 1
+Colisionó i 17 con j 686
+activos i j1 1
+Colisionó i 17 con j 689
+activos i j1 1
+Colisionó i 17 con j 694
+activos i j1 1
+Colisionó i 17 con j 699
+activos i j1 1
+Colisionó i 17 con j 704
+activos i j1 1
+Colisionó i 17 con j 708
+activos i j1 1
+Colisionó i 17 con j 716
+activos i j1 1
+Colisionó i 17 con j 728
+activos i j1 1
+Colisionó i 17 con j 729
+activos i j1 1
+Colisionó i 17 con j 731
+activos i j1 1
+Colisionó i 17 con j 742
+activos i j1 1
+Colisionó i 17 con j 750
+activos i j1 1
+Colisionó i 17 con j 759
+activos i j1 1
+Colisionó i 17 con j 764
+activos i j1 1
+Colisionó i 17 con j 772
+activos i j1 1
+Colisionó i 17 con j 773
+activos i j1 1
+Colisionó i 17 con j 774
+activos i j1 1
+Colisionó i 17 con j 784
+activos i j1 1
+Colisionó i 17 con j 792
+activos i j1 1
+Colisionó i 17 con j 799
+activos i j1 1
+Colisionó i 17 con j 808
+activos i j1 1
+Colisionó i 17 con j 813
+activos i j1 1
+Colisionó i 17 con j 817
+activos i j1 1
+Colisionó i 17 con j 818
+activos i j1 1
+Colisionó i 17 con j 821
+activos i j1 1
+Colisionó i 17 con j 830
+activos i j1 1
+Colisionó i 17 con j 832
+activos i j1 1
+Colisionó i 17 con j 838
+activos i j1 1
+Colisionó i 17 con j 851
+activos i j1 1
+Colisionó i 17 con j 852
+activos i j1 1
+Colisionó i 17 con j 853
+activos i j1 1
+Colisionó i 17 con j 855
+activos i j1 1
+Colisionó i 17 con j 868
+activos i j1 1
+Colisionó i 17 con j 870
+activos i j1 1
+Colisionó i 17 con j 887
+activos i j1 1
+Colisionó i 17 con j 902
+activos i j1 1
+Colisionó i 17 con j 909
+activos i j1 1
+Colisionó i 17 con j 922
+activos i j1 1
+Colisionó i 17 con j 933
+activos i j1 1
+Colisionó i 17 con j 940
+activos i j1 1
+Colisionó i 17 con j 942
+activos i j1 1
+Colisionó i 17 con j 957
+activos i j1 1
+Colisionó i 17 con j 963
+activos i j1 1
+Colisionó i 17 con j 985
+activos i j1 1
+Colisionó i 17 con j 986
+activos i j1 1
+Colisionó i 17 con j 988
+activos i j1 1
+Colisionó i 17 con j 990
+activos i j1 1
+Colisionó i 17 con j 994
+activos i j1 1
+Colisionó i 17 con j 998
+activos i j1 1
 
 Iteration: 1
 Net forces
@@ -1020,6 +3000,10 @@ Force(6) = 1.9746e+30 2.16079e+30 -1.89371e+30
 Force(7) = 1.8454e+30 -1.76314e+30 2.18096e+30 
 Force(8) = -1.70769e+28 -1.08701e+29 -1.62701e+28 
 Force(9) = 1.66697e+28 -1.59384e+28 -1.54222e+29 
+Colisionó i 0 con j 68
+activos i j1 1
+Colisionó i 4 con j 206
+activos i j1 1
 
 Iteration: 2
 Net forces
